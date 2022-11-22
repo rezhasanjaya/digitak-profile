@@ -11,7 +11,7 @@
             <div class="card shadow mb-4">
 
                 <div class="card-profile-image mt-4">
-                    <img src="{{ asset('img/favicon.png') }}" class="rounded-circle" alt="user-image">
+                    <img src="{{ asset('img/digitak-icon.png') }}" alt="user-image">
                 </div>
 
                 <div class="card-body">
@@ -19,20 +19,8 @@
                     <div class="row">
                         <div class="col-lg-12 mb-1">
                             <div class="text-center">
-                                <h5 class="font-weight-bold">Alejandro RH</h5>
+                              <a href="https://digitak.id" class="font-weight-bold text-lg text-decoration-none" target="_blank">Digitak.Id</a>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-4 mb-1 text-center">
-                            <a href="https://facebook.com/aleckrh" target="_blank" class="btn btn-facebook btn-circle btn-lg"><i class="fab fa-facebook-f fa-fw"></i></a>
-                        </div>
-                        <div class="col-md-4 mb-1 text-center">
-                            <a href="https://github.com/aleckrh" target="_blank" class="btn btn-github btn-circle btn-lg"><i class="fab fa-github fa-fw"></i></a>
-                        </div>
-                        <div class="col-md-4 mb-1 text-center">
-                            <a href="https://twitter.com/aleckrh" target="_blank" class="btn btn-twitter btn-circle btn-lg"><i class="fab fa-twitter fa-fw"></i></a>
                         </div>
                     </div>
 
@@ -43,7 +31,7 @@
                             <h5 class="font-weight-bold">Laravel SB Admin 2</h5>
                             <p>SB Admin 2 for Laravel.</p>
                             <p>Recommend to install this preset on a project that you are starting from scratch, otherwise your project's design might break.</p>
-                            <a href="https://github.com/aleckrh/laravel-sb-admin-2" target="_blank" class="btn btn-github">
+                            <a href="https://github.com/adimuhamad/digitak-magang-tasker/" target="_blank" class="btn btn-github">
                                 <i class="fab fa-github fa-fw"></i> Go to repository
                             </a>
                         </div>

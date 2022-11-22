@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Digitak') }}</title>
 
     <!-- Fonts -->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
@@ -18,9 +18,9 @@
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/digitaktab.JFIF') }}" rel="icon" type="image/JFIF">
+    <link href="{{ asset('img/digitak-icon.png') }}" rel="icon" type="image/png">
 </head>
-<body class="bg-gradient-orange min-vh-100 d-flex justify-content-center align-items-center">
+<body class="bg-gradient-warning min-vh-100 d-flex justify-content-center align-items-center">
 
 @yield('main-content')
 
