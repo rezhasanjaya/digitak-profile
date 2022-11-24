@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 
+  <link href="{{ asset('tab-nav/tab-nav.css') }}" rel="stylesheet">
+
 @section('main-content')
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">{{ $title ?? __('Blank Page') }}</h1>
@@ -93,143 +95,158 @@
     <!-- End script -->
 
     <!-- Modal -->
-    <div class="modal fade" id="addModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+    <div class="modal fade" id="addModal" data-backdrop="static" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog" style="max-width: 540px" role="dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add New Data</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
+            <h5 class="modal-title" id="exampleModalLongTitle">Add New Data</h5>
+            </div>
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-12">
+                    <form action="{{ route('user.store') }}" method="post">
+                      @csrf
 
-          <div class="modal-body">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="akun-tab" data-toggle="tab" data-target="#akun" type="button" role="tab" aria-controls="akun" aria-selected="true">Akun</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profil-tab" data-toggle="tab" data-target="#profil" type="button" role="tab" aria-controls="profil" aria-selected="false">Profil</button>
-              </li>
-            </ul>
-
-            <form action="{{ route('user.store') }}" method="post">
-              @csrf
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="akun" role="tabpanel" aria-labelledby="akun-tab">
-                  <div class="row mt-3">
-                    <div class="col-md-3 mt-1">
-                      <label class="form-control-label">First Name</label>
-                    </div>
-                    <div class="col-md-9 ms-auto">
-                      <input type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" id="first_name" placeholder="{{ __('First Name') }}" autocomplete="off" value="{{ old('first_name') }}">
-                      @error('first_name')
-                        <span class="text-danger">{{ $message }}</span>
-                      @enderror
-                    </div>
-                  </div>
-    
-                  <div class="row mt-2">
-                    <div class="col-md-3 mt-1">
-                      <label class="form-control-label">Last Name</label>
-                    </div>
-                    <div class="col-md-9 ms-auto">
-                      <input type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" id="last_name" placeholder="{{ __('Last Name') }}" autocomplete="off" value="{{ old('last_name') }}">
-                      @error('last_name')
-                        <span class="text-danger">{{ $message }}</span>
-                      @enderror
-                    </div>
-                  </div>
-    
-                  <div class="row mt-2">
-                    <div class="col-md-3 mt-1">
-                      <label class="form-control-label">E-mail</label>
-                    </div>
-                    <div class="col-md-9 ms-auto">
-                      <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="{{ __('E-Mail') }}" autocomplete="off" value="{{ old('email') }}">
-                      @error('email')
-                        <span class="text-danger">{{ $message }}</span>
-                      @enderror
-                    </div>
-                  </div>
-    
-                  <div class="row mt-2">
-                    <div class="col-md-3 mt-2 mb-3">
-                      <label class="form-control-label">Password</label>
-                    </div>
-                    <div class="col-md-9 ms-auto">
-                      <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="{{ __('Password') }}" autocomplete="off">
-                      @error('password')
-                        <span class="text-danger">{{ $message }}</span>
-                      @enderror
-                    </div>
-                  </div>                  
-                </div>
-
-                <div class="tab-pane fade" id="profil" role="tabpanel" aria-labelledby="profil-tab">
-                
-                  <div class="row mt-3">
-                    <div class="col-md-3">
-                      <label class="form-control-label">Tingkat</label>
-                    </div>
-                    <div class="col-md-9 ms-auto">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="tingkat" id="tingkat1" value="Siswa">
-                        <label class="form-check-label" for="tingkat1">Siswa</label>
+                      <br>
+                      <section class="tabs-section">
+                      <div class="tabs-section-nav tabs-section-nav-icons">
+                        <div class="tbl">
+                          <ul class="nav" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link navl1 active" data-target="#akun" role="tab" data-toggle="tab">
+                                <span class="nav-link-in">
+                                  <i class="fa fa-gears"></i>
+                                  Akun
+                                </span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link navl2" data-target="#profil" role="tab" data-toggle="tab">
+                                <span class="nav-link-in">
+                                  <i class="fa fa-address-card"></i>
+                                  Profil
+                                </span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="tingkat" id="tingkat2" value="Mahasiswa">
-                        <label class="form-check-label" for="tingkat2">Mahasiswa</label>
-                      </div>
-                    </div>
-                  </div>
-    
-                  <div class="row mt-2">
-                    <div class="col-md-3 mt-2">
-                      <label class="form-control-label">Jurusan</label>
-                    </div>
-                    <div class="col-md-9 ms-auto">
-                      <input type="text" class="form-control @error('jurusan') is-invalid @enderror" name="jurusan" id="jurusan" placeholder="{{ __('Jurusan') }}" autocomplete="off" value="{{ old('jurusan') }}">
-                      @error('jurusan')
-                        <span class="text-danger">{{ $message }}</span>
-                      @enderror
-                    </div>
-                  </div>
-    
-                  <div class="row mt-2">
-                    <div class="col-md-3 mt-2">
-                      <label class="form-control-label">Tanggal Masuk</label>
-                    </div>
-                    <div class="col-md-9 ms-auto">
-                      <input type="date" class="form-control @error('tanggal_masuk') is-invalid @enderror" name="tanggal_masuk" id="tanggal_masuk" autocomplete="off">
-                      @error('tanggal_masuk')
-                        <span class="text-danger">{{ $message }}</span>
-                      @enderror
-                    </div>
-                  </div>
-    
-                  <div class="row mt-2 mb-2">
-                    <div class="col-md-3">
-                      <label class="form-control-label">Durasi Magang (Bulan)</label>
-                    </div>
-                    <div class="col-md-9 ms-auto">
-                      <input type="number" min='1' class="form-control @error('durasi') is-invalid @enderror" name="durasi" id="durasi" placeholder="{{ __('Durasi Magang') }}" autocomplete="off">
-                      @error('durasi')
-                        <span class="text-danger">{{ $message }}</span>
-                      @enderror
-                    </div>
-                  </div>
                   
-                </div>
-              </div>           
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="akun" role="tabpanel" aria-labelledby="akun-tab">
+                          <div class="row">
+                            <div class="col-md-3 mt-1">
+                              <label class="form-control-label">First Name</label>
+                            </div>
+                            <div class="col-md-9 ms-auto">
+                              <input type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" id="first_name" placeholder="{{ __('First Name') }}" autocomplete="off" value="{{ old('first_name') }}">
+                              @error('first_name')
+                                <span class="text-danger">{{ $message }}</span>
+                              @enderror
+                            </div>
+                          </div>
+            
+                          <div class="row mt-2">
+                            <div class="col-md-3 mt-1">
+                              <label class="form-control-label">Last Name</label>
+                            </div>
+                            <div class="col-md-9 ms-auto">
+                              <input type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" id="last_name" placeholder="{{ __('Last Name') }}" autocomplete="off" value="{{ old('last_name') }}">
+                              @error('last_name')
+                                <span class="text-danger">{{ $message }}</span>
+                              @enderror
+                            </div>
+                          </div>
+            
+                          <div class="row mt-2">
+                            <div class="col-md-3 mt-1">
+                              <label class="form-control-label">E-mail</label>
+                            </div>
+                            <div class="col-md-9 ms-auto">
+                              <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="{{ __('E-Mail') }}" autocomplete="off" value="{{ old('email') }}">
+                              @error('email')
+                                <span class="text-danger">{{ $message }}</span>
+                              @enderror
+                            </div>
+                          </div>
+            
+                          <div class="row mt-2">
+                            <div class="col-md-3 mt-1 mb-2">
+                              <label class="form-control-label">Password</label>
+                            </div>
+                            <div class="col-md-9 ms-auto">
+                              <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="{{ __('Password') }}" autocomplete="off">
+                              @error('password')
+                                <span class="text-danger">{{ $message }}</span>
+                              @enderror
+                            </div>
+                          </div>                  
+                        </div>
+        
+                        <div class="tab-pane fade" id="profil" role="tabpanel" aria-labelledby="profil-tab">
+                        
+                          <div class="row">
+                            <div class="col-md-3 mt-1">
+                              <label class="form-control-label">Tingkat</label>
+                            </div>
+                            <div class="col-md-9 ms-auto">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tingkat" id="tingkat1" value="Siswa">
+                                <label class="form-check-label" for="tingkat1">Siswa</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tingkat" id="tingkat2" value="Mahasiswa">
+                                <label class="form-check-label" for="tingkat2">Mahasiswa</label>
+                              </div>
+                            </div>
+                          </div>
+            
+                          <div class="row mt-2">
+                            <div class="col-md-3 mt-1">
+                              <label class="form-control-label">Jurusan</label>
+                            </div>
+                            <div class="col-md-9 ms-auto">
+                              <input type="text" class="form-control @error('jurusan') is-invalid @enderror" name="jurusan" id="jurusan" placeholder="{{ __('Jurusan') }}" autocomplete="off" value="{{ old('jurusan') }}">
+                              @error('jurusan')
+                                <span class="text-danger">{{ $message }}</span>
+                              @enderror
+                            </div>
+                          </div>
+            
+                          <div class="row mt-2">
+                            <div class="col-md-3 mt-1">
+                              <label class="form-control-label">Tanggal Masuk</label>
+                            </div>
+                            <div class="col-md-9 ms-auto">
+                              <input type="date" class="form-control @error('tanggal_masuk') is-invalid @enderror" name="tanggal_masuk" id="tanggal_masuk" autocomplete="off">
+                              @error('tanggal_masuk')
+                                <span class="text-danger">{{ $message }}</span>
+                              @enderror
+                            </div>
+                          </div>
+            
+                          <div class="row mt-2">
+                            <div class="col-md-3 mt-1 mb-2">
+                              <label class="form-control-label">Durasi Magang</label>
+                            </div>
+                            <div class="col-md-9 ms-auto">
+                              <input type="number" min='1' class="form-control @error('durasi') is-invalid @enderror" name="durasi" id="durasi" placeholder="{{ __('Durasi Magang (Bulan)') }}" autocomplete="off">
+                              @error('durasi')
+                                <span class="text-danger">{{ $message }}</span>
+                              @enderror
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>                    
+                    </div>
 
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa-solid fa-xmark mr-2"></i>Close</button>
-                <button type="submit" class="btn btn-warning"><i class="fa-solid fa-floppy-disk mr-2"></i>Save</button>
-              </div>
-
-            </form>
-          </div>          
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa-solid fa-xmark mr-2"></i>Close</button>
+                      <button type="submit" class="btn btn-warning"><i class="fa-solid fa-floppy-disk mr-2"></i>Save</button>
+                    </div>
+                  </form>
+          </div>
         </div>
       </div>
     </div>

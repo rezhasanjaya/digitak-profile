@@ -22,6 +22,8 @@
     <!-- Favicon -->
     <link href="{{ asset('img/digitak-icon.png') }}" rel="icon" type="image/png">
     
+    <!-- Tab Nav -->
+    {{-- <link href="{{ asset('tab-nav/tab-nav.css') }}" rel="stylesheet"> --}}
 
     @stack('css')
 </head>
