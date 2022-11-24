@@ -111,18 +111,18 @@
                         <div class="tbl">
                           <ul class="nav" role="tablist">
                             <li class="nav-item">
-                              <a class="nav-link navl1 active" data-target="#akun" role="tab" data-toggle="tab">
+                              <a class="nav-link active" data-target="#akun" role="tab" data-toggle="tab" type="button">
                                 <span class="nav-link-in">
                                   <i class="fa fa-gears"></i>
-                                  <label class="form-control-label mb-0">Akun</label>
+                                  <label class="form-control-label mb-0" type="button">Akun</label>
                                 </span>
                               </a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link navl2" data-target="#profil" role="tab" data-toggle="tab">
+                              <a class="nav-link" data-target="#profil" role="tab" data-toggle="tab" type="button">
                                 <span class="nav-link-in">
                                   <i class="fa fa-address-card"></i>
-                                  <label class="form-control-label mb-0">Profil</label>
+                                  <label class="form-control-label mb-0" type="button">Profil</label>
                                 </span>
                               </a>
                             </li>
