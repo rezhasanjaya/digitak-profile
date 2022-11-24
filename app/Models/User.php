@@ -3,13 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'last_name', 'email', 'password',
+        'first_name', 'last_name', 'email', 'email_verified_at', 'password', 'jurusan', 'tingkat', 'tanggal_masuk', 'tanggal_berakhir', 'durasi'
     ];
 
     /**
@@ -38,28 +37,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /**
-     * Get the user's full name.
-     *
-     * @return string
-     */
     public function getFullNameAttribute()
     {
         if (is_null($this->last_name)) {
-            return "{$this->name}";
+            return "{$this->first_name}";
         }
 
-        return "{$this->name} {$this->last_name}";
-    }
-
-    /**
-     * Set the user's password.
-     *
-     * @param string $value
-     * @return void
-     */
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = bcrypt($value);
+        return "{$this->first_name} {$this->last_name}";
     }
 }

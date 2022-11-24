@@ -28,7 +28,7 @@
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user" name="email" placeholder="{{ __('E-Mail Address') }}" value="admin@gmail.com" required autofocus>
+                                        <input type="email" class="form-control form-control-user" name="email" placeholder="{{ __('E-Mail') }}" value="admin@gmail.com" required autofocus>
                                     </div>
 
                                     <div class="form-group">
@@ -36,26 +36,17 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                            <label class="custom-control-label" for="remember">{{ __('Remember Me') }}</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-dark btn-user btn-block">
+                                        <button type="submit" class="btn btn-warning btn-user btn-block">
                                             {{ __('Login') }}
                                         </button>
                                     </div>
-
-                    
                                 </form>
 
-                         
+                                <hr>
 
                                 @if (Route::has('password.request'))
                                     <div class="text-center">
-                                        <a style="color: orange" class="small" href="{{ route('password.request') }}">
+                                        <a class="small" href="{{ route('password.request') }}">
                                             {{ __('Forgot Password?') }}
                                         </a>
                                     </div>
@@ -63,7 +54,7 @@
 
                                 @if (Route::has('register'))
                                     <div class="text-center">
-                                        <a  style="color: orange" class="small" href="{{ route('register') }}">{{ __('Create an Account!') }}</a>
+                                        <a class="small" href="{{ route('register') }}">{{ __('Create an Account!') }}</a>
                                     </div>
                                 @endif
                             </div>

@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Laravel SB Admin 2">
-    <meta name="author" content="Alejandro RH">
+    <meta name="author" content="Mochamad Adi">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Digitak') }}</title>
 
     <!-- Fonts -->
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
@@ -20,21 +20,23 @@
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/digitaktab.JFIF') }}" rel="icon" type="image/JFIF">
+    <link href="{{ asset('img/digitak-icon.png') }}" rel="icon" type="image/png">    
+
+    @stack('css')
 </head>
 <body id="page-top">
 
 <!-- Page Wrapper -->
 <div id="wrapper">
-    <!---------------------------------------- SIDEBARRRRRRRRR ----------------------------------------------->
-    <ul class="navbar-nav bg-gradient-orange sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-warning sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
+            <div class="sidebar-brand-icon">
+                <i class="fas fa-house-laptop"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">Digitak Profile</div>
+            <div class="sidebar-brand-text mx-2">Digitak</div>
         </a>
 
         <!-- Divider -->
@@ -58,23 +60,31 @@
         <!-- Nav Item - Profile -->
         <li class="nav-item {{ Nav::isRoute('profile') }}">
             <a class="nav-link" href="{{ route('profile') }}">
-                <i class="fas fa-fw fa-user"></i>
+                <i class="fa-solid fa-user"></i>
                 <span>{{ __('Profile') }}</span>
             </a>
         </li>
 
-        <!-- Nav Item - Portofolio -->
-        <li class="nav-item {{ Nav::isRoute('portofolio') }}">
-            <a class="nav-link" href="{{ route('portofolio') }}">
+        <!-- Nav Item -->
+        <li class="nav-item {{ Nav::isRoute('user.index') }}">
+            <a class="nav-link" href="{{ route('user.index') }}">
+                <i class="fa-solid fa-users"></i>
+                <span>{{ __('User') }}</span>
+            </a>
+        </li>       
+        
+         <!-- Nav Item - Magang -->
+         <li class="nav-item {{ Nav::isRoute('magang.index') }}">
+            <a class="nav-link" href="{{ route('magang.index') }}">
                 <i class="fas fa-fw fa-user"></i>
-                <span>{{ __('Portofolio') }}</span>
+                <span>{{ __('Magang') }}</span>
             </a>
         </li>
 
         <!-- Nav Item - About -->
         <li class="nav-item {{ Nav::isRoute('about') }}">
             <a class="nav-link" href="{{ route('about') }}">
-                <i class="fas fa-fw fa-hands-helping"></i>
+                <i class="fa-solid fa-circle-info"></i>
                 <span>{{ __('About') }}</span>
             </a>
         </li>
@@ -84,9 +94,9 @@
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
         </div>
-
+       
     </ul>
     <!-- End of Sidebar -->
 
@@ -109,7 +119,7 @@
                     <div class="input-group">
                         <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                            <button class="btn btn-dark" type="button">
+                            <button class="btn btn-warning" type="button">
                                 <i class="fas fa-search fa-sm"></i>
                             </button>
                         </div>
@@ -130,7 +140,7 @@
                                 <div class="input-group">
                                     <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                     <div class="input-group-append">
-                                        <button class="btn btn-primary" type="button">
+                                        <button class="btn btn-warning" type="button">
                                             <i class="fas fa-search fa-sm"></i>
                                         </button>
                                     </div>
@@ -148,7 +158,7 @@
                         </a>
                         <!-- Dropdown - Alerts -->
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-                            <h6 class="dropdown-header">
+                            <h6 class="dropdown-header" style="background-color: #E2A814; border: #E2A814">
                                 Alerts Center
                             </h6>
                             <a class="dropdown-item d-flex align-items-center" href="#">
@@ -197,12 +207,12 @@
                         </a>
                         <!-- Dropdown - Messages -->
                         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
-                            <h6 class="dropdown-header">
+                            <h6 class="dropdown-header" style="background-color: #E2A814; border: #E2A814">
                                 Message Center
                             </h6>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
-                                    <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                                    <img class="rounded-circle" src="https://i.ibb.co/DCgGvHv/profil-1.jpg" alt="">
                                     <div class="status-indicator bg-success"></div>
                                 </div>
                                 <div class="font-weight-bold">
@@ -212,7 +222,7 @@
                             </a>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
-                                    <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                                    <img class="rounded-circle" src="https://i.ibb.co/XFBsf2J/profil-2.jpg" alt="">
                                     <div class="status-indicator"></div>
                                 </div>
                                 <div>
@@ -222,7 +232,7 @@
                             </a>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
-                                    <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                                    <img class="rounded-circle" src="https://i.ibb.co/j5fxbf5/profil-3.jpg" alt="">
                                     <div class="status-indicator bg-warning"></div>
                                 </div>
                                 <div>
@@ -232,7 +242,7 @@
                             </a>
                             <a class="dropdown-item d-flex align-items-center" href="#">
                                 <div class="dropdown-list-image mr-3">
-                                    <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                                    <img class="rounded-circle" src="https://i.ibb.co/rsvktBX/profil-4.jpg" alt="">
                                     <div class="status-indicator bg-success"></div>
                                 </div>
                                 <div>
@@ -249,8 +259,8 @@
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
-                            <figure class="img-profile rounded-circle avatar font-weight-bold" data-initial="{{ Auth::user()->name[0] }}"></figure>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small font-weight-bold">{{ Auth::user()->full_name }}</span>
+                            <figure class="img-profile rounded-circle avatar font-weight-bold" style="background-color: #E2A814" data-initial="{{ Auth::user()->first_name[0] }}"></figure>
                         </a>
                         <!-- Dropdown - User Information -->
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -281,7 +291,7 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
-
+                @stack('notif')
                 @yield('main-content')
 
             </div>
@@ -294,7 +304,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Alejandro RH {{ now()->year }}</span>
+                    <span>Copyright &copy; Digitam Team 2022</span>
                 </div>
             </div>
         </footer>
@@ -312,17 +322,18 @@
 
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">{{ __('You Sure?') }}</h5>
+                <h5 class="modal-title" id="exampleModalLabel">{{ __('Ready to Leave?') }}</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
+                    <span aria-hidden="true">x</span>
                 </button>
             </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
-                <button class="btn btn-sm btn-secondary" type="button" data-dismiss="modal">{{ __('Cancel') }}</button>
-                <a class="btn btn-sm btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
@@ -336,5 +347,6 @@
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
+@stack('js')
 </body>
 </html>

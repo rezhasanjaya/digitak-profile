@@ -7,7 +7,7 @@
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
                     <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-6 d-none d-lg-block bg-register-image"></div>
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
@@ -28,7 +28,7 @@
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="name" placeholder="{{ __('Name') }}" value="{{ old('name') }}" required autofocus>
+                                        <input type="text" class="form-control form-control-user" name="name" placeholder="{{ __('First Name') }}" value="{{ old('name') }}" required autofocus>
                                     </div>
 
                                     <div class="form-group">
@@ -48,7 +48,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-warning btn-user btn-block">
                                             {{ __('Register') }}
                                         </button>
                                     </div>
