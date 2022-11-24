@@ -11,7 +11,7 @@
             <div class="card shadow mb-4">
 
                 <div class="card-profile-image mt-4">
-                    <img src="{{ asset('img/digitak-icon.png') }}" alt="user-image">
+                    <img src="{{ asset('img/digitak.png') }}" alt="user-image">
                 </div>
 
                 <div class="card-body">
