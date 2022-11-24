@@ -1,7 +1,5 @@
 @extends('layouts.admin')
 
-  <link href="{{ asset('tab-nav/tab-nav.css') }}" rel="stylesheet">
-
 @section('main-content')
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">{{ $title ?? __('Blank Page') }}</h1>
@@ -116,7 +114,7 @@
                               <a class="nav-link navl1 active" data-target="#akun" role="tab" data-toggle="tab">
                                 <span class="nav-link-in">
                                   <i class="fa fa-gears"></i>
-                                  Akun
+                                  <label class="form-control-label mb-0">Akun</label>
                                 </span>
                               </a>
                             </li>
@@ -124,7 +122,7 @@
                               <a class="nav-link navl2" data-target="#profil" role="tab" data-toggle="tab">
                                 <span class="nav-link-in">
                                   <i class="fa fa-address-card"></i>
-                                  Profil
+                                  <label class="form-control-label mb-0">Profil</label>
                                 </span>
                               </a>
                             </li>

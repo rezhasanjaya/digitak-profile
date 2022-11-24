@@ -31,7 +31,7 @@
                             <h5 class="font-weight-bold">Laravel SB Admin 2</h5>
                             <p>SB Admin 2 for Laravel.</p>
                             <p>Recommend to install this preset on a project that you are starting from scratch, otherwise your project's design might break.</p>
-                            <a href="https://github.com/adimuhamad/digitak-magang-tasker/" target="_blank" class="btn btn-github">
+                            <a href="https://github.com/rezhasanjaya/digitak-profile" target="_blank" class="btn btn-github">
                                 <i class="fab fa-github fa-fw"></i> Go to repository
                             </a>
                         </div>

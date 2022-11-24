@@ -20,10 +20,7 @@
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/digitak-icon.png') }}" rel="icon" type="image/png">
-    
-    <!-- Tab Nav -->
-    {{-- <link href="{{ asset('tab-nav/tab-nav.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('img/digitak-icon.png') }}" rel="icon" type="image/png">    
 
     @stack('css')
 </head>
