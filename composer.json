@@ -12,6 +12,7 @@
         "devmarketer/easynav": "^1.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "laravel/fortify": "^1.13",
         "laravel/framework": "^9.0",
         "laravel/legacy-factories": "^1.0",
         "laravel/tinker": "^2.0",
