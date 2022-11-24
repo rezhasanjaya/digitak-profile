@@ -20,14 +20,14 @@
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/favicon.png') }}" rel="icon" type="image/png">
+    <link href="{{ asset('img/digitaktab.JFIF') }}" rel="icon" type="image/JFIF">
 </head>
 <body id="page-top">
 
 <!-- Page Wrapper -->
 <div id="wrapper">
-    <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!---------------------------------------- SIDEBARRRRRRRRR ----------------------------------------------->
+    <ul class="navbar-nav bg-gradient-orange sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -63,6 +63,14 @@
             </a>
         </li>
 
+        <!-- Nav Item - Portofolio -->
+        <li class="nav-item {{ Nav::isRoute('portofolio') }}">
+            <a class="nav-link" href="{{ route('portofolio') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>{{ __('Portofolio') }}</span>
+            </a>
+        </li>
+
         <!-- Nav Item - About -->
         <li class="nav-item {{ Nav::isRoute('about') }}">
             <a class="nav-link" href="{{ route('about') }}">
@@ -88,7 +96,7 @@
         <!-- Main Content -->
         <div id="content">
 
-            <!-- Topbar -->
+            <!-------------------------------------NAVBAR ------------------------------------------------------>
             <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                 <!-- Sidebar Toggle (Topbar) -->
@@ -101,7 +109,7 @@
                     <div class="input-group">
                         <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
+                            <button class="btn btn-dark" type="button">
                                 <i class="fas fa-search fa-sm"></i>
                             </button>
                         </div>
