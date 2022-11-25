@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PerusahaanController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +19,7 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::middleware('auth')->group(function () {
+Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/home', 'HomeController@index')->name('home');
 
@@ -29,6 +31,7 @@ Route::middleware('auth')->group(function () {
     })->name('about');
 
     Route::resource('user', UserController::class);
-    Route::resource('magang', MagangController::class);
-    Route::get('/magang/skill', 'MagangController@skill')->name('magang.skill');
+
+    Route::resource('perusahaan', PerusahaanController::class);
+    Route::put('/perusahaan', 'PerusahaanController@update')->name('perusahaan.update');
 });

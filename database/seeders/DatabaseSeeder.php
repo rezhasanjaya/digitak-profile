@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Perusahaan;
 use App\Models\User;
 use App\Models\Skill;
 use Database\Seeders\AdminUserSeeder;
@@ -17,20 +18,29 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $currentDateTime = Carbon::now();
+        Perusahaan::create([
+            'id' => 1,
+            'nama_pt' => 'PT. Metanouva Informatika',
+            'nama_studio' => 'Digitak',
+            'alamat' => 'Jl. Gn. Batu Dalam Komplek Citra Asri Permai No.C-26, Pasirkaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat 40514',
+            'tahun_berdiri' => '2014',
+            'email' => 'info@digitak.com',
+            'phone' => '(+62 22) 2028 0625',
+            'whatsapp' => 'whatsapp',
+            'facebook' => 'facebook',
+            'twitter' => 'twitter',
+            'instagram' => 'instagram',
+            'latitude' => '-6.884670666134072',
+            'longitude' => '107.57010316354963',
+            'logo' => 'digitak.png',
+        ]);
+
         User::create([
             'first_name' => 'Super',
             'last_name' => 'Administrator',
             'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('admin123'),
-            'jurusan' => 'admin',
-            'tingkat' => 'Admin',
-            'tanggal_masuk' => $currentDateTime,
-            'tanggal_berakhir' => null,
-            'skill_id' => null,
-            'isActive' => 1,
-            'keahlian' => 'Admin',
-            'role' => 0,
         ]);
     }
 }

@@ -73,11 +73,11 @@
             </a>
         </li>       
         
-         <!-- Nav Item - Magang -->
-         <li class="nav-item {{ Nav::isRoute('magang.index') }}">
-            <a class="nav-link" href="{{ route('magang.index') }}">
+         <!-- Nav Item - Perusahaan -->
+         <li class="nav-item {{ Nav::isRoute('perusahaan.index') }}">
+            <a class="nav-link" href="{{ route('perusahaan.index') }}">
                 <i class="fas fa-fw fa-user"></i>
-                <span>{{ __('Magang') }}</span>
+                <span>{{ __('Perusahaan') }}</span>
             </a>
         </li>
 
