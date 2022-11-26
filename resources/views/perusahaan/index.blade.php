@@ -2,7 +2,7 @@
 
 @section('main-content')
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">{{ __('Profile') }}</h1>
+    <h1 class="h3 mb-4 text-gray-800">{{ __('Profile Perusahaan') }}</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger alert-dismissible fade show border-left-danger" role="alert">
@@ -39,6 +39,11 @@
         </div>
     @endif
 
+
+    <?php 
+      $i = 1;
+                               
+    foreach ($perusahaan as $pt) : ?>
     <div class="row">
 
         <div class="col-lg-4 order-lg-2">
@@ -53,7 +58,7 @@
                         <div class="col-lg-12">
                             <div class="text-center">
                                 <h5 class="font-weight-bold"></h5>
-                                
+                                Nama File : {{ $pt->logo }}
                             </div>
                         </div>
                     </div>
@@ -67,9 +72,9 @@
 
             <div class="card shadow mb-4">
 
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-warning">My Account</h6>
-                </div>
+                {{-- <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-warning">Profile </h6>
+                </div> --}}
 
                 <div class="card-body">
 
@@ -78,20 +83,39 @@
 
                         <input type="hidden" name="_method" value="PUT">
 
-                        <h6 class="heading-small text-muted mb-4">User information</h6>
+                        <h6 class="heading-small text-muted mb-4">Detail Perusahaan</h6>
 
                         <div class="pl-lg-4">
                             <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="nama_pt">Nama PT<span class="small text-danger"></span></label>
+                                        <input type="text" id="nama_pt" class="form-control" name="nama_pt" placeholder="First Name" value="{{ old('nama_pt',$pt->nama_pt) }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="first_name">First Name<span class="small text-danger"></span></label>
-                                        <input type="text" id="first_name" class="form-control" name="first_name" placeholder="First Name" value="{{ old('first_name') }}">
+                                        <label class="form-control-label" for="nama_studio">Nama Studio</label>
+                                        <input type="text" id="nama_studio" class="form-control" name="nama_studio" placeholder="Nama Studio" value="{{ old('nama_studio',$pt->nama_studio) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="last_name">Last name</label>
-                                        <input type="text" id="last_name" class="form-control" name="last_name" placeholder="Last name" value="{{ old('last_name') }}">
+                                            <label class="form-control-label" for="tahun_berdiri">Tahun Berdiri<span class="small text-danger"></span></label>
+                                            <input type="text" id="tahun_berdiri" class="form-control" name="tahun_berdiri" placeholder="E-Mail" value="{{ old('tahun_berdiri',$pt->tahun_berdiri) }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                           
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="alamat">Alamat<span class="small text-danger"></span></label>
+                                        <input type="text" id="alamat" class="form-control" name="alamat" placeholder="E-Mail" value="{{ old('alamat',$pt->alamat) }}">
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +124,22 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="form-control-label" for="email">E-mail<span class="small text-danger"></span></label>
-                                        <input type="email" id="email" class="form-control" name="email" placeholder="E-Mail" value="{{ old('email') }}">
+                                        <input type="email" id="email" class="form-control" name="email" placeholder="E-Mail" value="{{ old('email',$pt->email) }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group focused">
+                                            <label class="form-control-label" for="phone">Phone<span class="small text-danger"></span></label>
+                                            <input type="text" id="phone" class="form-control" name="phone" placeholder="Phone" value="{{ old('phone',$pt->phone) }}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group focused">
+                                        <label class="form-control-label" for="whatsapp">WhatsApp</label>
+                                        <input type="text" id="whatsapp" class="form-control" name="whatsapp" placeholder="WhatsApp" value="{{ old('whatsapp',$pt->whatsapp) }}">
                                     </div>
                                 </div>
                             </div>
@@ -108,23 +147,40 @@
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="current_password">Current password</label>
-                                        <input type="password" id="current_password" class="form-control" name="current_password" placeholder="Current password">
+                                        <label class="form-control-label" for="facebook">Facebook</label>
+                                        <input type="text" id="facebook" class="form-control" name="facebook" placeholder="Facebook" value="{{ old('facebook',$pt->facebook) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="new_password">New password</label>
-                                        <input type="password" id="new_password" class="form-control" name="new_password" placeholder="New password">
+                                        <label class="form-control-label" for="instagram">Instagram</label>
+                                        <input type="text" id="instagram" class="form-control" name="instagram" placeholder="Instagram" value="{{ old('instagram',$pt->instagram) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="confirm_password">Confirm password</label>
-                                        <input type="password" id="confirm_password" class="form-control" name="password_confirmation" placeholder="Confirm password">
+                                        <label class="form-control-label" for="twitter">Twitter</label>
+                                        <input type="text" id="twitter" class="form-control" name="twitter" placeholder="Twitter" value="{{ old('twitter',$pt->twitter) }}">
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group focused">
+                                            <label class="form-control-label" for="latitude">Latitude<span class="small text-danger"></span></label>
+                                            <input type="text" id="latitude" class="form-control" name="latitude" placeholder="Latitude" value="{{ old('latitude',$pt->latitude) }}">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group focused">
+                                        <label class="form-control-label" for="longitude">Longitude</label>
+                                        <input type="text" id="longitude" class="form-control" name="longitude" placeholder="Longitude" value="{{ old('longitude',$pt->longitude) }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
                         </div>
 
                         <!-- Button -->
@@ -144,5 +200,6 @@
         </div>
 
     </div>
+    <?php endforeach; ?>
 
 @endsection
