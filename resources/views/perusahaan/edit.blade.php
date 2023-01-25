@@ -19,7 +19,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-          </div>            
+          </div>
         </div>
     @endif
 
@@ -41,27 +41,22 @@
 
                      
     <div class="row">
-
         <div class="col-lg-4 order-lg-2">
-
             <div class="card shadow mb-4">
                 <div class="card-profile-image mt-4">
                     <figure class="rounded-circle avatar avatar font-weight-bold" style="font-size: 60px; height: 180px; width: 180px; background-color: #E2A814" data-initial="{{ Auth::user()->first_name[0] }}"></figure>
                 </div>
                 <div class="card-body">
-
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="text-center">
-                                <h5 class="font-weight-bold"></h5>
-                                Nama File : {{ $perusahaan->logo }}
+                                <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()">
+                                <div>*file type .jpg .jpeg .png | max size 2 mb</div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
 
         <div class="col-lg-8 order-lg-1">
@@ -84,13 +79,6 @@
                         ?>
 
                         <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group focused">
-                                        <input type="text" id="id" class="form-control" name="id" placeholder="ID" value="{{ old('id',$perusahaan->id) }}">
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="row">
                                 <div class="col-lg-12">
@@ -106,14 +94,10 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="form-control-label" for="alamat">Alamat<span class="small text-danger"></span></label>
-                                        <input type="text" id="alamat" class="form-control" name="alamat" placeholder="E-Mail" value="{{ old('alamat',$perusahaan->alamat) }}">
+                                        <textarea type="text" id="alamat" class="form-control" name="alamat" placeholder="Alamat">{{ old('alamat',$perusahaan->alamat) }}</textarea>
                                     </div>
                                 </div>
-                            </div>
-                            <input type="text" id="tahun_berdiri" class="form-control" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
-                            <input type="text" id="logo" class="form-control" name="logo" value="{{ old('logo',$perusahaan->logo) }}">
-                            <input type="text" id="edited_by" class="form-control" name="edited_by" value="{{ old('edited_by',$perusahaan->edited_by) }}">
-                            
+                            </div>                            
 
                             <div class="row">
                                 <div class="col-lg-12">
@@ -127,8 +111,8 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                            <label class="form-control-label" for="phone">Phone<span class="small text-danger"></span></label>
-                                            <input type="text" id="phone" class="form-control" name="phone" placeholder="Phone" value="{{ old('phone',$perusahaan->phone) }}">
+                                        <label class="form-control-label" for="phone">Phone<span class="small text-danger"></span></label>
+                                        <input type="text" id="phone" class="form-control" name="phone" placeholder="Phone" value="{{ old('phone',$perusahaan->phone) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -163,8 +147,8 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                            <label class="form-control-label" for="latitude">Latitude<span class="small text-danger"></span></label>
-                                            <input type="text" id="latitude" class="form-control" name="latitude" placeholder="Latitude" value="{{ old('latitude',$perusahaan->latitude) }}">
+                                        <label class="form-control-label" for="latitude">Latitude<span class="small text-danger"></span></label>
+                                        <input type="text" id="latitude" class="form-control" name="latitude" placeholder="Latitude" value="{{ old('latitude',$perusahaan->latitude) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -174,8 +158,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <br>
                         </div>
 
                         <!-- Button -->
