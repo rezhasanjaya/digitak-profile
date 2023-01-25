@@ -14,7 +14,7 @@ class Perusahaan extends Model
 
 
     protected $fillable = [
-        'nama_pt', 'nama_workshop', 'tahun_berdiri', 'alamat', 'email', 'phone', 'whatsapp', 'facebook', 'instagram', 'twitter', 'latitude', 'longitude', 'logo'
+        'nama_workshop', 'tahun_berdiri', 'alamat', 'email', 'phone', 'whatsapp', 'facebook', 'instagram', 'twitter', 'latitude', 'longitude', 'logo'
     ];
 
     protected $hidden = [

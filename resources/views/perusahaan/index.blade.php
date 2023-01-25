@@ -45,10 +45,7 @@
                 <th>Twitter</th>
                 <th>Logo's Filename</th>
                 <th>Updated At</th>
-                <th>Created By</th>
                 <th>Edited By</th>
-                <th>Action</th>
-
             </tr>
         </thead>
         <tbody>
@@ -56,6 +53,9 @@
             <div class="d-flex mb-3">
                 <a href="{{ route('perusahaan.edit', $pt->id) }}" class="btn btn-sm btn-warning mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Data</a>
             </div>
+            <?php break; ?>
+            @endforeach
+            @foreach ($perusahaan as $pt)
                 <tr>
                     <td>{{ $pt->nama_workshop }}</td>
                     <td>{{ $pt->alamat }}</td>
@@ -66,11 +66,7 @@
                     <td>{{ $pt->twitter }}</td>
                     <td>{{ $pt->logo }}</td>
                     <td>{{ $pt->updated_at }}</td>
-                    <td>{{ $pt->created_by }}</td>
                     <td>{{ $pt->edited_by }}</td>
-                    <td>
-                        
-                    </td>
                 </tr>
             @endforeach
         </tbody>

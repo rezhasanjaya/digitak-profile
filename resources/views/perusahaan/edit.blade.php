@@ -54,7 +54,7 @@
                         <div class="col-lg-12">
                             <div class="text-center">
                                 <h5 class="font-weight-bold"></h5>
-                                {{-- Nama File : {{ $perushaan->logo }} --}}
+                                Nama File : {{ $perusahaan->logo }}
                             </div>
                         </div>
                     </div>
@@ -84,24 +84,9 @@
                         <div class="pl-lg-4">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="nama_pt">Nama PT<span class="small text-danger"></span></label>
-                                        <input type="text" id="nama_pt" class="form-control" name="nama_pt" placeholder="First Name" value="{{ old('nama_pt',$perusahaan->nama_pt) }}">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-6">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="nama_workshhop">Nama Studio</label>
+                                        <label class="form-control-label" for="nama_workshhop">Nama Workshop</label>
                                         <input type="text" id="nama_workshop" class="form-control" name="nama_workshhop" placeholder="Nama Workshop" value="{{ old('nama_workshhop',$perusahaan->nama_workshop) }}">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group focused">
-                                            <label class="form-control-label" for="tahun_berdiri">Tahun Berdiri<span class="small text-danger"></span></label>
-                                            <input type="text" id="tahun_berdiri" class="form-control" name="tahun_berdiri" placeholder="E-Mail" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
                                     </div>
                                 </div>
                             </div>
