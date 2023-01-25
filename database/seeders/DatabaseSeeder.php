@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         Perusahaan::create([
             'id' => 1,
             'nama_pt' => 'PT. Metanouva Informatika',
-            'nama_studio' => 'Digitak',
+            'nama_workshop' => 'Digitak',
             'alamat' => 'Jl. Gn. Batu Dalam Komplek Citra Asri Permai No.C-26, Pasirkaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat 40514',
             'tahun_berdiri' => '2014',
             'email' => 'info@digitak.com',
@@ -32,6 +32,8 @@ class DatabaseSeeder extends Seeder
             'instagram' => 'instagram',
             'latitude' => '-6.884670666134072',
             'longitude' => '107.57010316354963',
+            'created_by' => 'Super Admin',
+            'edited_by' => '',
             'logo' => 'digitak.png',
         ]);
 

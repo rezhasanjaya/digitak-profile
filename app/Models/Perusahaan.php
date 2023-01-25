@@ -12,11 +12,12 @@ class Perusahaan extends Model
     public $remember_token = false;
     public $incrementing = false;
 
+
     protected $fillable = [
-        'nama_pt', 'nama_studio', 'tahun_berdiri', 'alamat', 'email', 'phone', 'whatsapp', 'facebook', 'instagram', 'twitter', 'latitude', 'longitude', 'logo'
+        'nama_pt', 'nama_workshop', 'tahun_berdiri', 'alamat', 'email', 'phone', 'whatsapp', 'facebook', 'instagram', 'twitter', 'latitude', 'longitude', 'logo'
     ];
 
     protected $hidden = [
-        'portofolio_id', 'perusahaan_id',
+        'perusahaan_id', 'id_akun'
     ];
 }

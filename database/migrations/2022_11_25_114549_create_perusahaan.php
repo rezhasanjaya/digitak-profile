@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('perusahaan', function (Blueprint $table) {
             $table->id();
             $table->string('nama_pt');
-            $table->string('nama_studio');
+            $table->string('nama_workshop');
             $table->string('alamat');
             $table->string('tahun_berdiri');
             $table->string('email');
@@ -27,6 +27,8 @@ return new class extends Migration
             $table->string('instagram');
             $table->string('latitude');
             $table->string('longitude');
+            $table->string('created_by');
+            $table->string('edited_by')->nullable(true);
             $table->text('logo');
             $table->timestamps();
         });
