@@ -35,6 +35,7 @@ class PerusahaanController extends Controller
             'latitude' => 'required',
             'longitude' => 'required',
         ]);
+
         $perusahaan = new Perusahaan;
         $perusahaan->id = $request->id;
         $perusahaan->nama_workshop = $request->nama_workshop;
@@ -48,8 +49,8 @@ class PerusahaanController extends Controller
         $perusahaan->twitter = $request->twitter;
         $perusahaan->latitude = $request->latitude;
         $perusahaan->longitude = $request->longitude;
-        $perusahaan->edited_by = 'test';
-        $perusahaan->logo = 'test';
+        $perusahaan->edited_by = 'Super Admin';
+        $perusahaan->logo = 'digitak.png';
         $perusahaan->save();
 
         return redirect()->route('perusahaan.index')
@@ -100,6 +101,23 @@ class PerusahaanController extends Controller
         // $perusahaan->edited_by = 'test';
         // $perusahaan->logo = 'test';
         // $perusahaan->update();
+
+        $perusahaan = new Perusahaan;
+        $perusahaan->id = $request->id+1;
+        $perusahaan->nama_workshop = $request->nama_workshop;
+        $perusahaan->tahun_berdiri = $request->tahun_berdiri;
+        $perusahaan->alamat = $request->alamat;
+        $perusahaan->email = $request->email;
+        $perusahaan->phone = $request->phone;
+        $perusahaan->whatsapp = $request->whatsapp;
+        $perusahaan->facebook = $request->facebook;
+        $perusahaan->instagram = $request->instagram;
+        $perusahaan->twitter = $request->twitter;
+        $perusahaan->latitude = $request->latitude;
+        $perusahaan->longitude = $request->longitude;
+        $perusahaan->edited_by = 'Super Admin';
+        $perusahaan->logo = 'digitak.png';
+        $perusahaan->save();
 
         $perusahaan->update($request->all());
         return redirect()->route('perusahaan.index')
