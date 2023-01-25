@@ -26,7 +26,7 @@
     @if (session('message'))
         <div class="alert alert-success alert-dismissible fade show border-left-success" role="alert">
             {{ session('message') }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <button typ e="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
         </div>
@@ -72,29 +72,22 @@
                 </div> --}}
 
                 <div class="card-body">
-                    <form action="{{ route('perusahaan.store') }}" method="POST" autocomplete="off">
+                    <form action="{{ route('perusahaan.store') }}" method="POST">
+                        @csrf
                         <h6 class="heading-small text-muted mb-4">Detail Perusahaan</h6>
                         <div class="pl-lg-4">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="nama_pt">Nama PT<span class="small text-danger"></span></label>
-                                        <input type="text" id="nama_pt" class="form-control" name="nama_pt" placeholder="First Name" value="">
-                                    </div>
-                                </div>
-                            </div>
-
+                            
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="nama_studio">Nama Workshop</label>
+                                        <label class="form-control-label" for="nama_workshop">Nama Workshop</label>
                                         <input type="text" id="nama_workshop" class="form-control" name="nama_workshop" placeholder="Nama Workshop" value="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                             <label class="form-control-label" for="tahun_berdiri">Tahun Berdiri<span class="small text-danger"></span></label>
-                                            <input type="text" id="tahun_berdiri" class="form-control" name="tahun_berdiri" placeholder="Tahun Berdiri" value="">
+                                            <input type="text" id="tahun_berdiri" class="form-control" name="tahun_berdiri" placeholder="Tahun Berdiri" value="2014">
                                     </div>
                                 </div>
                             </div>

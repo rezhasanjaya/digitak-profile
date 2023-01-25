@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Perusahaan;
-use DB;
 
 class PerusahaanController extends Controller
 {
@@ -24,7 +23,6 @@ class PerusahaanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_pt' => 'required',
             'nama_workshop' => 'required',
             'tahun_berdiri' => 'required',
             'alamat' => 'required',
@@ -34,11 +32,11 @@ class PerusahaanController extends Controller
             'facebook' => 'required',
             'instagram' => 'required',
             'twitter' => 'required',
-            'longitude' => 'required',
             'latitude' => 'required',
+            'longitude' => 'required',
         ]);
         $perusahaan = new Perusahaan;
-        $perusahaan->nama_pt = $request->nama_pt;
+        $perusahaan->id = $request->id;
         $perusahaan->nama_workshop = $request->nama_workshop;
         $perusahaan->tahun_berdiri = $request->tahun_berdiri;
         $perusahaan->alamat = $request->alamat;
@@ -48,15 +46,14 @@ class PerusahaanController extends Controller
         $perusahaan->facebook = $request->facebook;
         $perusahaan->instagram = $request->instagram;
         $perusahaan->twitter = $request->twitter;
-        $perusahaan->longitude = $request->longitude;
         $perusahaan->latitude = $request->latitude;
-        $perusahaan->logo = "digitak.com";
-        $perusahaan->created_by = "test";
-        $perusahaan->edited_by = "mang iih";
+        $perusahaan->longitude = $request->longitude;
+        $perusahaan->edited_by = 'test';
+        $perusahaan->logo = 'test';
         $perusahaan->save();
 
         return redirect()->route('perusahaan.index')
-            ->with('success', 'Data Has Been Updated.');
+            ->with('Success', 'Data Has Been Updated.');
     }
 
     public function show()
@@ -68,7 +65,46 @@ class PerusahaanController extends Controller
         return view('perusahaan.edit', compact('perusahaan'), ["title" => "Edit Data Perusahaan"]);
     }
 
-    public function update()
+    public function update(Request $request, Perusahaan $perusahaan)
     {
+        $request->validate([
+            'nama_workshop' => 'required',
+            'tahun_berdiri' => 'required',
+            'alamat' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'whatsapp' => 'required',
+            'facebook' => 'required',
+            'instagram' => 'required',
+            'twitter' => 'required',
+            'latitude' => 'required',
+            'longitude' => 'required',
+            'logo' => 'required',
+            'edited_by' => 'required',
+
+        ]);
+        // $perusahaan = new Perusahaan;
+        // $perusahaan->id = $request->id;
+        // $perusahaan->nama_workshop = $request->nama_workshop;
+        // $perusahaan->tahun_berdiri = $request->tahun_berdiri;
+        // $perusahaan->alamat = $request->alamat;
+        // $perusahaan->email = $request->email;
+        // $perusahaan->phone = $request->phone;
+        // $perusahaan->whatsapp = $request->whatsapp;
+        // $perusahaan->facebook = $request->facebook;
+        // $perusahaan->instagram = $request->instagram;
+        // $perusahaan->twitter = $request->twitter;
+        // $perusahaan->latitude = $request->latitude;
+        // $perusahaan->longitude = $request->longitude;
+        // $perusahaan->edited_by = 'test';
+        // $perusahaan->logo = 'test';
+        // $perusahaan->update();
+
+        $perusahaan->save($request->all());
+        return redirect()->route('perusahaan.index')
+            ->with('sukses', 'Data Berhasil Diupdate');
+
+        // return redirect()->route('perusahaan.index')
+        //     ->with('Success', 'Data Has Been Updated.');
     }
 }

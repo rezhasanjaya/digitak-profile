@@ -74,19 +74,29 @@
 
                 <div class="card-body">
 
-                    <form method="POST" action="{{ route('perusahaan.store') }}" autocomplete="off">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-                        <input type="hidden" name="_method" value="PUT">
+                    <form action="{{ route('perusahaan.update', $perusahaan->id) }}" method="post">
+                        @csrf
+                        @method('put')
 
                         <h6 class="heading-small text-muted mb-4">Detail Perusahaan</h6>
+                        <?php 
+                        $plus1 = 1;
+                        ?>
 
                         <div class="pl-lg-4">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="nama_workshhop">Nama Workshop</label>
-                                        <input type="text" id="nama_workshop" class="form-control" name="nama_workshhop" placeholder="Nama Workshop" value="{{ old('nama_workshhop',$perusahaan->nama_workshop) }}">
+                                        <input type="text" id="id" class="form-control" name="id" placeholder="ID" value="{{ old('id',$perusahaan->id) }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group focused">
+                                        <label class="form-control-label" for="nama_workshop">Nama Workshop</label>
+                                        <input type="text" id="nama_workshop" class="form-control" name="nama_workshop" placeholder="Nama Workshop" value="{{ old('nama_workshop',$perusahaan->nama_workshop) }}">
                                     </div>
                                 </div>
                             </div>
@@ -100,6 +110,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <input type="text" id="tahun_berdiri" class="form-control" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
+                            <input type="text" id="logo" class="form-control" name="logo" value="{{ old('logo',$perusahaan->logo) }}">
+                            <input type="text" id="edited_by" class="form-control" name="edited_by" value="{{ old('edited_by',$perusahaan->edited_by) }}">
+                            
 
                             <div class="row">
                                 <div class="col-lg-12">

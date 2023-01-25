@@ -5,8 +5,8 @@
     <h1 class="h3 mb-4 text-gray-800">{{ $title ?? __('Blank Page') }}</h1>
 
     <!-- Main Content goes here -->
-    {{-- <a href="{{ route('perusahaan.create') }}">  <button type="button" class="btn btn-warning mb-3"><i class="fa-solid fa-pen-to-square mr-2"></i> Edit Data</button></a>
-    --}}
+    <a href="{{ route('perusahaan.create') }}">  <button type="button" class="btn btn-warning mb-3"><i class="fa-solid fa-pen-to-square mr-2"></i> Edit Data</button></a>
+   
     @if ($errors->any())
         <div class="alert alert-danger alert-dismissible fade show border-left-danger" role="alert">
           Failed to add new user, please check the field!
