@@ -83,6 +83,7 @@ class PerusahaanController extends Controller
             'edited_by' => 'required',
 
         ]);
+
         // $perusahaan = new Perusahaan;
         // $perusahaan->id = $request->id;
         // $perusahaan->nama_workshop = $request->nama_workshop;
@@ -100,7 +101,7 @@ class PerusahaanController extends Controller
         // $perusahaan->logo = 'test';
         // $perusahaan->update();
 
-        $perusahaan->save($request->all());
+        $perusahaan->update($request->all());
         return redirect()->route('perusahaan.index')
             ->with('sukses', 'Data Berhasil Diupdate');
 

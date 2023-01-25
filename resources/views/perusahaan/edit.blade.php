@@ -76,7 +76,7 @@
 
                     <form action="{{ route('perusahaan.update', $perusahaan->id) }}" method="post">
                         @csrf
-                        @method('put')
+                        @method('PUT')
 
                         <h6 class="heading-small text-muted mb-4">Detail Perusahaan</h6>
                         <?php 

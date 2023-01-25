@@ -17,7 +17,7 @@ class Perusahaan extends Model
         'nama_workshop', 'tahun_berdiri', 'alamat', 'email', 'phone', 'whatsapp', 'facebook', 'instagram', 'twitter', 'latitude', 'longitude', 'logo'
     ];
 
-    protected $hidden = [
-        'perusahaan_id', 'id_akun'
+    protected $guarded = [
+        'id',
     ];
 }

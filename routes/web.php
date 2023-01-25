@@ -33,6 +33,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('user', UserController::class);
 
     Route::resource('perusahaan', PerusahaanController::class);
-    Route::put('/perusahaan', 'PerusahaanController@update')->name('perusahaan.update');
+    // Route::put('/perusahaan', 'PerusahaanController@update')->name('perusahaan.update');
     // Route::put('/perusahaan', 'PerusahaanController@create')->name('perusahaan.create');
 });
