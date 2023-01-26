@@ -52,4 +52,9 @@ $app->singleton(
 |
 */
 
+$app->configureMonologUsing(function($monolog) {
+  $nullLogger = new \Monolog\Handler\NullHandler();
+  $monolog->setHandlers(array($nullLogger));
+});
+
 return $app;

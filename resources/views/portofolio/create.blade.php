@@ -94,13 +94,18 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="link_demo">Link Demo<span class="small text-danger"></span></label>
-                                        <input type="text" id="link_demo" class="form-control" name="link_demo" placeholder="Link Demo" value="">
-                                    </div>
-                                </div>
-                            </div>
+                              <div class="col-lg-12">
+                                  <div class="form-group">
+                                      <label class="form-control-label" for="link_demo">Link Demo<span class="small text-danger"></span></label>
+                                      <div class="input-group">
+                                        <div class="input-group-prepend">
+                                          <div class="input-group-text">{{ __('https://www.') }}</div>
+                                        </div>
+                                        <input type="text" class="form-control" name="link_demo" id="link_demo" placeholder="Link Demo" value="">
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
 
                             <div class="row">
                                 <div class="col-lg-12">

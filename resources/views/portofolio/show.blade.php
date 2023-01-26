@@ -48,10 +48,10 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="text-center">
-                                <img src="{{ asset($portofolio->image) }}" class="img-thumbnail" style="width:400px" />
+                                <img src="{{ asset($portofolio->image) }}" style="width:400px" />
                                 <h5 class="font-weight-bold"></h5>
+                                <br>
                                 Nama File : {{ $portofolio->image }}
-                               <h6> Link Demo : <a href="{{url($portofolio->link_demo)}}" target="_blank">{{ $portofolio->link_demo}}</a></h6>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
 
                 <div class="card-body">
                     
-                        <h6 class="heading-small text-muted mb-4">Detail Perusahaan</h6>
+                        <h6 class="heading-small text-muted mb-4">Detail Portofolio</h6>
                         <div class="pl-lg-4">
                             
                             <div class="row">
@@ -122,12 +122,13 @@
                                 </div>
                             </div>
                         </div>
-
+                        <hr>
                         <!-- Button -->
                         <div class="pl-lg-4">
                             <div class="row">
                                 <div class="col">
-                                    <a href="{{ route('portofolio.index') }}" class="btn btn-default">Batal</a>
+                                    <a href="{{ route('portofolio.index') }}" class="btn btn-danger"><i class="fa-solid fa-angle-double-left mr-2"></i>Kembali</a>
+                                    <a onclick="location.href='http://www.{{ $portofolio->link_demo }}'" class="btn btn-primary" target="_blank"><i class="fa-solid fa-play mr-2"></i>Demo</a>
                                 </div>
                             </div>
                         </div>
