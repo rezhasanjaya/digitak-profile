@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Perusahaan::create([
-            'id' => 1,
+            'id_prshn' => 1,
             'edited_by' => 1,
             'nama_workshop' => 'Digitak',
             'alamat' => 'Jl. Gn. Batu Dalam Komplek Citra Asri Permai No.C-26, Pasirkaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat 40514',

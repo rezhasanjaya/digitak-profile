@@ -50,7 +50,7 @@
         <tbody>
             @foreach ($perusahaan as $pt)
             <div class="d-flex mb-3">
-                <a href="{{ route('perusahaan.edit', $pt->id) }}" class="btn btn-sm btn-warning mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Data</a>
+                <a href="{{ route('perusahaan.edit', $pt->id_prshn) }}" class="btn btn-sm btn-warning mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Data</a>
             </div>
             <?php break; ?>
             @endforeach

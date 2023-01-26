@@ -12,17 +12,13 @@ class Perusahaan extends Model
     public $remember_token = false;
     public $incrementing = false;
     public $timestamps = false;
+    protected $primaryKey = 'id_prshn';
 
     protected $fillable = [
         'nama_workshop', 'tahun_berdiri', 'alamat', 'email', 'phone', 'whatsapp', 'facebook', 'instagram', 'twitter', 'latitude', 'longitude', 'logo', 'waktu_update'
     ];
 
     protected $guarded = [
-        'id', 'edited_by',
+        'id_prshn', 'edited_by',
     ];
-
-    public function User()
-    {
-        return $this->belongsTo(User::class, 'id');
-    }
 }
