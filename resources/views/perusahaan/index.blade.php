@@ -34,7 +34,6 @@
   
     <table class="table table-bordered table-stripped">
         <thead>
-            <tr>
             <tr>  
                 <th>Updated At</th>
                 <th>Workshop</th>
@@ -58,7 +57,7 @@
             
             @foreach ($data as $pt)
                 <tr>
-                    <td>{{ $pt->updated_at }}</td>
+                    <td>{{ $pt->waktu_update }}</td>
                     <td>{{ $pt->nama_workshop }}</td>
                     <td>{{ $pt->alamat }}</td>
                     <td>{{ $pt->email }}</td>
@@ -67,7 +66,6 @@
                     <td>{{ $pt->facebook }}</td>
                     <td>{{ $pt->twitter }}</td>
                     <td>{{ $pt->logo }}</td>
-                    <td>{{ $pt->waktu_update }}</td>
                     <td>{{ $pt->first_name }} {{ $pt->last_name }}</td>
                 </tr>
             @endforeach
