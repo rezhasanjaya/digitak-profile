@@ -19,7 +19,6 @@ class PerusahaanController extends Controller
             'users' => User::all(),
             'perusahaan' => Perusahaan::latest('id_prshn')->first()->orderBy('id_prshn', 'desc')->paginate(10),
             'data' => $data,
-            // 'perusahaan' => Perusahaan::latest('id_prshn')->first()->orderBy('id_prshn', 'desc')->paginate(10),
         ]);
     }
 
