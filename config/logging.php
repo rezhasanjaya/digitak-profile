@@ -101,4 +101,9 @@ return [
         ],
     ],
 
+    'none' => [
+      'driver' => 'monolog',
+      'handler' => \Monolog\Handler\NullHandler::class,
+    ],
+
 ];

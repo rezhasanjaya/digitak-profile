@@ -59,7 +59,7 @@
                     <td>{{ $pt->kategori }}</td>
                     <td>{{ $pt->tahun_pembuatan }}</td>
                     <td>{{ $pt->klien }}</td>
-                    <td><a href="{{url($pt->link_demo)}}" target="_blank">{{ $pt->link_demo}}</a></td>
+                    <td>{{ $pt->link_demo }}</td>
                     <td>{{ date('H:i:s d-m-Y', strtotime($pt->created_at)); }}</td>
                     <td> 
                         <div class="d-flex">

@@ -164,7 +164,7 @@
                         <div class="pl-lg-4">
                             <div class="row">
                                 <div class="col">
-                                    <button type="submit" class="btn btn-warning">Save Changes</button>
+                                  <button type="submit" class="btn btn-warning"><i class="fa-solid fa-save mr-2"></i>Simpan</button>
                                 </div>
                             </div>
                         </div>
