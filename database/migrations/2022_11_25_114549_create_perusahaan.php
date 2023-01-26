@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('nama_workshop');
             $table->text('alamat');
             $table->string('tahun_berdiri');
-            $table->string('email');
+            $table->string('email_workshop');
             $table->string('phone');
             $table->string('whatsapp');
             $table->string('facebook');

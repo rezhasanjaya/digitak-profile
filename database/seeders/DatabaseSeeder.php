@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'first_name' => 'Super',
             'last_name' => 'Administrator',
-            'email_user' => 'admin@gmail.com',
+            'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('admin123'),
         ]);
@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'first_name' => 'Saha',
             'last_name' => 'Maneh',
-            'email_user' => 'admin2@gmail.com',
+            'email' => 'admin2@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('admin456'),
         ]);
@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             'nama_workshop' => 'Digitak',
             'alamat' => 'Jl. Gn. Batu Dalam Komplek Citra Asri Permai No.C-26, Pasirkaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat 40514',
             'tahun_berdiri' => '2014',
-            'email' => 'info@digitak.com',
+            'email_workshop' => 'info@digitak.com',
             'phone' => '(+62 22) 2028 0625',
             'whatsapp' => '(+62 22) 2028 0625',
             'facebook' => 'facebook',
