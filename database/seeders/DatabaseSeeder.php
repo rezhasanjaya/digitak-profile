@@ -24,11 +24,19 @@ class DatabaseSeeder extends Seeder
         ]);
 
         User::create([
-            'first_name' => 'Saha',
-            'last_name' => 'Maneh',
+            'first_name' => 'Adi',
+            'last_name' => 'Maulia',
             'email' => 'admin2@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('admin456'),
+        ]);
+
+        User::create([
+            'first_name' => 'Rezha',
+            'last_name' => 'Sanjaya',
+            'email' => 'admin3@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('admin212'),
         ]);
 
         Perusahaan::create([
@@ -45,7 +53,7 @@ class DatabaseSeeder extends Seeder
             'instagram' => 'instagram',
             'latitude' => '-6.884670666134072',
             'longitude' => '107.57010316354963',
-            'logo' => 'digitak.png',
+            'logo' => '',
             'waktu_update' => '2023-01-26 16:13:53',
         ]);
     }

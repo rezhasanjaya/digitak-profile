@@ -137,7 +137,7 @@
                   <label class="form-control-label">Password</label>
                 </div>
                 <div class="col-md-9 ms-auto">
-                  <input type="text" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="{{ __('Password') }}" autocomplete="off">
+                  <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="{{ __('Password') }}" autocomplete="off">
                   @error('password')
                     <span class="text-danger">{{ $message }}</span>
                   @enderror

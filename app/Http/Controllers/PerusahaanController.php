@@ -41,6 +41,7 @@ class PerusahaanController extends Controller
             'twitter' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',
+            'logo' => 'required',
         ]);
 
         $perusahaan = new Perusahaan;
@@ -91,23 +92,6 @@ class PerusahaanController extends Controller
             'edited_by' => 'required',
 
         ]);
-
-        // $perusahaan = new Perusahaan;
-        // $perusahaan->id = $request->id;
-        // $perusahaan->nama_workshop = $request->nama_workshop;
-        // $perusahaan->tahun_berdiri = $request->tahun_berdiri;
-        // $perusahaan->alamat = $request->alamat;
-        // $perusahaan->email = $request->email;
-        // $perusahaan->phone = $request->phone;
-        // $perusahaan->whatsapp = $request->whatsapp;
-        // $perusahaan->facebook = $request->facebook;
-        // $perusahaan->instagram = $request->instagram;
-        // $perusahaan->twitter = $request->twitter;
-        // $perusahaan->latitude = $request->latitude;
-        // $perusahaan->longitude = $request->longitude;
-        // $perusahaan->edited_by = 'test';
-        // $perusahaan->logo = 'test';
-        // $perusahaan->update();
 
         $perusahaan = new Perusahaan;
         $perusahaan->id_prshn = $request->id_prshn + 1;

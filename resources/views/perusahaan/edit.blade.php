@@ -82,7 +82,7 @@
 
                         <div class="pl-lg-4">
   
-                        {{-- <input type="hidden" id="id_prshn" class="form-control" name="id_prshn" placeholder="id_prshn" value="{{ old('id_prshn',$perusahaan->id_prshn) }}"> --}}
+                        <input type="hidden" id="id_prshn" class="form-control" name="id_prshn" placeholder="id_prshn" value="{{ old('id_prshn',$perusahaan->id_prshn) }}">
 
                             <div class="row">
                                 <div class="col-lg-12">
