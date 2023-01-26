@@ -48,7 +48,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="text-center">
-                                <img src="{{ asset($portofolio->image) }}" class="img-thumbnail" style="width:400px" />
+                                <img src="/images/{{ $portofolio->image }}" width="400px">
                                 <h5 class="font-weight-bold"></h5>
                                 Nama File : {{ $portofolio->image }}
                                <h6> Link Demo : <a href="{{url($portofolio->link_demo)}}" target="_blank">{{ $portofolio->link_demo}}</a></h6>
@@ -121,7 +121,17 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group focused">
+                                            <label class="form-control-label" for="keterangan">Keterengan<span class="small text-danger"></span></label>
+                                            <textarea id="keterangan" style="height: 200px" class="form-control" name="keterangan" placeholder="Keterangan" disabled>{{ $portofolio->keterangan }}</textarea>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        
 
                         <!-- Button -->
                         <div class="pl-lg-4">

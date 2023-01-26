@@ -32,20 +32,31 @@ class PortofolioController extends Controller
         return view('portofolio.create', ["title" => "Tambah Portofolio"]);
     }
 
-    public function store(PortoReq $request)
+    public function store(Request $request, Portofolio $portofolio)
     {
-        $imageName = time() . '.' . $request->image->extension();
-        $uploadedImage = $request->image->move(public_path('images'), $imageName);
-        $imagePath = 'images/' . $imageName;
+        $request->validate([
+            'nama_aplikasi' => ['required'],
+            'tahun_pembuatan' => ['required'],
+            'created_by' => ['required'],
+            'kategori' => ['required'],
+            'klien' => ['required'],
+            'link_demo' => ['required'],
+            'keterangan' => ['required'],
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
 
-        $params = $request->validated();
+        $input = $request->all();
 
-        if ($portofolio = Portofolio::create($params)) {
-            $portofolio->image = $imagePath;
-            $portofolio->save();
-
-            return redirect(route('portofolio.index'))->with('success', 'Portofolio baru telah ditambahkan');
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $postImage);
+            $input['image'] = "$postImage";
         }
+
+        Portofolio::create($input);
+
+        return redirect()->route('portofolio.index')->with('success', 'Portofolio berhasil ditambah');
     }
 
     public function edit(Portofolio $portofolio)
@@ -53,11 +64,38 @@ class PortofolioController extends Controller
         return view('portofolio.edit', compact('portofolio'), ["title" => "Ubah Portofolio"]);
     }
 
-    public function update()
+    public function update(Request $request, Portofolio $portofolio)
     {
+        $request->validate([
+            'nama_aplikasi' => ['required'],
+            'tahun_pembuatan' => ['required'],
+            'created_by' => ['required'],
+            'kategori' => ['required'],
+            'klien' => ['required'],
+            'link_demo' => ['required'],
+            'keterangan' => ['required'],
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
+
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/';
+            $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $postImage);
+            $input['image'] = "$postImage";
+        } else {
+            unset($input['image']);
+        }
+
+        $portofolio->update($input);
+        return redirect()->route('portofolio.index')->with('success', 'Data telah diupdated');
     }
 
-    public function delete()
+    public function destroy(Portofolio $portofolio)
     {
+        $portofolio->delete();
+        return redirect()->route('portofolio.index')
+            ->with('success', 'Data berhasil dihapus');
     }
 }

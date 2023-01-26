@@ -35,7 +35,8 @@
     <table class="table table-bordered table-stripped">
         <thead>
             <tr>
-            <tr>  
+            <tr>    
+                <th>#</th>
                 <th>Nama Project</th>
                 <th>Dibuat Oleh</th>
                 <th>Kategori</th>
@@ -47,8 +48,12 @@
             </tr>
         </thead>
         <tbody>
+            <?php 
+            $i = 1;
+            ?>
             @foreach ($portofolio as $pt)
                 <tr>
+                    <td>{{ $i++ }}</td>
                     <td>{{ $pt->nama_aplikasi }}</td>
                     <td>{{ $pt->created_by }}</td>
                     <td>{{ $pt->kategori }}</td>

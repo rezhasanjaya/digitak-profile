@@ -92,7 +92,7 @@
                                 </div>
                             </div>
 
-                            <input type="hidden" id="created_by" class="form-control" name="created_by" value="1">
+                            <input type="hidden" id="created_by" class="form-control" name="created_by" value="{{ Auth::user()->id }}">
 
                             <div class="row">
                                 <div class="col-lg-12">
