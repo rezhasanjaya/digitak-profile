@@ -5,21 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Perusahaan;
 use App\Models\User;
+use App\Controllers\Carbon;
 
 class PerusahaanController extends Controller
 {
     public function index()
     {
         $data = Perusahaan::join("users", function ($join) {
-          $join->on("users.id", "=", "perusahaan.edited_by")->orderBy('users.id', 'ASC');
+            $join->on("users.id", "=", "perusahaan.edited_by")->orderBy('users.id', 'ASC');
         })->get();
 
         return view('perusahaan.index', [
             'title' => 'Company Changing History',
             'users' => User::all(),
-            'perusahaan' => Perusahaan::all(),
-            'data' => $data,
-            'perusahaan' => Perusahaan::latest('id')->first()->orderBy('id', 'desc')->paginate(10),
+            'perusahaan' => Perusahaan::paginate(10),
+            'data' => $data
         ]);
     }
 

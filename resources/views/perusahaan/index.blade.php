@@ -36,6 +36,7 @@
         <thead>
             <tr>
             <tr>  
+                <th>Updated At</th>
                 <th>Workshop</th>
                 <th>Address</th>
                 <th>Email</th>
@@ -44,7 +45,6 @@
                 <th>Facebook</th>
                 <th>Twitter</th>
                 <th>Logo's Filename</th>
-                <th>Updated At</th>
                 <th>Edited By</th>
             </tr>
         </thead>
@@ -58,6 +58,7 @@
             
             @foreach ($data as $pt)
                 <tr>
+                    <td>{{ $pt->updated_at }}</td>
                     <td>{{ $pt->nama_workshop }}</td>
                     <td>{{ $pt->alamat }}</td>
                     <td>{{ $pt->email }}</td>
