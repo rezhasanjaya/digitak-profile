@@ -56,7 +56,7 @@
             @break
             @endforeach
             
-            @foreach ($perusahaan as $pt)
+            @foreach ($data as $pt)
                 <tr>
                     <td>{{ $pt->nama_workshop }}</td>
                     <td>{{ $pt->alamat }}</td>
@@ -67,7 +67,7 @@
                     <td>{{ $pt->twitter }}</td>
                     <td>{{ $pt->logo }}</td>
                     <td>{{ $pt->updated_at }}</td>
-                    <td>{{ $pt->edited_by }}</td>
+                    <td>{{ $pt->first_name }} {{ $pt->last_name }}</td>
                 </tr>
             @endforeach
         </tbody>
