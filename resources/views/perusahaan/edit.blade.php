@@ -109,8 +109,8 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="email">E-mail<span class="small text-danger"></span></label>
-                                        <input type="email" id="email" class="form-control" name="email" placeholder="E-Mail" value="{{ old('email',$perusahaan->email) }}">
+                                        <label class="form-control-label" for="email_workshop">E-mail<span class="small text-danger"></span></label>
+                                        <input type="email_workshop" id="email_workshop" class="form-control" name="email_workshop" placeholder="E-Mail" value="{{ old('email_workshop',$perusahaan->email_workshop) }}">
                                     </div>
                                 </div>
                             </div>

@@ -34,7 +34,7 @@ class PerusahaanController extends Controller
             'nama_workshop' => 'required',
             'tahun_berdiri' => 'required',
             'alamat' => 'required',
-            'email' => 'required',
+            'email_workshop' => 'required',
             'phone' => 'required',
             'whatsapp' => 'required',
             'facebook' => 'required',
@@ -48,7 +48,7 @@ class PerusahaanController extends Controller
         $perusahaan->nama_workshop = $request->nama_workshop;
         $perusahaan->tahun_berdiri = $request->tahun_berdiri;
         $perusahaan->alamat = $request->alamat;
-        $perusahaan->email = $request->email;
+        $perusahaan->email_workshop = $request->email_workshop;
         $perusahaan->phone = $request->phone;
         $perusahaan->whatsapp = $request->whatsapp;
         $perusahaan->facebook = $request->facebook;
@@ -80,7 +80,7 @@ class PerusahaanController extends Controller
             'nama_workshop' => 'required',
             'tahun_berdiri' => 'required',
             'alamat' => 'required',
-            'email' => 'required',
+            'email_workshop' => 'required',
             'phone' => 'required',
             'whatsapp' => 'required',
             'facebook' => 'required',
@@ -115,7 +115,7 @@ class PerusahaanController extends Controller
         $perusahaan->nama_workshop = $request->nama_workshop;
         $perusahaan->tahun_berdiri = $request->tahun_berdiri;
         $perusahaan->alamat = $request->alamat;
-        $perusahaan->email = $request->email;
+        $perusahaan->email_workshop = $request->email_workshop;
         $perusahaan->phone = $request->phone;
         $perusahaan->whatsapp = $request->whatsapp;
         $perusahaan->facebook = $request->facebook;
