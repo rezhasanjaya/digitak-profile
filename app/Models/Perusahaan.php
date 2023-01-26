@@ -18,6 +18,11 @@ class Perusahaan extends Model
     ];
 
     protected $guarded = [
-        'id',
+        'id', 'edited_by',
     ];
+
+    public function User()
+    {
+        return $this->belongsTo(User::class, 'id');
+    }
 }

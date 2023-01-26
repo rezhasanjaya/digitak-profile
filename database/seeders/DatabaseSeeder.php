@@ -14,6 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::create([
+            'first_name' => 'Super',
+            'last_name' => 'Administrator',
+            'email' => 'admin@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('admin123'),
+        ]);
+
         Perusahaan::create([
             'id' => 1,
             'edited_by' => 1,
@@ -29,14 +37,6 @@ class DatabaseSeeder extends Seeder
             'latitude' => '-6.884670666134072',
             'longitude' => '107.57010316354963',
             'logo' => 'digitak.png',
-        ]);
-
-        User::create([
-            'first_name' => 'Super',
-            'last_name' => 'Administrator',
-            'email' => 'admin@gmail.com',
-            'email_verified_at' => now(),
-            'password' => Hash::make('admin123'),
         ]);
     }
 }

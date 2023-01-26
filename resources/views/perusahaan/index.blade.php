@@ -66,7 +66,7 @@
                     <td>{{ $pt->twitter }}</td>
                     <td>{{ $pt->logo }}</td>
                     <td>{{ $pt->updated_at }}</td>
-                    <td>{{ $pt->edited_by }}</td>
+                    <td>{{ $pt->created_by->last_name}}</td>
                 </tr>
             @endforeach
         </tbody>
