@@ -10,7 +10,7 @@ class PerusahaanController extends Controller
     public function index()
     {
         return view('perusahaan.index', [
-            'title' => 'Riwayat Perusahaan',
+            'title' => 'Company Changing History',
             'perusahaan' => Perusahaan::latest('id')->first()->orderBy('id', 'desc')->paginate(10)
         ]);
     }
@@ -37,7 +37,8 @@ class PerusahaanController extends Controller
         ]);
 
         $perusahaan = new Perusahaan;
-        $perusahaan->id = $request->id;
+        $perusahaan->id = $request->id + 1;
+        $perusahaan->edited_by = 1;
         $perusahaan->nama_workshop = $request->nama_workshop;
         $perusahaan->tahun_berdiri = $request->tahun_berdiri;
         $perusahaan->alamat = $request->alamat;
@@ -49,7 +50,6 @@ class PerusahaanController extends Controller
         $perusahaan->twitter = $request->twitter;
         $perusahaan->latitude = $request->latitude;
         $perusahaan->longitude = $request->longitude;
-        $perusahaan->edited_by = 'Super Admin';
         $perusahaan->logo = 'digitak.png';
         $perusahaan->save();
 
@@ -103,7 +103,7 @@ class PerusahaanController extends Controller
         // $perusahaan->update();
 
         $perusahaan = new Perusahaan;
-        $perusahaan->id = $request->id+1;
+        $perusahaan->id = $request->id + 1;
         $perusahaan->nama_workshop = $request->nama_workshop;
         $perusahaan->tahun_berdiri = $request->tahun_berdiri;
         $perusahaan->alamat = $request->alamat;
@@ -115,7 +115,7 @@ class PerusahaanController extends Controller
         $perusahaan->twitter = $request->twitter;
         $perusahaan->latitude = $request->latitude;
         $perusahaan->longitude = $request->longitude;
-        $perusahaan->edited_by = $request->edited_by;
+        $perusahaan->edited_by = 1;
         $perusahaan->logo = 'digitak.png';
         $perusahaan->save();
 

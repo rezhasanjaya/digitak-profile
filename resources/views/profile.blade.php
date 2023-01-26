@@ -41,7 +41,7 @@
 
     <div class="row">
 
-        <div class="col-lg-4 order-lg-2">
+        <div class="col-lg-3 order-lg-2">
 
             <div class="card shadow mb-4">
                 <div class="card-profile-image mt-4">
@@ -69,7 +69,7 @@
 
         </div>
 
-        <div class="col-lg-8 order-lg-1">
+        <div class="col-lg-9 order-lg-1">
 
             <div class="card shadow mb-4">
 

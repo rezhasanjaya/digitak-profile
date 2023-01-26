@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Portofolio;
 
 class PortofolioController extends Controller
 {
@@ -14,13 +15,36 @@ class PortofolioController extends Controller
 
     public function index()
     {
-        $users = User::count();
+        return view('portofolio.index', [
+            'title' => 'Portofolio Management',
+            'portofolio' => Portofolio::paginate(10)
+        ]);
+    }
 
-        $widget = [
-            'users' => $users,
-            //...
-        ];
+    public function show(Portofolio $portofolio)
+    {
+        return view('portofolio.show', compact('porto'), ["title" => "Portofolio's Detail"]);
+    }
 
-        return view('portofolio/index', compact('widget'));
+    public function create()
+    {
+        return view('portofolio.create', ["title" => "Add Portofolio"]);
+    }
+
+    public function store()
+    {
+    }
+
+    public function edit(Portofolio $portofolio)
+    {
+        return view('portofolio.create', compact('porto'), ["title" => "Add Portofolio"]);
+    }
+
+    public function update()
+    {
+    }
+
+    public function delete()
+    {
     }
 }

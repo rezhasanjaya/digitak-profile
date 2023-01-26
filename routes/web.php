@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PerusahaanController;
+use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('user', UserController::class);
 
     Route::resource('perusahaan', PerusahaanController::class);
-    // Route::put('/perusahaan', 'PerusahaanController@update')->name('perusahaan.update');
-    // Route::put('/perusahaan', 'PerusahaanController@create')->name('perusahaan.create');
+
+    Route::resource('portofolio', PortofolioController::class);
 });

@@ -17,21 +17,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $currentDateTime = Carbon::now();
         Perusahaan::create([
             'id' => 1,
+            'edited_by' => 1,
             'nama_workshop' => 'Digitak',
             'alamat' => 'Jl. Gn. Batu Dalam Komplek Citra Asri Permai No.C-26, Pasirkaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat 40514',
             'tahun_berdiri' => '2014',
             'email' => 'info@digitak.com',
             'phone' => '(+62 22) 2028 0625',
-            'whatsapp' => 'whatsapp',
+            'whatsapp' => '(+62 22) 2028 0625',
             'facebook' => 'facebook',
             'twitter' => 'twitter',
             'instagram' => 'instagram',
             'latitude' => '-6.884670666134072',
             'longitude' => '107.57010316354963',
-            'edited_by' => 'Super Administrator',
             'logo' => 'digitak.png',
         ]);
 
