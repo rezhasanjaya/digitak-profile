@@ -4,14 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Perusahaan;
+use App\Models\User;
 
 class PerusahaanController extends Controller
 {
     public function index()
     {
+        $data = Perusahaan::join("users", function ($join) {
+          $join->on("users.id", "=", "perusahaan.edited_by");
+        })->get();
+
         return view('perusahaan.index', [
             'title' => 'Company Changing History',
-            'perusahaan' => Perusahaan::latest('id')->first()->orderBy('id', 'desc')->paginate(10)
+            'users' => User::all(),
+            'perusahaan' => Perusahaan::all(),
+            'data' => $data,
+            'perusahaan' => Perusahaan::latest('id')->first()->orderBy('id', 'desc')->paginate(10),
         ]);
     }
 
