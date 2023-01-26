@@ -78,14 +78,14 @@
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="nama_workshop">Nama Workshop</label>
-                                        <input type="text" id="nama_workshop" class="form-control" name="nama_workshop" placeholder="Nama Workshop" value="">
+                                        <input type="text" id="nama_workshop" class="form-control" name="nama_workshop" placeholder="Nama Workshop" value="{{ old('nama_workshop') }}">
                                     </div>
                                 </div>
                                 
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                             <label class="form-control-label" for="tahun_berdiri">Tahun Berdiri<span class="small text-danger"></span></label>
-                                            <input type="text" id="tahun_berdiri" class="form-control" name="tahun_berdiri" placeholder="Tahun Berdiri" value="2014">
+                                            <input type="text" id="tahun_berdiri" class="form-control" name="tahun_berdiri" placeholder="Tahun Berdiri" value="{{ old('tahun_berdiri') }}">
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="form-control-label" for="alamat">Alamat<span class="small text-danger"></span></label>
-                                        <input type="text" id="alamat" class="form-control" name="alamat" placeholder="Alamat" value="">
+                                        <input type="text" id="alamat" class="form-control" name="alamat" placeholder="Alamat" value="{{ old('alamat') }}">
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="form-control-label" for="email">E-mail<span class="small text-danger"></span></label>
-                                        <input type="email" id="email" class="form-control" name="email" placeholder="E-Mail" value="">
+                                        <input type="email" id="email" class="form-control" name="email" placeholder="E-Mail" value="{{ old('email') }}">
                                     </div>
                                 </div>
                             </div>
@@ -112,13 +112,13 @@
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                             <label class="form-control-label" for="phone">Phone<span class="small text-danger"></span></label>
-                                            <input type="text" id="phone" class="form-control" name="phone" placeholder="Phone" value="">
+                                            <input type="text" id="phone" class="form-control" name="phone" placeholder="Phone" value="{{ old('phone') }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="whatsapp">WhatsApp</label>
-                                        <input type="text" id="whatsapp" class="form-control" name="whatsapp" placeholder="WhatsApp" value="">
+                                        <input type="text" id="whatsapp" class="form-control" name="whatsapp" placeholder="WhatsApp" value="{{ old('whatsapp') }}">
                                     </div>
                                 </div>
                             </div>
@@ -127,19 +127,19 @@
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="facebook">Facebook</label>
-                                        <input type="text" id="facebook" class="form-control" name="facebook" placeholder="Facebook" value="">
+                                        <input type="text" id="facebook" class="form-control" name="facebook" placeholder="Facebook" value="{{ old('facebook') }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="instagram">Instagram</label>
-                                        <input type="text" id="instagram" class="form-control" name="instagram" placeholder="Instagram" value="">
+                                        <input type="text" id="instagram" class="form-control" name="instagram" placeholder="Instagram" value="{{ old('instagram') }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="twitter">Twitter</label>
-                                        <input type="text" id="twitter" class="form-control" name="twitter" placeholder="Twitter" value="">
+                                        <input type="text" id="twitter" class="form-control" name="twitter" placeholder="Twitter" value="{{ old('twitter') }}">
                                     </div>
                                 </div>
                             </div>
@@ -148,13 +148,13 @@
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                             <label class="form-control-label" for="latitude">Latitude<span class="small text-danger"></span></label>
-                                            <input type="text" id="latitude" class="form-control" name="latitude" placeholder="Latitude" value="">
+                                            <input type="text" id="latitude" class="form-control" name="latitude" placeholder="Latitude" value="{{ old('latitude') }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="longitude">Longitude</label>
-                                        <input type="text" id="longitude" class="form-control" name="longitude" placeholder="Longitude" value="">
+                                        <input type="text" id="longitude" class="form-control" name="longitude" placeholder="Longitude" value="{{ old('longitude') }}">
                                     </div>
                                 </div>
                             </div>

@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id('id_portofolio');
             $table->foreignId('created_by')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama_aplikasi');
-            $table->text('kategori');
+            $table->enum('kategori', ['Android', 'IOS', 'Website']);
             $table->string('tahun_pembuatan');
             $table->string('klien');
             $table->string('link_demo');
-            $table->string('keterangan');
+            $table->text('keterangan');
             $table->text('image')->nullable();
             $table->timestamps();
             $table->engine = "InnoDB";

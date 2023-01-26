@@ -88,7 +88,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="nama_workshop">Nama Workshop</label>
-                                        <input type="text" id="nama_workshop" class="form-control" name="nama_workshop" placeholder="Nama Workshop" value="{{ old('nama_workshop',$perusahaan->nama_workshop) }}">
+                                        <input type="text" id="nama_workshop" class="form-control @error('nama_workshop') is-invalid @enderror" name="nama_workshop" placeholder="Nama Workshop" value="{{ old('nama_workshop',$perusahaan->nama_workshop) }}">
                                     </div>
                                 </div>
                             </div>
@@ -97,14 +97,14 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="form-control-label" for="alamat">Alamat<span class="small text-danger"></span></label>
-                                        <textarea type="text" id="alamat" class="form-control" name="alamat" placeholder="Alamat"> {{ old('alamat',$perusahaan->alamat) }}</textarea>
+                                        <textarea type="text" id="alamat" class="form-control @error('alamat') is-invalid @enderror" name="alamat" placeholder="Alamat"> {{ old('alamat',$perusahaan->alamat) }}</textarea>
                                     </div>
                                 </div>
                             </div>
 
-                            <input type="hidden" id="tahun_berdiri" class="form-control" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
+                            <input type="hidden" id="tahun_berdiri" class="form-control @error('tahun_berdiri') is-invalid @enderror" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
 
-                            <input type="hidden" id="image" class="form-control" name="image" value="{{ old('image',$perusahaan->image) }}">
+                            <input type="hidden" id="image" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image',$perusahaan->image) }}">
 
                             <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ Auth::user()->id }}">
                             
@@ -112,7 +112,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="form-control-label" for="email_workshop">E-mail<span class="small text-danger"></span></label>
-                                        <input type="email_workshop" id="email_workshop" class="form-control" name="email_workshop" placeholder="E-Mail" value="{{ old('email_workshop',$perusahaan->email_workshop) }}">
+                                        <input type="email_workshop" id="email_workshop" class="form-control @error('email_workshop') is-invalid @enderror" name="email_workshop" placeholder="E-Mail" value="{{ old('email_workshop',$perusahaan->email_workshop) }}">
                                     </div>
                                 </div>
                             </div>
@@ -121,13 +121,13 @@
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="phone">Telepone<span class="small text-danger"></span></label>
-                                        <input type="text" id="phone" class="form-control" name="phone" placeholder="Telepone" value="{{ old('phone',$perusahaan->phone) }}">
+                                        <input type="text" id="phone" class="form-control @error('phone') is-invalid @enderror" name="phone" placeholder="Telepone" value="{{ old('phone',$perusahaan->phone) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="whatsapp">WhatsApp</label>
-                                        <input type="text" id="whatsapp" class="form-control" name="whatsapp" placeholder="WhatsApp" value="{{ old('whatsapp',$perusahaan->whatsapp) }}">
+                                        <input type="text" id="whatsapp" class="form-control @error('whatsapp') is-invalid @enderror" name="whatsapp" placeholder="WhatsApp" value="{{ old('whatsapp',$perusahaan->whatsapp) }}">
                                     </div>
                                 </div>
                             </div>
@@ -136,19 +136,19 @@
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="facebook">Facebook</label>
-                                        <input type="text" id="facebook" class="form-control" name="facebook" placeholder="Facebook" value="{{ old('facebook',$perusahaan->facebook) }}">
+                                        <input type="text" id="facebook" class="form-control @error('facebook') is-invalid @enderror" name="facebook" placeholder="Facebook" value="{{ old('facebook',$perusahaan->facebook) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="instagram">Instagram</label>
-                                        <input type="text" id="instagram" class="form-control" name="instagram" placeholder="Instagram" value="{{ old('instagram',$perusahaan->instagram) }}">
+                                        <input type="text" id="instagram" class="form-control @error('instagram') is-invalid @enderror" name="instagram" placeholder="Instagram" value="{{ old('instagram',$perusahaan->instagram) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="twitter">Twitter</label>
-                                        <input type="text" id="twitter" class="form-control" name="twitter" placeholder="Twitter" value="{{ old('twitter',$perusahaan->twitter) }}">
+                                        <input type="text" id="twitter" class="form-control @error('twitter') is-invalid @enderror" name="twitter" placeholder="Twitter" value="{{ old('twitter',$perusahaan->twitter) }}">
                                     </div>
                                 </div>
                             </div>
@@ -157,13 +157,13 @@
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="latitude">Latitude<span class="small text-danger"></span></label>
-                                        <input type="text" id="latitude" class="form-control" name="latitude" placeholder="Latitude" value="{{ old('latitude',$perusahaan->latitude) }}">
+                                        <input type="text" id="latitude" class="form-control @error('latitude') is-invalid @enderror" name="latitude" placeholder="Latitude" value="{{ old('latitude',$perusahaan->latitude) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="longitude">Longitude</label>
-                                        <input type="text" id="longitude" class="form-control" name="longitude" placeholder="Longitude" value="{{ old('longitude',$perusahaan->longitude) }}">
+                                        <input type="text" id="longitude" class="form-control @error('longitude') is-invalid @enderror" name="longitude" placeholder="Longitude" value="{{ old('longitude',$perusahaan->longitude) }}">
                                     </div>
                                 </div>
                             </div>

@@ -54,7 +54,7 @@
                               <h5 class="font-weight-bold"></h5>
                               {{-- <img src="/images/" width="400px"> --}}
                               <img class="img-preview img-fluid mb-3">
-                              <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()" value=""> 
+                              <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()" value="{{ old('image') }}"> 
                               <br>
                               <div>*file type .jpg .jpeg .png | max size 2 mb</div>
                           </div>
@@ -79,13 +79,13 @@
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                 <label class="form-control-label" for="nama_aplikasi">Nama Aplikasi</label>
-                                <input type="text" id="nama_aplikasi" class="form-control" name="nama_aplikasi" placeholder="Nama Aplikasi" value="">
+                                <input type="text" id="nama_aplikasi" class="form-control @error('nama_aplikasi') is-invalid @enderror" name="nama_aplikasi" placeholder="Nama Aplikasi" value="{{ old('nama_aplikasi') }}">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group focused">
                                     <label class="form-control-label" for="tahun_pembuatan">Tahun Pembuatan<span class="small text-danger"></span></label>
-                                    <input type="text" id="tahun_pembuatan" class="form-control" name="tahun_pembuatan" placeholder="Tahun Pembuatan" value="">
+                                    <input type="text" id="tahun_pembuatan" class="form-control @error('tahun_pembuatan') is-invalid @enderror" name="tahun_pembuatan" placeholder="Tahun Pembuatan" value="{{ old('tahun_pembuatan') }}">
                             </div>
                         </div>
                     </div>
@@ -97,16 +97,17 @@
                           <div class="form-group focused">
                             <label class="form-control-label" for="kategori">Kategori<span class="small text-danger"></span></label>
                             <select class="form-control" id="kategori" name="kategori" required>
-                            <option value="" selected disabled>Pilih Kategori</option> 
-                            <option value="Application">Application</option>
-                            <option value="Website">Website</option>
-                            </select>
+                              <option value="" selected disabled>Pilih Kategori</option> 
+                              <option value="Android" {{ old('kategori') == 'Android'? 'selected': ''}} >Android</option>
+                              <option value="IOS" {{ old('kategori') == 'IOS'? 'selected': ''}} >IOS</option>
+                              <option value="Website" {{ old('kategori') == 'Website'? 'selected': ''}} >Website</option>
+                              </select>
                           </div>
                       </div>
                       <div class="col-lg-6">
                           <div class="form-group focused">
                             <label class="form-control-label" for="klien">Klien<span class="small text-danger"></span></label>
-                            <input type="text" id="klien" class="form-control" name="klien" placeholder="Klien" value="">
+                            <input type="text" id="klien" class="form-control @error('klien') is-invalid @enderror" name="klien" placeholder="Klien" value="{{ old('klien') }}">
                           </div>
                       </div>
                   </div>
@@ -119,22 +120,11 @@
                                 <div class="input-group-prepend">
                                   <div class="input-group-text">{{ __('https://www.') }}</div>
                                 </div>
-                                <input type="text" class="form-control" name="link_demo" id="link_demo" placeholder="Link Demo" value="">
+                                <input type="text" class="form-control @error('link_demo') is-invalid @enderror" name="link_demo" id="link_demo" placeholder="Link Demo" value="{{ old('link_demo') }}">
                               </div>
                           </div>
                       </div>
                   </div>
-
-                    {{-- <div class="row">
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label class="form-control-label" for="image">Preview Project<span class="small text-danger"></span></label>
-                                
-                                <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()">
-                        <div>*file type .jpg .jfif .png | max size 2 mb</div>
-                            </div>
-                        </div>
-                    </div> --}}
 
                     <div class="row">
                         <div class="col-lg-12">

@@ -142,7 +142,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group focused">
                                             <label class="form-control-label" for="keterangan">Keterengan<span class="small text-danger"></span></label>
-                                            <article class="my-3 fs-5">
+                                            <article class="border-bottom border-top">
                                               {!! $portofolio->keterangan !!}
                                             </article>                                            
                                     </div>
