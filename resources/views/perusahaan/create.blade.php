@@ -52,7 +52,7 @@
                         <div class="col-lg-12">
                             <div class="text-center">
                                 <h5 class="font-weight-bold"></h5>
-                                Nama File : {{ $pt->logo }}
+                                Nama File : {{ $pt->image }}
                             </div>
                         </div>
                     </div> --}}

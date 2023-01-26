@@ -56,7 +56,7 @@ class PerusahaanController extends Controller
         $perusahaan->latitude = $request->latitude;
         $perusahaan->longitude = $request->longitude;
         $perusahaan->edited_by = $request->edited_by;
-        $perusahaan->logo = 'digitak.png';
+        $perusahaan->image = 'digitak.png';
         $perusahaan->waktu_update = now();
         $perusahaan->save();
 
@@ -87,7 +87,7 @@ class PerusahaanController extends Controller
             'twitter' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',
-            'logo' => 'required',
+            'image' => 'required',
             'edited_by' => 'required',
 
         ]);
@@ -106,7 +106,7 @@ class PerusahaanController extends Controller
         // $perusahaan->latitude = $request->latitude;
         // $perusahaan->longitude = $request->longitude;
         // $perusahaan->edited_by = 'test';
-        // $perusahaan->logo = 'test';
+        // $perusahaan->image = 'test';
         // $perusahaan->update();
 
         $perusahaan = new Perusahaan;
@@ -123,7 +123,7 @@ class PerusahaanController extends Controller
         $perusahaan->latitude = $request->latitude;
         $perusahaan->longitude = $request->longitude;
         $perusahaan->edited_by = $request->edited_by;
-        $perusahaan->logo = 'digitak.png';
+        $perusahaan->image = 'digitak.png';
         $perusahaan->waktu_update = now();
         $perusahaan->save();
 

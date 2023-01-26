@@ -15,7 +15,7 @@ class Perusahaan extends Model
     protected $primaryKey = 'id_prshn';
 
     protected $fillable = [
-        'nama_workshop', 'tahun_berdiri', 'alamat', 'email', 'phone', 'whatsapp', 'facebook', 'instagram', 'twitter', 'latitude', 'longitude', 'logo', 'waktu_update'
+        'nama_workshop', 'tahun_berdiri', 'alamat', 'email', 'phone', 'whatsapp', 'facebook', 'instagram', 'twitter', 'latitude', 'longitude', 'image', 'waktu_update'
     ];
 
     protected $guarded = [

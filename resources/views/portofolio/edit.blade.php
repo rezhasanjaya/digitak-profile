@@ -165,6 +165,7 @@
                                 </div>
                             </div>
                         </div>
+                        <hr>
 
                         <!-- Button -->
                         <div class="pl-lg-0 mt-3 mb-3">
