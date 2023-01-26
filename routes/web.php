@@ -31,7 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
         return view('about');
     })->name('about');
 
-    Route::resource('user', UserController::class);
+    Route::resource('user', UserController::class)->middleware('auth')->except('show')->middleware('superadmin');
 
     Route::resource('perusahaan', PerusahaanController::class);
 

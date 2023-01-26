@@ -48,7 +48,6 @@
                     <figure class="rounded-circle avatar avatar font-weight-bold" style="font-size: 60px; height: 180px; width: 180px; background-color: #E2A814" data-initial="{{ Auth::user()->first_name[0] }}"></figure>
                 </div>
                 <div class="card-body">
-
                     {{-- <div class="row">
                         <div class="col-lg-12">
                             <div class="text-center">
@@ -57,10 +56,8 @@
                             </div>
                         </div>
                     </div> --}}
-
                 </div>
             </div>
-
         </div>
 
         <div class="col-lg-8 order-lg-1">
@@ -84,6 +81,7 @@
                                         <input type="text" id="nama_workshop" class="form-control" name="nama_workshop" placeholder="Nama Workshop" value="">
                                     </div>
                                 </div>
+                                
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                             <label class="form-control-label" for="tahun_berdiri">Tahun Berdiri<span class="small text-danger"></span></label>
@@ -91,7 +89,6 @@
                                     </div>
                                 </div>
                             </div>
-
                            
                             <div class="row">
                                 <div class="col-lg-12">
@@ -161,8 +158,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <br>
                         </div>
 
                         <!-- Button -->
@@ -173,14 +168,9 @@
                                 </div>
                             </div>
                         </div>
-                        
                     </form>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 @endsection

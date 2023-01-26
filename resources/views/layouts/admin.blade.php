@@ -49,6 +49,9 @@
                 <span>{{ __('Dashboard') }}</span></a>
         </li>
 
+        @can('superadmin')
+        <!-- Superadmin -->
+
         <!-- Divider -->
         <hr class="sidebar-divider">
 
@@ -63,9 +66,7 @@
                 <i class="fa-solid fa-user"></i>
                 <span>{{ __('Profile') }}</span>
             </a>
-        </li> --}}
-
-        
+        </li> --}}        
 
         <!-- Nav Item -->
         <li class="nav-item {{ Nav::isRoute('user.index') }}">
@@ -73,7 +74,10 @@
                 <i class="fa-solid fa-users"></i>
                 <span>{{ __('User') }}</span>
             </a>
-        </li>       
+        </li>  
+        
+        <!-- End Superadmin -->
+        @endcan
         
         <!-- Divider -->
         <hr class="sidebar-divider">
@@ -322,7 +326,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Digitam Team 2022</span>
+                    <span>Copyright &copy; Digitak Team @php echo date("Y") @endphp</span>
                 </div>
             </div>
         </footer>
@@ -343,14 +347,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">{{ __('Ready to Leave?') }}</h5>
+                <h5 class="modal-title" id="exampleModalLabel">{{ __('Yakin ingin keluar?') }}</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">x</span>
                 </button>
             </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-body">Tekan tombol "Logout" dibawah jika kamu sudah siap untuk mengakhiri sesi yang sedang berjalan.</div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
                 <a class="btn btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf

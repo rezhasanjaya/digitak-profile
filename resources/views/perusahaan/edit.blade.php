@@ -97,7 +97,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="form-control-label" for="alamat">Alamat<span class="small text-danger"></span></label>
-                                        <input type="text" id="alamat" class="form-control" name="alamat" placeholder="E-Mail" value="{{ old('alamat',$perusahaan->alamat) }}">
+                                        <textarea type="text" id="alamat" class="form-control" name="alamat" placeholder="Alamat"> {{ old('alamat',$perusahaan->alamat) }}</textarea>
                                     </div>
                                 </div>
                             </div>
@@ -120,8 +120,8 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="phone">Phone<span class="small text-danger"></span></label>
-                                        <input type="text" id="phone" class="form-control" name="phone" placeholder="Phone" value="{{ old('phone',$perusahaan->phone) }}">
+                                        <label class="form-control-label" for="phone">Telepone<span class="small text-danger"></span></label>
+                                        <input type="text" id="phone" class="form-control" name="phone" placeholder="Telepone" value="{{ old('phone',$perusahaan->phone) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -173,8 +173,9 @@
                         <div class="pl-lg-4">
                             <div class="row">
                                 <div class="col">
-                                    <button type="submit" class="btn btn-warning">Save Changes</button>
-                                </div>
+                                    <button type="submit" class="btn btn-warning"><i class="fa-solid fa-save mr-2"></i>Simpan Perubahan</button>
+                                    <a href="{{ route('perusahaan.index') }}" class="btn btn-default">Batal</a>
+                                </div>                                
                             </div>
                         </div>
                     </form>

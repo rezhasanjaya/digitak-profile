@@ -9,7 +9,7 @@
    
     @if ($errors->any())
         <div class="alert alert-danger alert-dismissible fade show border-left-danger" role="alert">
-          Failed to add new user, please check the field!
+          Gagal untuk menambah user baru, harap cek setiap kolom!
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>           
@@ -35,22 +35,22 @@
     <table class="table table-bordered table-stripped">
         <thead>
             <tr>  
-                <th>Updated At</th>
+                <th>Waktu Diubah</th>
                 <th>Workshop</th>
-                <th>Address</th>
+                <th>Alamat</th>
                 <th>Email</th>
                 <th>WhatsApp</th>
-                <th>Phone</th>
+                <th>Telepon</th>
                 <th>Facebook</th>
                 <th>Twitter</th>
-                <th>Logo's Filename</th>
-                <th>Edited By</th>
+                <th>File Logo</th>
+                <th>Diubah Oleh</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($perusahaan as $pt)
             <div class="d-flex mb-3">
-                <a href="{{ route('perusahaan.edit', $pt->id_prshn) }}" class="btn btn-sm btn-warning mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Data</a>
+                <a href="{{ route('perusahaan.edit', $pt->id_prshn) }}" class="btn btn-warning mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Data</a>
             </div>
             <?php break; ?>
             @endforeach
