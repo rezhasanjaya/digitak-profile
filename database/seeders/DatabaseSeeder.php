@@ -47,7 +47,5 @@ class DatabaseSeeder extends Seeder
             'logo' => 'digitak.png',
             'waktu_update' => '2023-01-26 16:13:53',
         ]);
-
-        
     }
 }
