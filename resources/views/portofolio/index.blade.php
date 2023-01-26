@@ -5,7 +5,7 @@
     <h1 class="h3 mb-4 text-gray-800">{{ $title ?? __('Blank Page') }}</h1>
 
     <!-- Main Content goes here -->
-    <a href="{{ route('portofolio.create') }}">  <button type="button" class="btn btn-dark mb-3"><i class="fa-solid fa-pen-to-square mr-2"></i> Add Portofolio</button></a>
+    <a href="{{ route('portofolio.create') }}" class="btn btn-warning mb-3"><i class="fa-solid fa-plus mr-2"></i>Tambah Portofolio</a>
    
     @if ($errors->any())
         <div class="alert alert-danger alert-dismissible fade show border-left-danger" role="alert">
@@ -36,14 +36,14 @@
         <thead>
             <tr>
             <tr>  
-                <th>Application Name</th>
-                <th>Dibuat</th>
-                <th>Category</th>
-                <th>Year created</th>
-                <th>Client</th>
-                <th>Demo Link</th>
-                <th>Created At</th>
-                <th>Action</th>
+                <th>Nama Project</th>
+                <th>Dibuat Oleh</th>
+                <th>Kategori</th>
+                <th>Tahun Rilis</th>
+                <th>Klien</th>
+                <th>Link Demo</th>
+                <th>Waktu Dibuat</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>

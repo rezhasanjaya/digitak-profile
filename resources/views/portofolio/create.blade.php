@@ -2,7 +2,7 @@
 
 @section('main-content')
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">{{ __('Profile Perusahaan') }}</h1>
+    <h1 class="h3 mb-4 text-gray-800">{{ $title ?? __('Blank Page') }}</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger alert-dismissible fade show border-left-danger" role="alert">
@@ -41,34 +41,31 @@
                       
     <div class="row">
 
-        <div class="col-lg-4 order-lg-2">
-
-            <div class="card shadow mb-4">
-                <div class="card-profile-image mt-4">
-                    <figure class="rounded-circle avatar avatar font-weight-bold" style="font-size: 60px; height: 180px; width: 180px; background-color: #E2A814" data-initial=""></figure>
-                </div>
-                <div class="card-body"> 
-                    <form action="{{ route('portofolio.store') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="text-center">
-                                <h5 class="font-weight-bold"></h5>
-                                <label for="formFile" class="form-label">Image</label>
-                                <input class="form-control" type="file" name="image" id="formFile">
-                                <br>
-                            <div>*file type .jpg .jpeg .png | max size 2 mb</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+        {{-- <div class="col-lg-4 order-lg-2">
+          <div class="card shadow mb-4">
+            <div class="card-body">
+              <h5 class="heading-small text-muted mb-4">Preview Project</h5>
+              <div class="card-profile-image">
+                <img src="../img/bruce-mars.jpg" alt="{(( $name }}" class="img-preview img-fluid">
+                <form action="{{ route('portofolio.store') }}" method="POST" enctype="multipart/form-data">
+                  @csrf
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="text-center">
+                              <h5 class="font-weight-bold"></h5>
+                              <input class="form-control" type="file" accept=".jpg,.jfif,.png" name="image" id="image" onchange="previewImage()">
+                          <div>*file type .jpg .jfif .png | max size 2 mb</div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
             </div>
 
         </div>
+        </div> --}}
 
-        <div class="col-lg-8 order-lg-1">
-
+        <div class="col-lg">
+          
             <div class="card shadow mb-4">
 
                 {{-- <div class="card-header py-3">
@@ -76,11 +73,10 @@
                 </div> --}}
 
                 <div class="card-body">
-                   
-                        
                         <h5 class="heading-small text-muted mb-4">Tambah Data</h5>
                         <div class="pl-lg-4">
-                            
+                          <form action="{{ route('portofolio.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf   
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
@@ -131,6 +127,29 @@
 
                             <div class="row">
                                 <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="link_demo">Preview Project<span class="small text-danger"></span></label>
+                                        <img class="img-preview img-fluid mb-3 col-sm-5">
+                                        <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()">
+                                <div>*file type .jpg .jfif .png | max size 2 mb</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- <div class="mb-3">
+                              <label for="image" class="form-label">Select Image</label>
+                              <img class="img-preview img-fluid mb-3 col-sm-5">
+                                <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()">
+                                <div>*file type .jpg .jfif .png | max size 2 mb</div>
+                              @error('image')
+                              <div class="invalid-feedback">
+                                {{ $message }}
+                              </div>
+                              @enderror
+                            </div> --}}
+
+                            <div class="row">
+                                <div class="col-lg-12">
                                     <div class="form-group focused">
                                             <label class="form-control-label" for="keterangan">Keterangan<span class="small text-danger"></span></label>
                                             <textarea id="keterangan" style="height: 200px" class="form-control" name="keterangan" placeholder="Keterangan" value=""></textarea>
@@ -156,4 +175,21 @@
         </div>
 
     </div>
+
+    <script>
+      function previewImage() {
+      const image = document.querySelector('#image');
+      const imgPreview = document.querySelector('.img-preview');
+
+      imgPreview.style.display = 'block';
+
+      const oFReader = new FileReader();
+      oFReader.readAsDataURL(image.files[0]);
+
+      oFReader.onload = function(OFREvent) {
+        imgPreview.src = OFREvent.target.result;
+      }
+    }
+    </script>
+
 @endsection

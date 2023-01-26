@@ -33,7 +33,7 @@ class PortofolioController extends Controller
 
     public function create()
     {
-        return view('portofolio.create', ["title" => "Add Portofolio"]);
+        return view('portofolio.create', ["title" => "Tambah Portofolio"]);
     }
 
     public function store(PortoReq $request)
@@ -54,7 +54,7 @@ class PortofolioController extends Controller
 
     public function edit(Portofolio $portofolio)
     {
-        return view('portofolio.create', compact('porto'), ["title" => "Add Portofolio"]);
+        return view('portofolio.create', compact('portofolio'), ["title" => "Ubah Portofolio"]);
     }
 
     public function update()
