@@ -66,7 +66,7 @@
                     <td>{{ $pt->facebook }}</td>
                     <td>{{ $pt->twitter }}</td>
                     <td>{{ $pt->logo }}</td>
-                    <td>{{ $pt->updated_at }}</td>
+                    <td>{{ $pt->waktu_update }}</td>
                     <td>{{ $pt->first_name }} {{ $pt->last_name }}</td>
                 </tr>
             @endforeach

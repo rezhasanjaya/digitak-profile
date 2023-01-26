@@ -29,7 +29,8 @@ return new class extends Migration
             $table->string('latitude');
             $table->string('longitude');
             $table->text('logo');
-            $table->timestamps();
+            $table->timestamp('waktu_update');
+            // $table->timestamps();
             $table->engine = "InnoDB";
         });
     }

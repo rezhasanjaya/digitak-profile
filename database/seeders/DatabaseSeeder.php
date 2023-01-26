@@ -17,9 +17,17 @@ class DatabaseSeeder extends Seeder
         User::create([
             'first_name' => 'Super',
             'last_name' => 'Administrator',
-            'email' => 'admin@gmail.com',
+            'email_user' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('admin123'),
+        ]);
+
+        User::create([
+            'first_name' => 'Saha',
+            'last_name' => 'Maneh',
+            'email_user' => 'admin2@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('admin456'),
         ]);
 
         Perusahaan::create([
@@ -37,6 +45,7 @@ class DatabaseSeeder extends Seeder
             'latitude' => '-6.884670666134072',
             'longitude' => '107.57010316354963',
             'logo' => 'digitak.png',
+            'waktu_update' => '2023-01-26 16:13:53',
         ]);
 
         

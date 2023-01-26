@@ -11,10 +11,10 @@ class Perusahaan extends Model
     public $table = "perusahaan";
     public $remember_token = false;
     public $incrementing = false;
-
+    public $timestamps = false;
 
     protected $fillable = [
-        'nama_workshop', 'tahun_berdiri', 'alamat', 'email', 'phone', 'whatsapp', 'facebook', 'instagram', 'twitter', 'latitude', 'longitude', 'logo'
+        'nama_workshop', 'tahun_berdiri', 'alamat', 'email', 'phone', 'whatsapp', 'facebook', 'instagram', 'twitter', 'latitude', 'longitude', 'logo', 'waktu_update'
     ];
 
     protected $guarded = [

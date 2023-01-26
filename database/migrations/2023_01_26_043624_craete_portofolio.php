@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('link_demo');
             $table->string('keterangan');
             $table->text('gambar');
-            $table->timestamps();
+            // $table->timestamps();
             $table->engine = "InnoDB";
         });
     }
