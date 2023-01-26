@@ -50,7 +50,7 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            {{-- <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" value="{{ old('image',$perusahaan->image) }} onchange="previewLogo()">
+                            {{-- <input class="form-control @error('logo') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="logo" name="logo" value="{{ old('logo',$perusahaan->logo) }} onchange="previewLogo()">
                             <div>*file type .jpg .jpeg .png | max size 2 mb</div> --}}
                         </div>
                     </div>
@@ -168,7 +168,6 @@
                                 </div>
                             </div>
                         </div>
-                        <hr>
 
                         <!-- Button -->
                         <div class="pl-lg-4">
