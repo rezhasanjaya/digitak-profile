@@ -2,11 +2,8 @@
 
 use App\Models\Perusahaan;
 use App\Models\User;
-use App\Models\Skill;
-use Database\Seeders\AdminUserSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder
 {
