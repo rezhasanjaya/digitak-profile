@@ -12,8 +12,7 @@ class PerusahaanController extends Controller
     public function index()
     {
         $data = Perusahaan::join("users", function ($join) {
-            $join->on("users.id", "=", "perusahaan.edited_by")
-                ->orderBy('id', 'DESC');
+            $join->on("users.id", "=", "perusahaan.edited_by")->orderBy('users.id', 'ASC');
         })->get();
 
         return view('perusahaan.index', [
@@ -46,8 +45,6 @@ class PerusahaanController extends Controller
         ]);
 
         $perusahaan = new Perusahaan;
-        $perusahaan->id = $request->id + 1;
-        $perusahaan->edited_by = 1;
         $perusahaan->nama_workshop = $request->nama_workshop;
         $perusahaan->tahun_berdiri = $request->tahun_berdiri;
         $perusahaan->alamat = $request->alamat;
@@ -59,7 +56,9 @@ class PerusahaanController extends Controller
         $perusahaan->twitter = $request->twitter;
         $perusahaan->latitude = $request->latitude;
         $perusahaan->longitude = $request->longitude;
+        $perusahaan->edited_by = $request->edited_by;
         $perusahaan->logo = 'digitak.png';
+        $perusahaan->waktu_update = now();
         $perusahaan->save();
 
         return redirect()->route('perusahaan.index')
@@ -124,8 +123,9 @@ class PerusahaanController extends Controller
         $perusahaan->twitter = $request->twitter;
         $perusahaan->latitude = $request->latitude;
         $perusahaan->longitude = $request->longitude;
-        $perusahaan->edited_by = 1;
+        $perusahaan->edited_by = $request->edited_by;
         $perusahaan->logo = 'digitak.png';
+        $perusahaan->waktu_update = now();
         $perusahaan->save();
 
         $perusahaan->update($request->all());

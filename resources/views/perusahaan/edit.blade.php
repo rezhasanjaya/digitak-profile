@@ -104,7 +104,7 @@
 
                             <input type="hidden" id="logo" class="form-control" name="logo" value="{{ old('logo',$perusahaan->logo) }}">
 
-                            <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ Auth::user()->full_name }}">
+                            <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ Auth::user()->id }}">
                             
                             <div class="row">
                                 <div class="col-lg-12">
@@ -165,8 +165,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <br>
                         </div>
 
                         <!-- Button -->
@@ -178,11 +176,8 @@
                             </div>
                         </div>
                     </form>
-
                 </div>
-
             </div>
-
         </div>
 
     </div>

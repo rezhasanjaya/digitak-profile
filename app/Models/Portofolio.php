@@ -10,6 +10,7 @@ class Portofolio extends Model
     use HasFactory;
     public $table = "portofolio";
     public $remember_token = false;
+    public $timestamps = false;
 
     protected $fillable = [
         'nama_aplikasi', 'tahun_pembuatan', 'kategori', 'klien', 'link_demo', 'keterangan', 'gambar',
