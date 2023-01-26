@@ -24,11 +24,7 @@ class PortofolioController extends Controller
 
     public function show(Portofolio $portofolio)
     {
-        $data = Portofolio::join("users", function ($join) {
-            $join->on("users.id", "=", "portofolio.created_by")
-                ->orderBy('portofolio_id', 'desc');
-        })->get();
-        return view('portofolio.show', compact('porto'), ["title" => "Portofolio's Detail"]);
+        return view('portofolio.show', compact('portofolio'), ["title" => "Portofolio's Detail"]);
     }
 
     public function create()
@@ -54,7 +50,7 @@ class PortofolioController extends Controller
 
     public function edit(Portofolio $portofolio)
     {
-        return view('portofolio.create', compact('porto'), ["title" => "Add Portofolio"]);
+        return view('portofolio.edit', compact('portofolio'), ["title" => "Add Portofolio"]);
     }
 
     public function update()
