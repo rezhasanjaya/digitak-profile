@@ -89,13 +89,13 @@
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="first_name">Nama Depan<span class="small text-danger"></span></label>
-                                        <input type="text" id="first_name" class="form-control" name="first_name" placeholder="First Name" value="{{ old('first_name', Auth::user()->first_name) }}">
+                                        <input type="text" id="first_name" class="form-control" name="first_name" placeholder="Nama Depan" value="{{ old('first_name', Auth::user()->first_name) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="last_name">Nama Belakang</label>
-                                        <input type="text" id="last_name" class="form-control" name="last_name" placeholder="Last name" value="{{ old('last_name', Auth::user()->last_name) }}">
+                                        <input type="text" id="last_name" class="form-control" name="last_name" placeholder="Nama Belakang" value="{{ old('last_name', Auth::user()->last_name) }}">
                                     </div>
                                 </div>
                             </div>
@@ -113,19 +113,19 @@
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="current_password">Password Sekarang</label>
-                                        <input type="password" id="current_password" class="form-control" name="current_password" placeholder="Current password">
+                                        <input type="password" id="current_password" class="form-control" name="current_password" placeholder="Password Sekarang">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="new_password">Password Baru</label>
-                                        <input type="password" id="new_password" class="form-control" name="new_password" placeholder="New password">
+                                        <input type="password" id="new_password" class="form-control" name="new_password" placeholder="Password Baru">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="confirm_password">Konfirmasi Password Baru</label>
-                                        <input type="password" id="confirm_password" class="form-control" name="password_confirmation" placeholder="Confirm password">
+                                        <input type="password" id="confirm_password" class="form-control" name="password_confirmation" placeholder="Konfirmasi Password Baru">
                                     </div>
                                 </div>
                             </div>

@@ -17,7 +17,7 @@
                     <label class="form-control-label">Nama Depan</label>
                   </div>
                   <div class="col-md-5 ms-auto">
-                    <input type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" id="first_name" placeholder="{{ __('First Name') }}" autocomplete="off" value="{{ old('first_name') ?? $user->first_name }}">
+                    <input type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" id="first_name" placeholder="{{ __('Nama Depan') }}" autocomplete="off" value="{{ old('first_name') ?? $user->first_name }}">
                     @error('first_name')
                       <span class="text-danger">{{ $message }}</span>
                     @enderror
@@ -29,7 +29,7 @@
                     <label class="form-control-label">Nama Belakang</label>
                   </div>
                   <div class="col-md-5 ms-auto">
-                    <input type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" id="last_name" placeholder="{{ __('Last Name') }}" autocomplete="off" value="{{ old('last_name') ?? $user->last_name }}">
+                    <input type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" id="last_name" placeholder="{{ __('Nama Belakang') }}" autocomplete="off" value="{{ old('last_name') ?? $user->last_name }}">
                     @error('last_name')
                       <span class="text-danger">{{ $message }}</span>
                     @enderror
