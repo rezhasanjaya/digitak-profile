@@ -50,7 +50,7 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            {{-- <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" value="{{ old('image',$perusahaan->image) }} onchange="previewLogo()">
+                            {{-- <input class="form-control @error('logo') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="logo" name="logo" value="{{ old('logo',$perusahaan->logo) }} onchange="previewLogo()">
                             <div>*file type .jpg .jpeg .png | max size 2 mb</div> --}}
                         </div>
                     </div>
@@ -82,7 +82,7 @@
 
                         <div class="pl-lg-4">
   
-                        <input type="hidden" id="id_prshn" class="form-control" name="id_prshn" placeholder="id_prshn" value="{{ old('id_prshn',$perusahaan->id_prshn) }}">
+                        {{-- <input type="hidden" id="id_prshn" class="form-control" name="id_prshn" placeholder="id_prshn" value="{{ old('id_prshn',$perusahaan->id_prshn) }}"> --}}
 
                             <div class="row">
                                 <div class="col-lg-12">
@@ -104,7 +104,7 @@
 
                             <input type="hidden" id="tahun_berdiri" class="form-control" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
 
-                            <input type="hidden" id="image" class="form-control" name="image" value="{{ old('image',$perusahaan->image) }}">
+                            <input type="hidden" id="logo" class="form-control" name="logo" value="{{ old('logo',$perusahaan->logo) }}">
 
                             <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ Auth::user()->id }}">
                             
@@ -168,7 +168,6 @@
                                 </div>
                             </div>
                         </div>
-                        <hr>
 
                         <!-- Button -->
                         <div class="pl-lg-4">

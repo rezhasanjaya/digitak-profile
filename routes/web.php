@@ -16,8 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
+
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/beranda', 'BerandaController@index')->name('beranda');
 });
 
 Route::group(['middleware' => 'auth'], function () {

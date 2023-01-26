@@ -41,7 +41,6 @@ class PerusahaanController extends Controller
             'twitter' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',
-            'logo' => 'required',
         ]);
 
         $perusahaan = new Perusahaan;
@@ -57,7 +56,7 @@ class PerusahaanController extends Controller
         $perusahaan->latitude = $request->latitude;
         $perusahaan->longitude = $request->longitude;
         $perusahaan->edited_by = $request->edited_by;
-        $perusahaan->image = 'digitak.png';
+        $perusahaan->logo = 'digitak.png';
         $perusahaan->waktu_update = now();
         $perusahaan->save();
 
@@ -93,23 +92,6 @@ class PerusahaanController extends Controller
 
         ]);
 
-        // $perusahaan = new Perusahaan;
-        // $perusahaan->id = $request->id;
-        // $perusahaan->nama_workshop = $request->nama_workshop;
-        // $perusahaan->tahun_berdiri = $request->tahun_berdiri;
-        // $perusahaan->alamat = $request->alamat;
-        // $perusahaan->email = $request->email;
-        // $perusahaan->phone = $request->phone;
-        // $perusahaan->whatsapp = $request->whatsapp;
-        // $perusahaan->facebook = $request->facebook;
-        // $perusahaan->instagram = $request->instagram;
-        // $perusahaan->twitter = $request->twitter;
-        // $perusahaan->latitude = $request->latitude;
-        // $perusahaan->longitude = $request->longitude;
-        // $perusahaan->edited_by = 'test';
-        // $perusahaan->image = 'test';
-        // $perusahaan->update();
-
         $perusahaan = new Perusahaan;
         $perusahaan->id_prshn = $request->id_prshn + 1;
         $perusahaan->nama_workshop = $request->nama_workshop;
@@ -131,8 +113,5 @@ class PerusahaanController extends Controller
         $perusahaan->update($request->all());
         return redirect()->route('perusahaan.index')
             ->with('sukses', 'Data berhasil diubah');
-
-        // return redirect()->route('perusahaan.index')
-        //     ->with('Success', 'Data Has Been Updated.');
     }
 }
