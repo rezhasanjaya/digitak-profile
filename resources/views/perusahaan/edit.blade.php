@@ -68,19 +68,21 @@
 
                 <div class="card-body">
 
-                    <form action="{{ route('perusahaan.update', $perusahaan->id) }}" method="post">
+                    <form action="{{ route('perusahaan.update', $perusahaan->id_prshn) }}" method="post">
                         @csrf
                         @method('PUT')
 
                         <h6 class="heading-small text-muted mb-4">Detail Perusahaan</h6>
-                        <input type="hidden" id="id" class="form-control" name="id" value="{{ old('id',$perusahaan->id) }}">
+                        <input type="hidden" id="id_prshn" class="form-control" name="id_prshn" value="{{ old('id_prshn',$perusahaan->id_prshn) }}">
+
                         <input type="hidden" id="tahun_berdiri" class="form-control" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
+
                         <input type="hidden" id="logo" class="form-control" name="logo" value="{{ old('logo',$perusahaan->logo) }}">
-                        <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ old('edited_by',$perusahaan->edited_by) }}">
+                        <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ Auth::user()->id }}">
 
                         <div class="pl-lg-4">
   
-                            <input type="hidden" id="id" class="form-control" name="id" placeholder="ID" value="{{ old('id',$perusahaan->id) }}">
+                        {{-- <input type="hidden" id="id_prshn" class="form-control" name="id_prshn" placeholder="id_prshn" value="{{ old('id_prshn',$perusahaan->id_prshn) }}"> --}}
 
                             <div class="row">
                                 <div class="col-lg-12">
