@@ -30,6 +30,7 @@ return new class extends Migration
             $table->string('longitude');
             $table->text('logo');
             $table->timestamps();
+            $table->engine = "InnoDB";
         });
     }
 

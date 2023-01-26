@@ -47,12 +47,11 @@
                     <figure class="rounded-circle avatar avatar font-weight-bold" style="font-size: 60px; height: 180px; width: 180px; background-color: #E2A814" data-initial="{{ Auth::user()->first_name[0] }}"></figure>
                 </div>
                 <div class="card-body">
+
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="text-center">
-                                <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()">
-                                <div>*file type .jpg .jpeg .png | max size 2 mb</div>
-                            </div>
+                            {{-- <input class="form-control @error('logo') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="logo" name="logo" value="{{ old('logo',$perusahaan->logo) }} onchange="previewLogo()">
+                            <div>*file type .jpg .jpeg .png | max size 2 mb</div> --}}
                         </div>
                     </div>
                 </div>
@@ -80,6 +79,8 @@
                         <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ old('edited_by',$perusahaan->edited_by) }}">
 
                         <div class="pl-lg-4">
+  
+                            <input type="hidden" id="id" class="form-control" name="id" placeholder="ID" value="{{ old('id',$perusahaan->id) }}">
 
                             <div class="row">
                                 <div class="col-lg-12">
@@ -89,17 +90,22 @@
                                     </div>
                                 </div>
                             </div>
-
-                           
+                     
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="form-control-label" for="alamat">Alamat<span class="small text-danger"></span></label>
-                                        <textarea type="text" id="alamat" class="form-control" name="alamat" placeholder="Alamat">{{ old('alamat',$perusahaan->alamat) }}</textarea>
+                                        <input type="text" id="alamat" class="form-control" name="alamat" placeholder="E-Mail" value="{{ old('alamat',$perusahaan->alamat) }}">
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>
 
+                            <input type="hidden" id="tahun_berdiri" class="form-control" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
+
+                            <input type="hidden" id="logo" class="form-control" name="logo" value="{{ old('logo',$perusahaan->logo) }}">
+
+                            <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ Auth::user()->full_name }}">
+                            
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
@@ -159,6 +165,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <br>
                         </div>
 
                         <!-- Button -->

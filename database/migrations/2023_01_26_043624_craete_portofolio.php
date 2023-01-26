@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('portofolio', function (Blueprint $table) {
             $table->id('id_portofolio');
-            $table->foreignId('craeted_by')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('created_by')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama_aplikasi');
             $table->text('kategori');
             $table->string('tahun_pembuatan');
@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('keterangan');
             $table->text('gambar');
             $table->timestamps();
+            $table->engine = "InnoDB";
         });
     }
 
