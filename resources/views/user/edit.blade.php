@@ -6,66 +6,79 @@
 
     <!-- Main Content goes here -->
 
-    <div class="card">
-        <div class="card-body">
-            <form action="{{ route('user.update', $user->id) }}" method="post">
-                @csrf
-                @method('put')
+    <div class="row justify-content-center">
 
-                <div class="row mb-3">
-                  <div class="col-md-2 mt-1">
-                    <label class="form-control-label">Nama Depan</label>
-                  </div>
-                  <div class="col-md-5 ms-auto">
-                    <input type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" id="first_name" placeholder="{{ __('Nama Depan') }}" autocomplete="off" value="{{ old('first_name') ?? $user->first_name }}">
-                    @error('first_name')
-                      <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                  </div>
-                </div>
+      <div class="col-lg-5">
 
-                <div class="row mb-3">
-                  <div class="col-md-2 mt-1">
-                    <label class="form-control-label">Nama Belakang</label>
-                  </div>
-                  <div class="col-md-5 ms-auto">
-                    <input type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" id="last_name" placeholder="{{ __('Nama Belakang') }}" autocomplete="off" value="{{ old('last_name') ?? $user->last_name }}">
-                    @error('last_name')
-                      <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                  </div>
-                </div>
+          <div class="card shadow mb-4">
 
-                <div class="row mb-3">
-                  <div class="col-md-2 mt-1">
-                    <label class="form-control-label">Email</label>
-                  </div>
-                  <div class="col-md-5 ms-auto">
-                    <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="{{ __('Email') }}" autocomplete="off" value="{{ old('email') ?? $user->email }}">
-                    @error('email')
-                      <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                  </div>
-                </div>
+              
 
-                <div class="row mb-3">
-                  <div class="col-md-2 mt-1">
-                    <label class="form-control-label">Password</label>
-                  </div>
-                  <div class="col-md-5 ms-auto">
-                    <input type="text" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="{{ __('Password') }}" autocomplete="off">
-                    @error('password')
-                      <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                  </div>
-                </div>
-                <hr>
-                <button type="submit" class="btn btn-warning"><i class="fa-solid fa-save mr-2"></i>Simpan Perubahan</button>                
-                <a href="{{ route('user.index') }}" class="btn btn-default">Batal</a>
+              <div class="card-body">
 
-            </form>
-        </div>
-    </div>
+                <form action="{{ route('user.update', $user->id) }}" method="post">
+                  @csrf
+                  @method('put')
+  
+                  <div class="row mb-3">
+                    <div class="col-md-4 mt-1">
+                      <label class="form-control-label">Nama Depan</label>
+                    </div>
+                    <div class="col-md-7">
+                      <input type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" id="first_name" placeholder="{{ __('Nama Depan') }}" autocomplete="off" value="{{ old('first_name') ?? $user->first_name }}">
+                      @error('first_name')
+                        <span class="text-danger">{{ $message }}</span>
+                      @enderror
+                    </div>
+                  </div>
+  
+                  <div class="row mb-3">
+                    <div class="col-md-4 mt-1">
+                      <label class="form-control-label">Nama Belakang</label>
+                    </div>
+                    <div class="col-md-7">
+                      <input type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" id="last_name" placeholder="{{ __('Nama Belakang') }}" autocomplete="off" value="{{ old('last_name') ?? $user->last_name }}">
+                      @error('last_name')
+                        <span class="text-danger">{{ $message }}</span>
+                      @enderror
+                    </div>
+                  </div>
+  
+                  <div class="row mb-3">
+                    <div class="col-md-4 mt-1">
+                      <label class="form-control-label">Email</label>
+                    </div>
+                    <div class="col-md-7">
+                      <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="{{ __('Email') }}" autocomplete="off" value="{{ old('email') ?? $user->email }}">
+                      @error('email')
+                        <span class="text-danger">{{ $message }}</span>
+                      @enderror
+                    </div>
+                  </div>
+  
+                  <div class="row mb-3">
+                    <div class="col-md-4 mt-1">
+                      <label class="form-control-label">Password</label>
+                    </div>
+                    <div class="col-md-7">
+                      <input type="text" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="{{ __('Password') }}" autocomplete="off">
+                      @error('password')
+                        <span class="text-danger">{{ $message }}</span>
+                      @enderror
+                    </div>
+                  </div>
+                  <hr>
+                  <button type="submit" class="btn btn-warning"><i class="fa-solid fa-save mr-2"></i>Simpan Perubahan</button>                
+                  <a href="{{ route('user.index') }}" class="btn btn-default">Batal</a>
+  
+              </form>
+
+              </div>
+          </div>
+
+      </div>
+
+  </div>
 
     <!-- End of Main Content -->
 @endsection

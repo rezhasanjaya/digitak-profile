@@ -43,7 +43,7 @@
                 <th>Telepon</th>
                 <th>Facebook</th>
                 <th>Twitter</th>
-                <th>File Logo</th>
+                <th>File Image</th>
                 <th>Diubah Oleh</th>
             </tr>
         </thead>
@@ -65,7 +65,7 @@
                     <td>{{ $pt->phone }}</td>
                     <td>{{ $pt->facebook }}</td>
                     <td>{{ $pt->twitter }}</td>
-                    <td>{{ $pt->logo }}</td>
+                    <td>{{ $pt->image }}</td>
                     <td>{{ $pt->first_name }} {{ $pt->last_name }}</td>
                 </tr>
             @endforeach

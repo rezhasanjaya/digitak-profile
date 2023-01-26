@@ -44,11 +44,12 @@
         <div class="col-lg-6 order-lg-2">
 
             <div class="card shadow mb-4">
-                <div class="card-body mt-3">
+                <div class="card-body">
+                  <h5 class="heading-small text-muted mb-4">Gambar Project</h5>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="text-center">
-                                <img src="/images/{{ $portofolio->image }}" width="400px">
+                                <img src="/images/{{ $portofolio->image }}" class="img-fluid">
                                 <h5 class="font-weight-bold"></h5>
                                 <br>
                                 Nama File : {{ $portofolio->image }}
@@ -75,7 +76,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="nama_workshop">Nama Portofolio</label>
+                                        <label class="form-control-label" for="nama_workshop">Nama Aplikasi</label>
                                         <input type="text" id="nama_workshop" class="form-control" name="nama_workshop" placeholder="Nama Workshop" value="{{ $portofolio->nama_aplikasi }}" disabled>
                                     </div>
                                 </div>
@@ -91,17 +92,32 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="klien">Klien<span class="small text-danger"></span></label>
-                                        <input type="text" id="klien" class="form-control" name="klien" placeholder="klien" value="{{ $portofolio->klien }}" disabled>
+                                        <label class="form-control-label" for="kategori">Kategori<span class="small text-danger"></span></label>
+                                        <input type="text" id="kategori" class="form-control" name="kategori" placeholder="kategori" value="{{ $portofolio->kategori }}" disabled>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="created_by">Dipost oleh<span class="small text-danger"></span></label>
-                                        <input type="created_by" id="created_by" class="form-control" name="created_by" value="{{ $portofolio->created_by }}" disabled>
+                                      <label class="form-control-label" for="klien">Klien<span class="small text-danger"></span></label>
+                                      <input type="text" id="klien" class="form-control" name="klien" placeholder="klien" value="{{ $portofolio->klien }}" disabled>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                              <div class="col-lg-6">
+                                  <div class="form-group">
+                                      <label class="form-control-label" for="link_demo">Link Demo<span class="small text-danger"></span></label>
+                                      <input type="text" id="link_demo" class="form-control" name="link_demo" placeholder="link_demo" value="{{ _('https://') }}{{ $portofolio->link_demo }}" disabled>
+                                  </div>
+                              </div>
+                              <div class="col-lg-6">
+                                  <div class="form-group">
+                                    <label class="form-control-label" for="created_by">Dipost Oleh<span class="small text-danger"></span></label>
+                                    <input type="text" id="created_by" class="form-control" name="created_by" placeholder="created_by" value="{{ $portofolio->created_by }}" disabled>
+                                  </div>
+                              </div>
+                          </div>
 
                             <div class="row">
                                 
@@ -126,7 +142,9 @@
                                 <div class="col-lg-12">
                                     <div class="form-group focused">
                                             <label class="form-control-label" for="keterangan">Keterengan<span class="small text-danger"></span></label>
-                                            <textarea id="keterangan" style="height: 200px" class="form-control" name="keterangan" placeholder="Keterangan" disabled>{{ $portofolio->keterangan }}</textarea>
+                                            <article class="my-3 fs-5">
+                                              {!! $portofolio->keterangan !!}
+                                            </article>                                            
                                     </div>
                                 </div>
                             </div>

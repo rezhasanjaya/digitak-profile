@@ -97,10 +97,10 @@
               @csrf
 
               <div class="row mb-3">
-                <div class="col-md-3 mt-1">
+                <div class="col-md-4 mt-1">
                   <label class="form-control-label">Nama Depan</label>
                 </div>
-                <div class="col-md-9 ms-auto">
+                <div class="col-md-8 ms-auto">
                   <input type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" id="first_name" placeholder="{{ __('Nama Depan') }}" autocomplete="off">
                   @error('first_name')
                     <span class="text-danger">{{ $message }}</span>
@@ -109,10 +109,10 @@
               </div>
 
               <div class="row mb-3">
-                <div class="col-md-3 mt-1">
+                <div class="col-md-4 mt-1">
                   <label class="form-control-label">Nama Belakang</label>
                 </div>
-                <div class="col-md-9 ms-auto">
+                <div class="col-md-8 ms-auto">
                   <input type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" id="last_name" placeholder="{{ __('Nama Belakang') }}" autocomplete="off">
                   @error('last_name')
                     <span class="text-danger">{{ $message }}</span>
@@ -121,10 +121,10 @@
               </div>
               
               <div class="row mb-3">
-                <div class="col-md-3 mt-1">
+                <div class="col-md-4 mt-1">
                   <label class="form-control-label">Email</label>
                 </div>
-                <div class="col-md-9 ms-auto">
+                <div class="col-md-8 ms-auto">
                   <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="{{ __('Email') }}" autocomplete="off">
                   @error('email')
                     <span class="text-danger">{{ $message }}</span>
@@ -133,7 +133,7 @@
               </div>
 
               <div class="row mb-3">
-                <div class="col-md-3 mt-1">
+                <div class="col-md-4 mt-1">
                   <label class="form-control-label">Password</label>
                 </div>
                 <div class="col-md-9 ms-auto">

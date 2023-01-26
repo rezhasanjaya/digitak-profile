@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('instagram');
             $table->string('latitude');
             $table->string('longitude');
-            $table->text('logo');
+            $table->text('image');
             $table->timestamp('waktu_update');
             // $table->timestamps();
             $table->engine = "InnoDB";

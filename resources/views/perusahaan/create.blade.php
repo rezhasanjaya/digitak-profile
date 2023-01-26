@@ -19,14 +19,14 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-          </div>
+          </div>            
         </div>
     @endif
 
     @if (session('message'))
         <div class="alert alert-success alert-dismissible fade show border-left-success" role="alert">
             {{ session('message') }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <button typ e="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
         </div>
@@ -38,22 +38,24 @@
             </button>
         </div>
     @endif
-
-                     
+                      
     <div class="row">
+
         <div class="col-lg-4 order-lg-2">
+
             <div class="card shadow mb-4">
                 <div class="card-profile-image mt-4">
                     <figure class="rounded-circle avatar avatar font-weight-bold" style="font-size: 60px; height: 180px; width: 180px; background-color: #E2A814" data-initial="{{ Auth::user()->first_name[0] }}"></figure>
                 </div>
                 <div class="card-body">
-
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-lg-12">
-                            {{-- <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" value="{{ old('image',$perusahaan->image) }} onchange="previewLogo()">
-                            <div>*file type .jpg .jpeg .png | max size 2 mb</div> --}}
+                            <div class="text-center">
+                                <h5 class="font-weight-bold"></h5>
+                                Nama File : {{ $pt->image }}
+                            </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -67,52 +69,41 @@
                 </div> --}}
 
                 <div class="card-body">
-
-                    <form action="{{ route('perusahaan.update', $perusahaan->id_prshn) }}" method="post">
+                    <form action="{{ route('perusahaan.store') }}" method="POST">
                         @csrf
-                        @method('PUT')
-
                         <h6 class="heading-small text-muted mb-4">Detail Perusahaan</h6>
-                        <input type="hidden" id="id_prshn" class="form-control" name="id_prshn" value="{{ old('id_prshn',$perusahaan->id_prshn) }}">
-
-                        <input type="hidden" id="tahun_berdiri" class="form-control" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
-
-                        <input type="hidden" id="image" class="form-control" name="image" value="{{ old('image',$perusahaan->image) }}">
-                        <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ Auth::user()->id }}">
-
                         <div class="pl-lg-4">
-  
-                        <input type="hidden" id="id_prshn" class="form-control" name="id_prshn" placeholder="id_prshn" value="{{ old('id_prshn',$perusahaan->id_prshn) }}">
-
+                            
                             <div class="row">
-                                <div class="col-lg-12">
+                                <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="nama_workshop">Nama Workshop</label>
-                                        <input type="text" id="nama_workshop" class="form-control" name="nama_workshop" placeholder="Nama Workshop" value="{{ old('nama_workshop',$perusahaan->nama_workshop) }}">
+                                        <input type="text" id="nama_workshop" class="form-control" name="nama_workshop" placeholder="Nama Workshop" value="">
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                    <div class="form-group focused">
+                                            <label class="form-control-label" for="tahun_berdiri">Tahun Berdiri<span class="small text-danger"></span></label>
+                                            <input type="text" id="tahun_berdiri" class="form-control" name="tahun_berdiri" placeholder="Tahun Berdiri" value="2014">
                                     </div>
                                 </div>
                             </div>
-                     
+                           
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <label class="form-control-label" for="alamat">Alamat<span class="small text-danger"></span></label>
-                                        <textarea type="text" id="alamat" class="form-control" name="alamat" placeholder="Alamat"> {{ old('alamat',$perusahaan->alamat) }}</textarea>
+                                        <input type="text" id="alamat" class="form-control" name="alamat" placeholder="Alamat" value="">
                                     </div>
                                 </div>
                             </div>
 
-                            <input type="hidden" id="tahun_berdiri" class="form-control" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
-
-                            <input type="hidden" id="image" class="form-control" name="image" value="{{ old('image',$perusahaan->image) }}">
-
-                            <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ Auth::user()->id }}">
-                            
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="email_workshop">E-mail<span class="small text-danger"></span></label>
-                                        <input type="email_workshop" id="email_workshop" class="form-control" name="email_workshop" placeholder="E-Mail" value="{{ old('email_workshop',$perusahaan->email_workshop) }}">
+                                        <label class="form-control-label" for="email">E-mail<span class="small text-danger"></span></label>
+                                        <input type="email" id="email" class="form-control" name="email" placeholder="E-Mail" value="">
                                     </div>
                                 </div>
                             </div>
@@ -120,14 +111,14 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="phone">Telepone<span class="small text-danger"></span></label>
-                                        <input type="text" id="phone" class="form-control" name="phone" placeholder="Telepone" value="{{ old('phone',$perusahaan->phone) }}">
+                                            <label class="form-control-label" for="phone">Phone<span class="small text-danger"></span></label>
+                                            <input type="text" id="phone" class="form-control" name="phone" placeholder="Phone" value="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="whatsapp">WhatsApp</label>
-                                        <input type="text" id="whatsapp" class="form-control" name="whatsapp" placeholder="WhatsApp" value="{{ old('whatsapp',$perusahaan->whatsapp) }}">
+                                        <input type="text" id="whatsapp" class="form-control" name="whatsapp" placeholder="WhatsApp" value="">
                                     </div>
                                 </div>
                             </div>
@@ -136,19 +127,19 @@
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="facebook">Facebook</label>
-                                        <input type="text" id="facebook" class="form-control" name="facebook" placeholder="Facebook" value="{{ old('facebook',$perusahaan->facebook) }}">
+                                        <input type="text" id="facebook" class="form-control" name="facebook" placeholder="Facebook" value="">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="instagram">Instagram</label>
-                                        <input type="text" id="instagram" class="form-control" name="instagram" placeholder="Instagram" value="{{ old('instagram',$perusahaan->instagram) }}">
+                                        <input type="text" id="instagram" class="form-control" name="instagram" placeholder="Instagram" value="">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="twitter">Twitter</label>
-                                        <input type="text" id="twitter" class="form-control" name="twitter" placeholder="Twitter" value="{{ old('twitter',$perusahaan->twitter) }}">
+                                        <input type="text" id="twitter" class="form-control" name="twitter" placeholder="Twitter" value="">
                                     </div>
                                 </div>
                             </div>
@@ -156,33 +147,30 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
-                                        <label class="form-control-label" for="latitude">Latitude<span class="small text-danger"></span></label>
-                                        <input type="text" id="latitude" class="form-control" name="latitude" placeholder="Latitude" value="{{ old('latitude',$perusahaan->latitude) }}">
+                                            <label class="form-control-label" for="latitude">Latitude<span class="small text-danger"></span></label>
+                                            <input type="text" id="latitude" class="form-control" name="latitude" placeholder="Latitude" value="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="longitude">Longitude</label>
-                                        <input type="text" id="longitude" class="form-control" name="longitude" placeholder="Longitude" value="{{ old('longitude',$perusahaan->longitude) }}">
+                                        <input type="text" id="longitude" class="form-control" name="longitude" placeholder="Longitude" value="">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <hr>
 
                         <!-- Button -->
                         <div class="pl-lg-4">
                             <div class="row">
                                 <div class="col">
-                                    <button type="submit" class="btn btn-warning"><i class="fa-solid fa-save mr-2"></i>Simpan Perubahan</button>
-                                    <a href="{{ route('perusahaan.index') }}" class="btn btn-default">Batal</a>
-                                </div>                                
+                                  <button type="submit" class="btn btn-warning"><i class="fa-solid fa-save mr-2"></i>Simpan</button>
+                                </div>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-
     </div>
 @endsection

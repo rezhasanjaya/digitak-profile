@@ -53,7 +53,11 @@ class DatabaseSeeder extends Seeder
             'instagram' => 'instagram',
             'latitude' => '-6.884670666134072',
             'longitude' => '107.57010316354963',
+<<<<<<< HEAD
             'logo' => '',
+=======
+            'image' => 'digitak.png',
+>>>>>>> 510ed40d818a1db8f42dbe577dbc3b3bed5d96af
             'waktu_update' => '2023-01-26 16:13:53',
         ]);
     }
