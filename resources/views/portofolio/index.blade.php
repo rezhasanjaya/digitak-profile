@@ -5,7 +5,7 @@
     <h1 class="h3 mb-4 text-gray-800">{{ $title ?? __('Blank Page') }}</h1>
 
     <!-- Main Content goes here -->
-    {{-- <a href="{{ route('perusahaan.create') }}">  <button type="button" class="btn btn-warning mb-3"><i class="fa-solid fa-pen-to-square mr-2"></i> Edit Data</button></a> --}}
+    <a href="{{ route('portofolio.create') }}">  <button type="button" class="btn btn-dark mb-3"><i class="fa-solid fa-pen-to-square mr-2"></i> Add Portofolio</button></a>
    
     @if ($errors->any())
         <div class="alert alert-danger alert-dismissible fade show border-left-danger" role="alert">
@@ -37,6 +37,7 @@
             <tr>
             <tr>  
                 <th>Application Name</th>
+                <th>Dibuat</th>
                 <th>Category</th>
                 <th>Year created</th>
                 <th>Client</th>
@@ -47,24 +48,23 @@
         </thead>
         <tbody>
             @foreach ($portofolio as $pt)
-            <div class="d-flex mb-3">
-                <a href="{{ route('portofolio.edit', $pt->id) }}" class="btn btn-sm btn-warning mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Data</a>
-            </div>
-            <?php break; ?>
-            @endforeach
-            @foreach ($portofolio as $pt)
                 <tr>
                     <td>{{ $pt->nama_aplikasi }}</td>
+                    <td>{{ $pt->created_by }}</td>
                     <td>{{ $pt->kategori }}</td>
                     <td>{{ $pt->tahun_pembuatan }}</td>
                     <td>{{ $pt->klien }}</td>
-                    <td>{{ $pt->link_demo }}</td>
-                    <td>{{ $pt->created_at }}</td>
+                    <td><a href="{{url($pt->link_demo)}}" target="_blank">{{ $pt->link_demo}}</a></td>
+                    <td>{{ date('H:i:s d-m-Y', strtotime($pt->created_at)); }}</td>
                     <td> 
-                        <div class="d-flex mb-3">
-                        <a href="{{ route('portofolio.show', $pt->id) }}" class="btn btn-sm btn-success mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Show Data</a>
-                        <a href="{{ route('portofolio.edit', $pt->id) }}" class="btn btn-sm btn-warning mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Data</a>
-                        <a href="{{ route('portofolio.delete', $pt->id) }}" class="btn btn-sm btn-danger mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Delete Data</a>
+                        <div class="d-flex">
+                            <a href="{{ route('portofolio.show', $pt->id_portofolio) }}" class="btn btn-sm btn-success mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Detail</a>
+                            <a href="{{ route('portofolio.edit', $pt->id_portofolio) }}" class="btn btn-sm btn-warning mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit</a>
+                            <form action="{{ route('portofolio.destroy', $pt->id_portofolio) }}" method="post">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure want to delete this?')"><i class="fa-solid fa-trash-can mr-2"></i>Hapus</button>
+                            </form>
                         </div>
                     </td>
                 </tr>

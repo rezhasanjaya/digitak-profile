@@ -22,8 +22,8 @@ return new class extends Migration
             $table->string('klien');
             $table->string('link_demo');
             $table->string('keterangan');
-            $table->text('gambar');
-            // $table->timestamps();
+            $table->text('image')->nullable();
+            $table->timestamps();
             $table->engine = "InnoDB";
         });
     }
