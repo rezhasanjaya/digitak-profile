@@ -34,7 +34,7 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
             <div class="sidebar-brand-icon">
-                <i class="fas fa-house-laptop"></i>
+                <i class="fas fa-laptop-code"></i>
             </div>
             <div class="sidebar-brand-text mx-2">Digi Comfile</div>
         </a>
@@ -45,7 +45,7 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item {{ Nav::isRoute('home') }}">
             <a class="nav-link" href="{{ route('home') }}">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-fw fa-home"></i>
                 <span>{{ __('Dashboard') }}</span></a>
         </li>
 
@@ -90,7 +90,7 @@
          <!-- Nav Item - Perusahaan -->
          <li class="nav-item {{ Nav::isRoute('perusahaan.index') }}">
             <a class="nav-link" href="{{ route('perusahaan.index') }}">
-                <i class="fas fa-fw fa-user"></i>
+                <i class="fas fa-fw fa-building"></i>
                 <span>{{ __('Perusahaan') }}</span>
             </a>
         </li>
@@ -98,7 +98,7 @@
         <!-- Nav Item - Portofolio -->
         <li class="nav-item {{ Nav::isRoute('portofolio.index') }}">
             <a class="nav-link" href="{{ route('portofolio.index') }}">
-                <i class="fas fa-fw fa-user"></i>
+                <i class="fas fa-fw fa-book"></i>
                 <span>{{ __('Portofolio') }}</span>
             </a>
         </li>
