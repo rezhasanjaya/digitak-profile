@@ -16,5 +16,5 @@ class Portofolio extends Model
     ];
 
 
-    protected $guarded = ['id_portofolio', 'craeted_by'];
+    protected $guarded = ['id_portofolio', 'created_by'];
 }
