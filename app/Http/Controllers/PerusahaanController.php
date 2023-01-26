@@ -115,7 +115,7 @@ class PerusahaanController extends Controller
         $perusahaan->twitter = $request->twitter;
         $perusahaan->latitude = $request->latitude;
         $perusahaan->longitude = $request->longitude;
-        $perusahaan->edited_by = 'Super Admin';
+        $perusahaan->edited_by = $request->edited_by;
         $perusahaan->logo = 'digitak.png';
         $perusahaan->save();
 
