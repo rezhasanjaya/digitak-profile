@@ -101,7 +101,7 @@
                   <label class="form-control-label">First Name</label>
                 </div>
                 <div class="col-md-9 ms-auto">
-                  <input type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" id="first_name" placeholder="{{ __('First Name') }}" autocomplete="off" value="{{ old('first_name') }}">
+                  <input type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" id="first_name" placeholder="{{ __('First Name') }}" autocomplete="off">
                   @error('first_name')
                     <span class="text-danger">{{ $message }}</span>
                   @enderror
@@ -113,7 +113,7 @@
                   <label class="form-control-label">Last Name</label>
                 </div>
                 <div class="col-md-9 ms-auto">
-                  <input type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" id="last_name" placeholder="{{ __('Last Name') }}" autocomplete="off" value="{{ old('last_name') }}">
+                  <input type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" id="last_name" placeholder="{{ __('Last Name') }}" autocomplete="off">
                   @error('last_name')
                     <span class="text-danger">{{ $message }}</span>
                   @enderror
@@ -125,7 +125,7 @@
                   <label class="form-control-label">Email</label>
                 </div>
                 <div class="col-md-9 ms-auto">
-                  <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="{{ __('Email') }}" autocomplete="off" value="{{ old('email') }}">
+                  <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="{{ __('Email') }}" autocomplete="off">
                   @error('email')
                     <span class="text-danger">{{ $message }}</span>
                   @enderror
@@ -137,7 +137,7 @@
                   <label class="form-control-label">Password</label>
                 </div>
                 <div class="col-md-9 ms-auto">
-                  <input type="text" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="{{ __('Password') }}" autocomplete="off" value="{{ old('password') }}">
+                  <input type="text" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="{{ __('Password') }}" autocomplete="off">
                   @error('password')
                     <span class="text-danger">{{ $message }}</span>
                   @enderror
@@ -145,8 +145,8 @@
               </div>
 
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa-solid fa-xmark mr-2"></i>Close</button>
-                <button type="submit" class="btn btn-warning"><i class="fa-solid fa-floppy-disk mr-2"></i>Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa-solid fa-xmark mr-2"></i>Tutup</button>
+                <button type="submit" class="btn btn-warning"><i class="fa-solid fa-floppy-disk mr-2"></i>Simpan</button>
               </div>
 
             </form>

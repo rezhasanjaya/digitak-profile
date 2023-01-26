@@ -39,12 +39,12 @@ class ProfileController extends Controller
             if (Hash::check($request->input('current_password'), $user->password)) {
                 $user->password = Hash::make($request->input('new_password'));
             } else {
-                return redirect()->back()->withInput()->with('message2', 'Current password is not valid!');
+                return redirect()->back()->withInput()->with('message2', 'Password tidak cocok!');
             }
         }
 
         $user->save();
 
-        return redirect()->route('profile')->with('message', 'User updated successfully!');
+        return redirect()->route('profile')->with('message', 'Data user berhasil diubah!');
     }
 }

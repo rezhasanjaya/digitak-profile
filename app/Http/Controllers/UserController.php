@@ -35,7 +35,7 @@ class UserController extends Controller
         //     'users' => User::paginate(10)
         // ]);
 
-        return redirect()->route('user.index')->with('message2', 'Select "New User" below if you want to add new user!');
+        return redirect()->route('user.index')->with('message2', 'Tekan tombol "Tambah User" dibawah untuk menambah data!');
     }
     
 
@@ -95,15 +95,25 @@ class UserController extends Controller
      */
     public function update(EditUserRequest $request, User $user)
     {
+        $request->validate([
+          'first_name' => 'required',
+          'last_name' => 'required',
+          'email' => 'required|email:dns',
+        ]);
+
         if($request->filled('password')) {
+            $request->validate([
+              'password' => 'min:10|max:255',
+            ]);
             $user->password = Hash::make($request->password);
         }
+        
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->email = $request->email;
-        $user->save();
 
-        return redirect()->route('user.index')->with('message', 'User updated successfully!');
+        $user->save();
+        return redirect()->route('user.index')->with('message', 'Berhasil mengubah data user!');
     }
 
     /**
@@ -116,6 +126,6 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return redirect()->route('user.index')->with('message', 'User deleted successfully!');
+        return redirect()->route('user.index')->with('message', 'User berhasil dihapus!');
     }
 }

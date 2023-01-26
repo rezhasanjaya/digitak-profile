@@ -63,7 +63,7 @@ class PerusahaanController extends Controller
         $perusahaan->save();
 
         return redirect()->route('perusahaan.index')
-            ->with('Success', 'Data Has Been Updated.');
+            ->with('Success', 'Data berhasil ditambahkan.');
     }
 
     public function show()
@@ -131,7 +131,7 @@ class PerusahaanController extends Controller
 
         $perusahaan->update($request->all());
         return redirect()->route('perusahaan.index')
-            ->with('sukses', 'Data Berhasil Diupdate');
+            ->with('sukses', 'Data berhasil diubah');
 
         // return redirect()->route('perusahaan.index')
         //     ->with('Success', 'Data Has Been Updated.');
