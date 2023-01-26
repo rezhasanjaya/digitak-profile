@@ -52,7 +52,7 @@
             <div class="d-flex mb-3">
                 <a href="{{ route('perusahaan.edit', $pt->id) }}" class="btn btn-sm btn-warning mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Data</a>
             </div>
-            @break
+            <?php break; ?>
             @endforeach
             
             @foreach ($data as $pt)
@@ -60,7 +60,7 @@
                     <td>{{ $pt->waktu_update }}</td>
                     <td>{{ $pt->nama_workshop }}</td>
                     <td>{{ $pt->alamat }}</td>
-                    <td>{{ $pt->email }}</td>
+                    <td>{{ $pt->email_workshop }}</td>
                     <td>{{ $pt->whatsapp }}</td>
                     <td>{{ $pt->phone }}</td>
                     <td>{{ $pt->facebook }}</td>
