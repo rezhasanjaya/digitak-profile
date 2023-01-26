@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('perusahaan', function (Blueprint $table) {
             $table->id();
+            //$table->foreignId('edited_by')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('edited_by');
             $table->string('nama_workshop');
             $table->text('alamat');
             $table->string('tahun_berdiri');
@@ -26,7 +28,6 @@ return new class extends Migration
             $table->string('instagram');
             $table->string('latitude');
             $table->string('longitude');
-            $table->string('edited_by');
             $table->text('logo');
             $table->timestamps();
         });

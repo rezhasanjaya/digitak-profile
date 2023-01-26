@@ -36,7 +36,7 @@
             <div class="sidebar-brand-icon">
                 <i class="fas fa-house-laptop"></i>
             </div>
-            <div class="sidebar-brand-text mx-2">Digitak</div>
+            <div class="sidebar-brand-text mx-2">Digi Comfile</div>
         </a>
 
         <!-- Divider -->
@@ -54,16 +54,18 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            {{ __('Settings') }}
+            {{ __('Super Admin') }}
         </div>
 
-        <!-- Nav Item - Profile -->
+        {{-- <!-- Nav Item - Profile -->
         <li class="nav-item {{ Nav::isRoute('profile') }}">
             <a class="nav-link" href="{{ route('profile') }}">
                 <i class="fa-solid fa-user"></i>
                 <span>{{ __('Profile') }}</span>
             </a>
-        </li>
+        </li> --}}
+
+        
 
         <!-- Nav Item -->
         <li class="nav-item {{ Nav::isRoute('user.index') }}">
@@ -73,11 +75,27 @@
             </a>
         </li>       
         
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            {{ __('Company Profile') }}
+        </div>
+
          <!-- Nav Item - Perusahaan -->
          <li class="nav-item {{ Nav::isRoute('perusahaan.index') }}">
             <a class="nav-link" href="{{ route('perusahaan.index') }}">
                 <i class="fas fa-fw fa-user"></i>
                 <span>{{ __('Perusahaan') }}</span>
+            </a>
+        </li>
+
+        <!-- Nav Item - Portofolio -->
+        <li class="nav-item {{ Nav::isRoute('portofolio.index') }}">
+            <a class="nav-link" href="{{ route('portofolio.index') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>{{ __('Portofolio') }}</span>
             </a>
         </li>
 
@@ -115,7 +133,7 @@
                 </button>
 
                 <!-- Topbar Search -->
-                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                {{-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                     <div class="input-group">
                         <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
@@ -124,7 +142,7 @@
                             </button>
                         </div>
                     </div>
-                </form>
+                </form> --}}
 
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
@@ -149,7 +167,7 @@
                         </div>
                     </li>
 
-                    <!-- Nav Item - Alerts -->
+                    {{-- <!-- Nav Item - Alerts -->
                     <li class="nav-item dropdown no-arrow mx-1">
                         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-bell fa-fw"></i>
@@ -252,7 +270,7 @@
                             </a>
                             <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
                         </div>
-                    </li>
+                    </li> --}}
 
                     <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -268,14 +286,14 @@
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                 {{ __('Profile') }}
                             </a>
-                            <a class="dropdown-item" href="javascript:void(0)">
+                            {{-- <a class="dropdown-item" href="javascript:void(0)">
                                 <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                 {{ __('Settings') }}
                             </a>
                             <a class="dropdown-item" href="javascript:void(0)">
                                 <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                 {{ __('Activity Log') }}
-                            </a>
+                            </a> --}}
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

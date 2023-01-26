@@ -74,9 +74,10 @@
                         @method('PUT')
 
                         <h6 class="heading-small text-muted mb-4">Detail Perusahaan</h6>
-                        <?php 
-                        $plus1 = 1;
-                        ?>
+                        <input type="hidden" id="id" class="form-control" name="id" value="{{ old('id',$perusahaan->id) }}">
+                        <input type="hidden" id="tahun_berdiri" class="form-control" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
+                        <input type="hidden" id="logo" class="form-control" name="logo" value="{{ old('logo',$perusahaan->logo) }}">
+                        <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ old('edited_by',$perusahaan->edited_by) }}">
 
                         <div class="pl-lg-4">
 
