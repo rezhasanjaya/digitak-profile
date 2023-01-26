@@ -15,7 +15,7 @@ class PerusahaanController extends Controller
         })->get();
 
         return view('perusahaan.index', [
-            'title' => 'Company Changing History',
+            'title' => 'Ubah Data Perusahaan dan Histori',
             'users' => User::all(),
             'perusahaan' => Perusahaan::latest('id_prshn')->first()->orderBy('id_prshn','desc')->paginate(10),
             // 'perusahaan' => Perusahaan::all(),

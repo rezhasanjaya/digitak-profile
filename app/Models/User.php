@@ -17,11 +17,11 @@ class User extends Authenticatable
     ];
 
     protected $guarded = [
-      'id',
+      'id', 'role',
     ];
 
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 
     ];
 
     protected $casts = [
