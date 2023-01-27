@@ -53,7 +53,6 @@
                       <div class="col-lg-12">
                           <div class="text-center">
                               <h5 class="font-weight-bold"></h5>
-                              {{-- <img src="/images/{{ $portofolio->image }}" class="img-fluid"> --}}
                               <img src="/images/{{ $portofolio->image }}" class="img-preview img-fluid mb-3">
                               <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()" value=""> 
                               <br>
