@@ -14,7 +14,10 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">    
-
+    
+    <!-- Bootstrap Carousel -->
+    <link rel="stylesheet" href="/css/carousel.css">
+    
     <!-- My Style -->
     <link rel="stylesheet" href="/css/style.css">
     <link href="footers.css" rel="stylesheet">
