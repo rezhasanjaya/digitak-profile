@@ -99,8 +99,7 @@
                             <label class="form-control-label" for="kategori">Kategori<span class="small text-danger"></span></label>
                                 <select class="form-control @error('kategori') is-invalid @enderror" id="kategori" name="kategori" required>
                                 <option value="" selected disabled>Pilih Kategori</option> 
-                                <option value="Android" {{ $portofolio->kategori == 'Android'? 'selected': ''}} >Android</option>
-                                <option value="IOS" {{ $portofolio->kategori == 'IOS'? 'selected': ''}} >IOS</option>
+                                <option value="Application" {{ $portofolio->kategori == 'Application'? 'selected': ''}} >Application</option>
                                 <option value="Website" {{ $portofolio->kategori == 'Website'? 'selected': ''}} >Website</option>
                                 </select>
                           </div>
@@ -127,15 +126,15 @@
                       </div>
                   </div>
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="form-group focused">
-                              <label class="form-control-label" for="keterangan">Keterangan<span class="small text-danger"></span></label>   
-                              <input id="keterangan" type="hidden" name="keterangan" value="{{ $portofolio->keterangan }}">
-                              <trix-editor input="keterangan"></trix-editor>
-                            </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group focused">
+                          <label class="form-control-label" for="keterangan">Keterangan<span class="small text-danger"></span></label>   
+                          <input id="keterangan" type="hidden" name="keterangan" value="{{ old('keterangan') }}">
+                          <trix-editor input="keterangan"></trix-editor>
                         </div>
                     </div>
+                </div>
                     <hr>
 
                 <!-- Button -->

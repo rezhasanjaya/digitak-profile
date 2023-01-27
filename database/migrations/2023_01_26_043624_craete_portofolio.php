@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id('id_portofolio');
             $table->foreignId('created_by')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nama_aplikasi');
-            $table->enum('kategori', ['Android', 'IOS', 'Website']);
+            $table->enum('kategori', ['Application', 'Website']);
             $table->string('tahun_pembuatan');
             $table->string('klien');
             $table->string('link_demo');
