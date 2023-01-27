@@ -35,10 +35,6 @@
 
     
 </style>
-
-
-
-
 <nav id="primary-nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark primary-nav">
   <div class="container">
     <a href="/beranda"><img src="/images/digitak-logo.png" width="150"></a>
