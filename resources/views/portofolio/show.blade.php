@@ -141,7 +141,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group focused">
-                                            <label class="form-control-label" for="keterangan">Keterengan<span class="small text-danger"></span></label>
+                                            <label class="form-control-label" for="keterangan">Keterangan<span class="small text-danger"></span></label>
                                             <article class="border-bottom border-top">
                                               {!! $portofolio->keterangan !!}
                                             </article>                                            
@@ -155,7 +155,7 @@
                             <div class="row">
                                 <div class="col">
                                     <a href="{{ route('portofolio.index') }}" class="btn btn-danger"><i class="fa-solid fa-angle-double-left mr-2"></i>Kembali</a>
-                                    <a onclick="location.href='http://www.{{ $portofolio->link_demo }}'" class="btn btn-primary" target="_blank"><i class="fa-solid fa-play mr-2"></i>Demo</a>
+                                    <a onclick="location.href='http://{{ $portofolio->link_demo }}'" class="btn btn-primary" target="_blank"><i class="fa-solid fa-play mr-2"></i>Demo</a>
                                 </div>
                             </div>
                         </div>
