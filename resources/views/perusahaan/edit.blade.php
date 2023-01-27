@@ -43,15 +43,18 @@
     <div class="row">
         <div class="col-lg-4 order-lg-2">
             <div class="card shadow mb-4">
-                <div class="card-profile-image mt-4">
-                    <figure class="rounded-circle avatar avatar font-weight-bold" style="font-size: 60px; height: 180px; width: 180px; background-color: #E2A814" data-initial="{{ Auth::user()->first_name[0] }}"></figure>
-                </div>
+                
                 <div class="card-body">
-
+                  <h5 class="heading-small text-muted mb-4">Logo Perusahaan</h5>
                     <div class="row">
                         <div class="col-lg-12">
-                            {{-- <input class="form-control @error('logo') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="logo" name="logo" value="{{ old('logo',$perusahaan->logo) }} onchange="previewLogo()">
-                            <div>*file type .jpg .jpeg .png | max size 2 mb</div> --}}
+                          <div class="text-center">
+                            <img src="/images/{{ $perusahaan->image }}" class="img-preview img-fluid mb-3">
+                            <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()" value="{{ old('image') }}">
+                            <br>
+                            <div>*file type .jpg .jpeg .png | max size 2 mb
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -168,6 +171,7 @@
                                 </div>
                             </div>
                         </div>
+                        <hr>
 
                         <!-- Button -->
                         <div class="pl-lg-4">
@@ -184,4 +188,21 @@
         </div>
 
     </div>
+
+    <script>
+      function previewImage() {
+      const image = document.querySelector('#image');
+      const imgPreview = document.querySelector('.img-preview');
+
+      imgPreview.style.display = 'block';
+
+      const oFReader = new FileReader();
+      oFReader.readAsDataURL(image.files[0]);
+
+      oFReader.onload = function(OFREvent) {
+        imgPreview.src = OFREvent.target.result;
+      }
+    }
+    </script>
+
 @endsection

@@ -52,7 +52,6 @@
                       <div class="col-lg-12">
                           <div class="text-center">
                               <h5 class="font-weight-bold"></h5>
-                              {{-- <img src="/images/" width="400px"> --}}
                               <img class="img-preview img-fluid mb-3">
                               <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()" value="{{ old('image') }}"> 
                               <br>

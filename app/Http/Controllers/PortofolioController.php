@@ -35,13 +35,13 @@ class PortofolioController extends Controller
     public function store(Request $request, Portofolio $portofolio)
     {
         $request->validate([
-            'nama_aplikasi' => ['required'],
-            'tahun_pembuatan' => ['required'],
-            'created_by' => ['required'],
-            'kategori' => ['required'],
-            'klien' => ['required'],
-            'link_demo' => ['required'],
-            'keterangan' => ['required'],
+            'nama_aplikasi' => 'required',
+            'tahun_pembuatan' => 'required',
+            'created_by' => 'required',
+            'kategori' => 'required',
+            'klien' => 'required',
+            'link_demo' => 'required',
+            'keterangan' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
@@ -67,13 +67,13 @@ class PortofolioController extends Controller
     public function update(Request $request, Portofolio $portofolio)
     {
         $request->validate([
-            'nama_aplikasi' => ['required'],
-            'tahun_pembuatan' => ['required'],
-            'created_by' => ['required'],
-            'kategori' => ['required'],
-            'klien' => ['required'],
-            'link_demo' => ['required'],
-            'keterangan' => ['required'],
+            'nama_aplikasi' => 'required',
+            'tahun_pembuatan' => 'required',
+            'created_by' => 'required',
+            'kategori' => 'required',
+            'klien' => 'required',
+            'link_demo' => 'required',
+            'keterangan' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
