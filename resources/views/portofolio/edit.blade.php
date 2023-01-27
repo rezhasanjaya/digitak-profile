@@ -117,7 +117,7 @@
                               <label class="form-control-label" for="link_demo">Link Demo<span class="small text-danger"></span></label>
                               <div class="input-group">
                                 <div class="input-group-prepend">
-                                  <div class="input-group-text">{{ __('https://www.') }}</div>
+                                  <div class="input-group-text">{{ __('https://') }}</div>
                                 </div>
                                 <input type="text" class="form-control @error('link_demo') is-invalid @enderror" name="link_demo" id="link_demo" placeholder="Link Demo" value="{{ $portofolio->link_demo }}">
                               </div>
@@ -129,7 +129,7 @@
                     <div class="col-lg-12">
                         <div class="form-group focused">
                           <label class="form-control-label" for="keterangan">Keterangan<span class="small text-danger"></span></label>   
-                          <input id="keterangan" type="hidden" name="keterangan" value="{{ old('keterangan') }}">
+                          <input id="keterangan" type="hidden" name="keterangan" value="{{ $portofolio->keterangan }}">
                           <trix-editor input="keterangan"></trix-editor>
                         </div>
                     </div>
@@ -141,6 +141,7 @@
                     <div class="row">
                         <div class="col">
                           <button type="submit" class="btn btn-warning"><i class="fa-solid fa-save mr-2"></i>Simpan</button>
+                          <a href="{{ route('portofolio.index') }}" class="btn btn-danger"><i class="fa-solid fa-close mr-2"></i>Batal</a>
                         </div>
                     </div>
                 </div>             

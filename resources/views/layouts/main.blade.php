@@ -20,7 +20,7 @@
     
     <!-- My Style -->
     <link rel="stylesheet" href="/css/style.css">
-    <link href="footers.css" rel="stylesheet">
+    <link href="/css/footers.css" rel="stylesheet">
 
     <title>{{ config('app.name', 'Digitak') }}</title>
   </head>
