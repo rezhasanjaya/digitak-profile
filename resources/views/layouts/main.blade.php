@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <!-- My Style -->
-    {{-- <link rel="stylesheet" href="/css/style.css"> --}}
+    <link rel="stylesheet" href="/css/style.css">
 
     <title>{{ config('app.name', 'Digitak') }}</title>
   </head>
@@ -20,7 +20,7 @@
 
     @include('layouts.navbar')
 
-    <div class="container mt-4">
+    <div class="container-fluid">
       @yield('container')
     </div>
     
