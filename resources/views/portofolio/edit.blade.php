@@ -2,7 +2,7 @@
 
 @section('main-content')
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">{{ __('Edit Portofolio') }}</h1>
+    <h1 class="h3 mb-4 text-gray-800">{{ $title ?? __('Blank Page') }}</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger alert-dismissible fade show border-left-danger" role="alert">
@@ -47,8 +47,8 @@
               <div class="card-body"> 
                 <h5 class="heading-small text-muted mb-4">Gambar Project</h5>
                 <form action="{{ route('portofolio.update', $portofolio->id_portofolio) }}" method="post" enctype="multipart/form-data">
+                  @method('put')
                       @csrf
-                      @method('put')
                   <div class="row">
                       <div class="col-lg-12">
                           <div class="text-center">

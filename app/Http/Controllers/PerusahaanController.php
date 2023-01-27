@@ -8,6 +8,12 @@ use App\Models\User;
 
 class PerusahaanController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $data = Perusahaan::join("users", function ($join) {

@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/beranda', 'BerandaController@index')->name('beranda');
+    Route::get('/about', 'AboutController@index')->name('about');
+    Route::get('/portofolio', 'PortofolioController@index')->name('portofolio');
+    Route::get('/blog', 'BlogController@index')->name('blog');
+    Route::get('/contact', 'ContactController@index')->name('contact');
 });
 
 Route::group(['middleware' => 'auth'], function () {
@@ -27,10 +31,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/profile', 'ProfileController@index')->name('profile');
     Route::put('/profile', 'ProfileController@update')->name('profile.update');
-
-    Route::get('/about', function () {
-        return view('about');
-    })->name('about');
 
     Route::resource('user', UserController::class)->middleware('auth')->except('show')->middleware('superadmin');
 
