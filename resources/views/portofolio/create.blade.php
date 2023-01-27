@@ -97,8 +97,7 @@
                             <label class="form-control-label" for="kategori">Kategori<span class="small text-danger"></span></label>
                             <select class="form-control" id="kategori" name="kategori" required>
                               <option value="" selected disabled>Pilih Kategori</option> 
-                              <option value="Android" {{ old('kategori') == 'Android'? 'selected': ''}} >Android</option>
-                              <option value="IOS" {{ old('kategori') == 'IOS'? 'selected': ''}} >IOS</option>
+                              <option value="Application" {{ old('Application') == 'Application'? 'selected': ''}} >Application</option>
                               <option value="Website" {{ old('kategori') == 'Website'? 'selected': ''}} >Website</option>
                               </select>
                           </div>
