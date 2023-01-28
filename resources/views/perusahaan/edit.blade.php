@@ -2,7 +2,7 @@
 
 @section('main-content')
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">{{ __('Profile Perusahaan') }}</h1>
+    <h1 class="h3 mb-4 text-gray-800">{{ $title ?? __('Blank Page') }}</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger alert-dismissible fade show border-left-danger" role="alert">
