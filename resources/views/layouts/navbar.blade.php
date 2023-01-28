@@ -28,8 +28,8 @@
         padding-bottom: 0 !important;       
     }
 
-    .active, .btn:hover {
-      background-color: rgb(92,76,72);
+    .active, .nav-link:hover {
+      background-color: rgb(252,148,28);
       color: white;
     }
 

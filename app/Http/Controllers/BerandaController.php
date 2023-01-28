@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Perusahaan;
 use App\Models\User;
 
 class BerandaController extends Controller
 {
-    public function index()
-    {
-      return view('beranda.index', [
-          'title' => 'Beranda Management',
-          'beranda' => Perusahaan::paginate(10)
-      ]);
-    }
+  public function index()
+  {
+    $data = DB::table('perusahaan')->latest('id_prshn')->first();
+    return view('beranda.index', [
+      'title' => 'Beranda Management',
+      'beranda' => $data
+    ]);
+  }
 }
