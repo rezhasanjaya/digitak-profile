@@ -10,9 +10,9 @@ class AboutController extends Controller
 {
     public function index()
     {
-        return view('portfolio.index', [
+        return view('about.index', [
             'title' => 'Kontak Kami',
-            'portofolio' => Portofolio::all(),
+            // 'portofolio' => Portofolio::all(),
         ]);
     }
 }

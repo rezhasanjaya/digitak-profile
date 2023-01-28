@@ -10,7 +10,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('portfolio.index', [
+        return view('kontak.index', [
             'title' => 'Kontak Kami',
             'portofolio' => Portofolio::all(),
         ]);

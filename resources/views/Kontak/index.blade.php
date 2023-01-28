@@ -1,15 +1,38 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-    <h1 class="display-5 fw-bold">Centered hero</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-      </div>
+<style>
+  p{
+      color: black;
+    }
+</style>
+<div class="container mt-5">
+<div class="row">
+
+  <div class="col-lg-4">
+    <h1>Kontak Kami</h1>
+    <hr>
+      <div><strong><i class="fas fa-home"></i> Address:</strong><br>Jl. Gn. Batu Dalam Komplek Citra Asri Permai No.C-26, Pasirkaliki, Kec. Cimahi Utara Kota Cimahi - Jawa Barat 40514</div>
+      <div><br><strong><i class="fas fa-building"></i> Workshop:<br></strong>Jl. Gn. Batu Dalam Komplek Citra Asri Permai No.C-26, Pasirkaliki, Kec. Cimahi Utara Kota Cimahi - Jawa Barat 40514</div><br>
+      <div><strong><i class="fas fa-phone"></i> Phone:<br></strong>(+62 22) 2028 0625</div><br>
+      <div><strong><i class="fas fa-whatsapp"></i> Whatsapp:<br></strong>+62 821 2707 8478</div><br>
+      <div><strong><i class="fas fa-envelope"></i> Email:<br></strong>info@digitak.id</div><br>
     </div>
+  <div class="col-lg-8">
+    <h1>Kontak Form</h1>
+    <hr>
+    <input class="form-control mb-3" type="text" placeholder="Nama Lengkap *">
+    <input class="form-control mb-3" type="text" placeholder="Email *">
+    <input class="form-control mb-3" type="text" placeholder="Telepon">
+    <input class="form-control mb-3" type="text" placeholder="Masukkan pesan anda">
+    <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="3" placeholder="Default input"></textarea>
+    <b style="color: black">Masukan kata dengan pembatas koma</b>
+    <hr>
+    <button type="submit" class="btn btn-warning"><i class="fa-solid fa-paper-plane"></i> Kirim</button>
   </div>
+</div>
+</div>
+
+
+  
 @endsection
