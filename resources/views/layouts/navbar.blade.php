@@ -1,9 +1,9 @@
 <style>
 @media (min-width: 768px) {
   .navbar-nav > li > a {
-    padding-top: 26.5px;
-    padding-bottom: 26.5px;
-    line-height: 25px;
+    padding-top: 20.5px;
+    padding-bottom: 20.5px;
+    line-height: 15px;
   }
 }
 .primary-nav {
@@ -35,13 +35,9 @@
 
     
 </style>
-
-
-
-
 <nav id="primary-nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark primary-nav">
   <div class="container">
-    <a href="/beranda"><img src="/images/digitak-logo.png" width="150"></a>
+    <a href="/beranda"><img src="/images/digitak-logo.png" width="120"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
