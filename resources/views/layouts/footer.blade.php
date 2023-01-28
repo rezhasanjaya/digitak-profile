@@ -55,7 +55,6 @@
         <hr>
         <h6><b>DIGITAL DATA STUDIO (DIGITAK)</b></h6>
             <p style="text-align: justify;">adalah sebuah team pengembang perangkat lunak yang fokus pada pengembangan Teknologi Informasi untuk menunjang aktifitas instansi atau perusahaan anda sejak 2014. Kami menciptakan solusi (aplikasi, web design & development dan digital marketing) yang lebih futuris dan pastinya kompatibel dengan kebutuhan perusahaan Anda.</p>
-            
       </div>
 
       
