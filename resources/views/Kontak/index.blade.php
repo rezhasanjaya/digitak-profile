@@ -24,9 +24,9 @@
       $phone = str_replace(' ', '', $str); 
       ?>
       <div><br><strong><i class="fas fa-building"></i> Workshop:<br></strong>{{ $beranda->alamat }}</div><br>
-      <div><strong><i class="fas fa-phone"></i> Phone:<br></strong><a class="sosmed-link" href="tel:{{$phone}}">{{ $beranda->phone }}</a></div><br>
-      <div><strong><i class="fab fa-whatsapp"></i> Whatsapp:<br></strong><a class="sosmed-link" href="https://wa.me/{{$whatsapp}}" target="_blank">{{ $beranda->whatsapp }}</a></div><br>
-      <div><strong><i class="fas fa-envelope"></i> Email:<br></strong><a class="sosmed-link" href="mailto:{{ $beranda->whatsapp }}" target="_blank">{{ $beranda->email_workshop }}</a></div><br>
+      <div><strong><i class="fas fa-phone"></i> Phone:<br></strong><a class="type-link" href="tel:{{$phone}}">{{ $beranda->phone }}</a></div><br>
+      <div><strong><i class="fab fa-whatsapp"></i> Whatsapp:<br></strong><a class="type-link" href="https://wa.me/{{$whatsapp}}" target="_blank">{{ $beranda->whatsapp }}</a></div><br>
+      <div><strong><i class="fas fa-envelope"></i> Email:<br></strong><a class="type-link" href="mailto:{{ $beranda->whatsapp }}" target="_blank">{{ $beranda->email_workshop }}</a></div><br>
     </div>
   <div class="col-lg-8 mb-5">
     <h1>Kontak Form</h1>
@@ -46,6 +46,17 @@
 <style>
   #map {
     height: 400px;
+  }
+
+  .type-link {
+    color: orange;
+    text-decoration: none;
+  }
+
+  .type-link:hover {
+    color: orange;
+    font-weight: bold;
+    text-decoration: none;
   }
 </style>
 
