@@ -10,32 +10,32 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/images/gambar1.jpg"></svg>
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/images/gambar1.png"></svg>
 
       <div class="container">
         <div class="carousel-caption text-start">
-          <h1>WEB DESIGN & DEVELOPMENT</h1>
-          <p>Manfaatkan keunggulan internet untuk menjangkau publisitas yang lebih luas. Website dapat menjadi representasi dari perusahaan atau bisnis Anda. Ini adalah rumah online Anda, dimana informasi/promosi dari perusahaan atau bisnis Anda lebih cepat diterima oleh masyarakat.</p>
+          <b><h1>WEB DESIGN & DEVELOPMENT</h1>
+          <p>Manfaatkan keunggulan internet untuk menjangkau publisitas yang lebih luas. Website dapat menjadi representasi dari perusahaan atau bisnis Anda. Ini adalah rumah online Anda, dimana informasi/promosi dari perusahaan atau bisnis Anda lebih cepat diterima oleh masyarakat.</p></b>
         </div>
       </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/images/gambar2.jpg"></svg>
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/images/gambar2.png"></svg>
 
       <div class="container">
         <div class="carousel-caption">
-          <h1>MANAGEMENT INFORMATION SYSTEM</h1>
-          <p>Manfaatkan keunggulan internet untuk menjangkau publisitas yang lebih luas. Website dapat menjadi representasi dari perusahaan atau bisnis Anda. Ini adalah rumah online Anda, dimana informasi/promosi dari perusahaan atau bisnis Anda lebih cepat diterima oleh masyarakat.</p>
+          <b><h1>MANAGEMENT INFORMATION SYSTEM</h1>
+          <p>Manfaatkan keunggulan internet untuk menjangkau publisitas yang lebih luas. Website dapat menjadi representasi dari perusahaan atau bisnis Anda. Ini adalah rumah online Anda, dimana informasi/promosi dari perusahaan atau bisnis Anda lebih cepat diterima oleh masyarakat.</p></b>
         </div>
       </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/images/gambar3.jpg"></svg>
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/images/gambar3.png"></svg>
 
       <div class="container">
         <div class="carousel-caption text-end">
-          <h1>MANAGEMENT INFORMATION SYSTEM</h1>
-          <p>Maksimumkan Sumber Daya yang ada di perusahaan Anda dengan aplikasi Managemen Informasi System untuk menjawab kompleksitas informasi dari data yang ada. Sehingga perusahaan lebih fleksibel dalam menciptakan rencana dan melakukan evaluasi kinerja.</p>
+          <b><h1>MANAGEMENT INFORMATION SYSTEM</h1>
+          <p>Maksimumkan Sumber Daya yang ada di perusahaan Anda dengan aplikasi Managemen Informasi System untuk menjawab kompleksitas informasi dari data yang ada. Sehingga perusahaan lebih fleksibel dalam menciptakan rencana dan melakukan evaluasi kinerja.</p></b>
         </div>
       </div>
     </div>
@@ -58,24 +58,22 @@
 
   <!-- Three columns of text below the carousel -->
   <div class="row">
+    
     <div class="col-lg-4">
-      <center>
-      <img src="https://cdn-icons-png.flaticon.com/512/835/835369.png" width="20%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </center>
-      <h3>DEFINE</h3>
+      <i class="fa-solid fa-cubes"></i> 
+      <b><h5>DEFINE</h5></b>
       <p>Membantu anda dalam merumuskan masalah serta mendefinisikan kebutuhan solusi atas permasalahan yang sedang dihadapi.</p>
     </div><!-- /.col-lg-4 -->
+    
     <div class="col-lg-4">
-      <center>
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684831.png" width="20%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </center>
-
-      <h3>DESIGN</h3>
+      <i class="fa-regular fa-pen-to-square"></i>
+        <b><h5>DESIGN</h5></b>
       <p>Menyusun rancangan teknis atas kebutuhan solusi yang akan diambil untuk menyelesaiakan permasalahan yang sedang dihadapi.</p>
     </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <center>
-        <img src="https://cdn-icons-png.flaticon.com/512/711/711284.png" width="20%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </center>
 
-      <h3>DEVELOP</h3>
+    <div class="col-lg-4">
+      <i class="fa-solid fa-code"></i>
+        <b><h5>DEVELOP</h5></b>
       <p>Menerjemahkan rancangan teknis menjadi sebuah produk yang siap digunakan untuk menyelesaikan permasalahan yang sedang dihadapi.</p>
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
@@ -84,17 +82,18 @@
   <!-- START THE FEATURETTES -->
 
   <br class="featurette-divider">
-  <br>
   <div class="row featurette">
       <h2 class="featurette-heading mb-5"><b> <span style="color: #f7941d">//</span> PORTOFOLIO TERBARU KAMI</b></h2>
-      <div class="col-md-12">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-10">
+        <div class="row row-cols-2 row-cols-sm-6 row-cols-md-3 g-4">
           @foreach ($portofolio as $pt)
           <div class="col">
-            <div class="card bg-dark shadow-sm">
+            <div class="card ">
               <img src="/images/{{ $pt->image }}" class="img-fluid">
-              <div class="card-body">
-                <h4 style="color: white"><b>{{ $pt->nama_aplikasi }}</b></h4>
+              <div class="card-body shadow">
+                <h4 style="color:#292b2c"><b>{{ $pt->nama_aplikasi }}</b></h4>
                 <p style="color:#f7941d" class="card-text">{{ $pt->kategori }} - {{ $pt->tahun_pembuatan }}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -109,8 +108,8 @@
       </div>
   </div>
 
+
   <br class="featurette-divider">
-  <br>
   <div class="row row-cols-sm-2 featurette">
       <h2 class="featurette-heading mb-5"><b> <span style="color: #f7941d">//</span> TEKNOLOGI KAMI</b></h2>
       <div class="col-md-12 mb-5 g-3">
@@ -121,16 +120,15 @@
         <img src="https://cdn.freebiesupply.com/logos/large/2x/codeigniter-logo-png-transparent.png" width="3%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/JQuery-Logo.svg" width="9%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="3%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-        <img src="https://assets.stickpng.com/images/62a74f85223343fbc2207d05.png" width="3%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png" width="3%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" width="7%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbspnbsp
         <img src="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.png" width="10%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-
       </div>
   </div>
 
   {{-- END SECTION --}}
 </div>
-<hr style="color:#f7941d;border-width:10px" >
+
 <br>
 <br>
 <style>

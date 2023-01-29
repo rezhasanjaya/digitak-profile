@@ -32,8 +32,8 @@ body {
   left: 0;
   min-width: 100%;
   height: 38rem;
-  filter: blur(10px);
-  user-drag: none;
+  /* filter: blur(5px); */
+  user-zoom: none;
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;

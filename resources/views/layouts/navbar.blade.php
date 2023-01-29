@@ -35,7 +35,7 @@
 
     
 </style>
-<nav id="primary-nav" class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark primary-nav">
+<nav id="primary-nav" class="navbar shadow-sm navbar-expand-lg navbar-dark fixed-top bg-dark primary-nav">
   <div class="container">
     <a href="/beranda"><img src="/images/digitak-logo.png" width="120"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

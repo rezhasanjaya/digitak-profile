@@ -8,5 +8,27 @@
 
 .bi {
   vertical-align: -.125em;
-  fill: currentColor;
+  fill: gray;
+}
+
+@media (min-width: 992px){
+  .page-footer{
+      position:absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+  }
+
+  .sosmed
+  {
+  color:gray;
+  text-decoration: none; 
+  background-color: none;
+  }
+
+  .sosmed-link {
+    text-decoration: none;
+    color: gray;
+    /* color: #f7941d */
+  }
 }
