@@ -70,9 +70,6 @@ class PerusahaanController extends Controller
             ->with('Success', 'Data berhasil ditambahkan.');
     }
 
-    public function show()
-    {
-    }
 
     public function edit(Perusahaan $perusahaan)
     {

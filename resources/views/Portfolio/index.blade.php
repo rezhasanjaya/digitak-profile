@@ -17,7 +17,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                   </div>
-                  <small class="text-muted"><button type="button" class="btn btn-sm btn-outline-light"><i class="fa-solid fa-circle-info"></i> </i>Selengkapnya</button></small>
+                  {{-- <a href="{{ route('portfolio.show', $pt->id_portofolio) }}"class="btn btn-sm btn-outline-dark"><i class="fa-solid fa-circle-info"></i> Selengkapnya</button></a> --}}
                 </div>
               </div>
             </div>
