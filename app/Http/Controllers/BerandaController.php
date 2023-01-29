@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
-use App\Models\Perusahaan;
 use App\Models\Portofolio;
-use App\Models\User;
+
 
 class BerandaController extends Controller
 {
@@ -14,7 +12,7 @@ class BerandaController extends Controller
   {
     $data = DB::table('perusahaan')->latest('id_prshn')->first();
     return view('beranda.index', [
-      'title' => 'Beranda Management',
+      'title' => 'Beranda',
       'beranda' => $data,
       'portofolio' => Portofolio::latest('id_portofolio')->first()->paginate(6),
     ]);

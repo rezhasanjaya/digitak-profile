@@ -28,17 +28,17 @@
           <h5 style="color: black">Sitemap</h5>
         <hr>
         <ul class="sosmed flex-column">
-          <li class="sosmed-item mb-2"><a class="sosmed-link" href="beranda">Beranda</a></li>
-          <li class="sosmed-item mb-2"><a class="sosmed-link" href="about">Tentang Kami</a></li>
-          <li class="sosmed-item mb-2"><a class="sosmed-link" href="portfolio">Portofolio</a></li>
-          <li class="sosmed-item mb-2"><a class="sosmed-link" href="contact">Kontak Kami</a></li>
+          <li class="sosmed-item mb-2"><a class="sosmed-link" href="{{ route('beranda') }}">Home</a></li>
+          <li class="sosmed-item mb-2"><a class="sosmed-link" href="{{ route('about') }}">Tentang Kami</a></li>
+          <li class="sosmed-item mb-2"><a class="sosmed-link" href="{{ route('portfolio') }}">Portofolio</a></li>
+          <li class="sosmed-item mb-2"><a class="sosmed-link" href="{{ route('contact') }}">Kontak Kami</a></li>
         </ul>
       </div>
 
       <div class="col-4">
         <h5 style="color: black">Tentang Kami</h5>
         <hr>
-        <h6><b>DIGITAL DATA STUDIO (DIGITAK)</b></h6>
+        <h6><b>DIGITAL DATA STUDIO ({{strtoupper($beranda->nama_workshop) }})</b></h6>
             <p style="text-align: justify; color:">adalah sebuah team pengembang perangkat lunak yang fokus pada pengembangan Teknologi Informasi untuk menunjang aktifitas instansi atau perusahaan anda sejak 2014. Kami menciptakan solusi (aplikasi, web design & development dan digital marketing) yang lebih futuris dan pastinya kompatibel dengan kebutuhan perusahaan Anda.</p>
       </div> 
     </div>

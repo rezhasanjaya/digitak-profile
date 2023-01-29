@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\Portofolio;
-use App\Models\Perusahaan;
-use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
 {
@@ -14,8 +12,14 @@ class PortfolioController extends Controller
         $data = DB::table('perusahaan')->latest('id_prshn')->first();
         return view('portfolio.index', [
             'title' => 'Portofolio',
-            'portofolio' => Portofolio::all(),
+            'portofolio' => Portofolio::paginate(12),
             'beranda' => $data,
         ]);
+    }
+
+    public function show(Portofolio $portofolio)
+    {
+        $data = DB::table('perusahaan')->latest('id_prshn')->first();
+        return view('portfolio.show', compact('portofolio'), ["title" => "Detail Portofolio", 'beranda' => $data,]);
     }
 }

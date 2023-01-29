@@ -32,7 +32,7 @@
     <!-- Favicon -->
     <link href="{{ asset('img/web-icon.png') }}" rel="icon" type="image/png">
 
-    <title>{{ config('app.name', 'Digitak') }}</title>
+    <title>{{ config('app.name', {{ $title }}) }}</title>
   </head>
 
   <style>

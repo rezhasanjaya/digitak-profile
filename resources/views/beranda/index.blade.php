@@ -98,7 +98,8 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                   </div>
-                  <small class="text-muted"><button type="button" class="btn btn-sm btn-outline-light"><i class="fa-solid fa-circle-info"></i> </i>Selengkapnya</button></small>
+                 <a href="{{ route('portfolio') }}"class="btn btn-sm btn-outline-dark"><i class="fa-solid fa-circle-info"></i> Selengkapnya</button></a>
+                 
                 </div>
               </div>
             </div>
@@ -120,7 +121,8 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/JQuery-Logo.svg" width="9%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="3%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png" width="3%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" width="7%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png" width="3%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" width="7%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbspnbsp
         <img src="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.png" width="10%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
       </div>
   </div>
