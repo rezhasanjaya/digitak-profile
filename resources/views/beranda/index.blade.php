@@ -58,24 +58,22 @@
 
   <!-- Three columns of text below the carousel -->
   <div class="row">
+    
     <div class="col-lg-4">
-      <center>
-      <img src="https://cdn-icons-png.flaticon.com/512/835/835369.png" width="20%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </center>
-      <h3>DEFINE</h3>
+      <i class="fa-solid fa-cubes"></i> 
+      <b><h5>DEFINE</h5></b>
       <p>Membantu anda dalam merumuskan masalah serta mendefinisikan kebutuhan solusi atas permasalahan yang sedang dihadapi.</p>
     </div><!-- /.col-lg-4 -->
+    
     <div class="col-lg-4">
-      <center>
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684831.png" width="20%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </center>
-
-      <h3>DESIGN</h3>
+      <i class="fa-regular fa-pen-to-square"></i>
+        <b><h5>DESIGN</h5></b>
       <p>Menyusun rancangan teknis atas kebutuhan solusi yang akan diambil untuk menyelesaiakan permasalahan yang sedang dihadapi.</p>
     </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <center>
-        <img src="https://cdn-icons-png.flaticon.com/512/711/711284.png" width="20%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </center>
 
-      <h3>DEVELOP</h3>
+    <div class="col-lg-4">
+      <i class="fa-solid fa-code"></i>
+        <b><h5>DEVELOP</h5></b>
       <p>Menerjemahkan rancangan teknis menjadi sebuah produk yang siap digunakan untuk menyelesaikan permasalahan yang sedang dihadapi.</p>
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
@@ -84,17 +82,18 @@
   <!-- START THE FEATURETTES -->
 
   <br class="featurette-divider">
-  <br>
   <div class="row featurette">
       <h2 class="featurette-heading mb-5"><b> <span style="color: #f7941d">//</span> PORTOFOLIO TERBARU KAMI</b></h2>
-      <div class="col-md-12">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-10">
+        <div class="row row-cols-2 row-cols-sm-6 row-cols-md-3 g-4">
           @foreach ($portofolio as $pt)
           <div class="col">
-            <div class="card bg-dark shadow-sm">
+            <div class="card ">
               <img src="/images/{{ $pt->image }}" class="img-fluid">
-              <div class="card-body">
-                <h4 style="color: white"><b>{{ $pt->nama_aplikasi }}</b></h4>
+              <div class="card-body shadow">
+                <h4 style="color:#292b2c"><b>{{ $pt->nama_aplikasi }}</b></h4>
                 <p style="color:#f7941d" class="card-text">{{ $pt->kategori }} - {{ $pt->tahun_pembuatan }}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
@@ -109,8 +108,8 @@
       </div>
   </div>
 
+
   <br class="featurette-divider">
-  <br>
   <div class="row row-cols-sm-2 featurette">
       <h2 class="featurette-heading mb-5"><b> <span style="color: #f7941d">//</span> TEKNOLOGI KAMI</b></h2>
       <div class="col-md-12 mb-5 g-3">
@@ -124,7 +123,6 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png" width="3%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" width="7%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbspnbsp
         <img src="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.png" width="10%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-
       </div>
   </div>
 
