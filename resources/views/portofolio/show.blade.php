@@ -155,7 +155,7 @@
                             <div class="row">
                                 <div class="col">
                                     <a href="{{ route('portofolio.index') }}" class="btn btn-danger"><i class="fa-solid fa-angle-double-left mr-2"></i>Kembali</a>
-                                    <a onclick="location.href='http://{{ $portofolio->link_demo }}'" class="btn btn-primary" target="_blank"><i class="fa-solid fa-play mr-2"></i>Demo</a>
+                                    <a class="btn btn-primary" href="http://{{ $portofolio->link_demo }}" target="_blank"><i class="fa-solid fa-play mr-2"></i>Demo</a>
                                 </div>
                             </div>
                         </div>
