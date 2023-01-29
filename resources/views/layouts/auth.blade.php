@@ -18,7 +18,7 @@
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/digitak-icon.png') }}" rel="icon" type="image/png">
+    <link href="{{ asset('img/web-icon.png') }}" rel="icon" type="image/png">
 </head>
 <body class="bg-gradient-warning min-vh-100 d-flex justify-content-center align-items-center">
 

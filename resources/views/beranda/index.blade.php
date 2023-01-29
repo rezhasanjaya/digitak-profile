@@ -2,7 +2,7 @@
 
 @section('container')
 
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+<div id="myCarousel" class="carousel slide mb-0" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -49,9 +49,10 @@
     <span class="visually-hidden">Next</span>
   </button>
 
-  <div class="bg-dark text-secondary px-4 py-5 text-center">
-    <h3 style="color:white;"><b>We Are <span style="color: #f7941d"> {{strtoupper($beranda->nama_workshop) }}</span> The Innovation House of Information Technology     </b><a href="/files/CompanyProfileDigitak.pdf" target="_blank"><button type="button" class="btn btn-sm btn-danger btn-lg px-4 gap-3"><b>Download Here!</b></button></a></h3>
-  </div>
+</div>
+
+<div class="bg-dark text-secondary py-4 text-center mb-5">
+  <h3 style="color:white;"><b>We Are <span style="color: #f7941d"> {{strtoupper($beranda->nama_workshop) }}</span> The Innovation House of Information Technology     </b><a href="/files/CompanyProfileDigitak.pdf" target="_blank"><button type="button" class="btn btn-sm btn-warning btn-lg px-4 gap-3"><b>Download Here!</b></button></a></h3>
 </div>
 
 <div class="container marketing">
@@ -60,30 +61,29 @@
   <div class="row">
     
     <div class="col-lg-4">
-      <i class="fa-solid fa-cubes"></i> 
+      <i class="fa-solid fa-cubes fa-3x"></i><br><br>
       <b><h5>DEFINE</h5></b>
       <p>Membantu anda dalam merumuskan masalah serta mendefinisikan kebutuhan solusi atas permasalahan yang sedang dihadapi.</p>
     </div><!-- /.col-lg-4 -->
     
     <div class="col-lg-4">
-      <i class="fa-regular fa-pen-to-square"></i>
+      <i class="fa-regular fa-pen-to-square fa-3x"></i><br><br>
         <b><h5>DESIGN</h5></b>
       <p>Menyusun rancangan teknis atas kebutuhan solusi yang akan diambil untuk menyelesaiakan permasalahan yang sedang dihadapi.</p>
     </div><!-- /.col-lg-4 -->
 
     <div class="col-lg-4">
-      <i class="fa-solid fa-code"></i>
+      <i class="fa-solid fa-code fa-3x"></i><br><br>
         <b><h5>DEVELOP</h5></b>
       <p>Menerjemahkan rancangan teknis menjadi sebuah produk yang siap digunakan untuk menyelesaikan permasalahan yang sedang dihadapi.</p>
     </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
 
-
   <!-- START THE FEATURETTES -->
 
   <br class="featurette-divider">
   <div class="row featurette">
-      <h2 class="featurette-heading mb-5"><b> <span style="color: #f7941d">//</span> PORTOFOLIO TERBARU KAMI</b></h2>
+      <h2 class="featurette-heading mt-0 mb-5"><b> <span style="color: #f7941d">//</span> PORTOFOLIO TERBARU KAMI</b></h2>
       <div class="col-md-1">
       </div>
       <div class="col-md-10">
@@ -108,11 +108,10 @@
       </div>
   </div>
 
-
   <br class="featurette-divider">
   <div class="row row-cols-sm-2 featurette">
-      <h2 class="featurette-heading mb-5"><b> <span style="color: #f7941d">//</span> TEKNOLOGI KAMI</b></h2>
-      <div class="col-md-12 mb-5 g-3">
+      <h2 class="featurette-heading mt-5 mb-5"><b> <span style="color: #f7941d">//</span> TEKNOLOGI KAMI</b></h2>
+      <div class="col-md-12 mb-3 g-3">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/AngularJS-large.png" width="10%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Webysther_20160423_-_Elephpant.svg" width="5%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg"  width="5%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -121,7 +120,7 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/JQuery-Logo.svg" width="9%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="3%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vue.png" width="3%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" width="7%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbspnbsp
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" width="7%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.png" width="10%"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
       </div>
   </div>
@@ -145,7 +144,5 @@
       font-size: 3.5rem;
     }
   }
-
-  
 </style>
 @endsection
