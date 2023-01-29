@@ -12,7 +12,7 @@
   <div class="col-lg-4">
     <h1>Kontak Kami</h1>
     <hr>
-      <div><strong><i class="fas fa-home"></i> Address:</strong><br>Jl. Gn. Batu Dalam Komplek Citra Asri Permai No.C-26, Pasirkaliki, Kec. Cimahi Utara Kota Cimahi - Jawa Barat 40514</div>
+      <div><strong><i class="fas fa-home"></i> Address:</strong><br>-</div>
       <div><br><strong><i class="fas fa-building"></i> Workshop:<br></strong>Jl. Gn. Batu Dalam Komplek Citra Asri Permai No.C-26, Pasirkaliki, Kec. Cimahi Utara Kota Cimahi - Jawa Barat 40514</div><br>
       <div><strong><i class="fas fa-phone"></i> Phone:<br></strong>(+62 22) 2028 0625</div><br>
       <div><strong><i class="fas fa-whatsapp"></i> Whatsapp:<br></strong>+62 821 2707 8478</div><br>

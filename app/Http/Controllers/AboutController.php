@@ -12,7 +12,7 @@ class AboutController extends Controller
     {
         return view('about.index', [
             'title' => 'Kontak Kami',
-            // 'portofolio' => Portofolio::all(),
+            'portofolio' => Portofolio::all(),
         ]);
     }
 }
