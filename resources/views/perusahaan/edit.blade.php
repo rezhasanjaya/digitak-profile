@@ -139,19 +139,19 @@
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="facebook">Facebook</label>
-                                        <input type="text" id="facebook" class="form-control @error('facebook') is-invalid @enderror" name="facebook" placeholder="Facebook" value="{{ old('facebook',$perusahaan->facebook) }}">
+                                        <input type="text" id="facebook" class="form-control @error('facebook') is-invalid @enderror" name="facebook" placeholder="Facebook Username" value="{{ old('facebook',$perusahaan->facebook) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="instagram">Instagram</label>
-                                        <input type="text" id="instagram" class="form-control @error('instagram') is-invalid @enderror" name="instagram" placeholder="Instagram" value="{{ old('instagram',$perusahaan->instagram) }}">
+                                        <input type="text" id="instagram" class="form-control @error('instagram') is-invalid @enderror" name="instagram" placeholder="Instagram Username" value="{{ old('instagram',$perusahaan->instagram) }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="twitter">Twitter</label>
-                                        <input type="text" id="twitter" class="form-control @error('twitter') is-invalid @enderror" name="twitter" placeholder="Twitter" value="{{ old('twitter',$perusahaan->twitter) }}">
+                                        <input type="text" id="twitter" class="form-control @error('twitter') is-invalid @enderror" name="twitter" placeholder="Twitter Username" value="{{ old('twitter',$perusahaan->twitter) }}">
                                     </div>
                                 </div>
                             </div>

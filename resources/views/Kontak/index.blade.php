@@ -3,17 +3,14 @@
 @section('container')
 
 <div class="bg-warning">
-  <div class="container bg-warning py-4 mb-3">
+  <div class="container bg-warning py-4">
     <h3 style="color:white;"><b>KONTAK KAMI</b></h3>
   </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4 mt-5 mb-5">
-      MAP
-    </div>
-  </div>
-  </div>
+
+
+<div id="map" class="mb-5"></div>
+
 <div class="container">
 <div class="row">
   <div class="col-lg-4">
@@ -22,7 +19,7 @@
       <div><strong><i class="fas fa-home"></i> Address:</strong><br>-</div>
       <div><br><strong><i class="fas fa-building"></i> Workshop:<br></strong>{{ $beranda->alamat }}</div><br>
       <div><strong><i class="fas fa-phone"></i> Phone:<br></strong>{{ $beranda->phone }}</div><br>
-      <div><strong><i class="fas fa-whatsapp"></i> Whatsapp:<br></strong>{{ $beranda->whatsapp }}</div><br>
+      <div><strong><i class="fab fa-whatsapp"></i> Whatsapp:<br></strong>{{ $beranda->whatsapp }}</div><br>
       <div><strong><i class="fas fa-envelope"></i> Email:<br></strong>{{ $beranda->email_workshop }}</div><br>
     </div>
   <div class="col-lg-8 mb-5">
@@ -39,5 +36,23 @@
   </div>
 </div>
 </div>
+
+<style>
+  #map {
+    height: 400px;
+  }
+</style>
+
+<script>
+  const map = L.map('map').setView([{{ $beranda->latitude }}, {{ $beranda->longitude }}], 14);
+
+  const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  const marker = L.marker([{{ $beranda->latitude }}, {{ $beranda->longitude }}]).addTo(map)
+    .bindPopup('<b>PT. Metanouva Informatika</b><br />Digitak').openPopup();
+</script>
 
 @endsection
