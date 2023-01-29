@@ -17,10 +17,16 @@
     <h1>Kontak Kami</h1>
     <hr>
       <div><strong><i class="fas fa-home"></i> Address:</strong><br>-</div>
+      <?php 
+      $str = $beranda->whatsapp;
+      $str2 = $beranda->phone;
+      $whatsapp = str_replace(' ', '', $str); 
+      $phone = str_replace(' ', '', $str); 
+      ?>
       <div><br><strong><i class="fas fa-building"></i> Workshop:<br></strong>{{ $beranda->alamat }}</div><br>
-      <div><strong><i class="fas fa-phone"></i> Phone:<br></strong>{{ $beranda->phone }}</div><br>
-      <div><strong><i class="fab fa-whatsapp"></i> Whatsapp:<br></strong>{{ $beranda->whatsapp }}</div><br>
-      <div><strong><i class="fas fa-envelope"></i> Email:<br></strong>{{ $beranda->email_workshop }}</div><br>
+      <div><strong><i class="fas fa-phone"></i> Phone:<br></strong><a class="sosmed-link" href="tel:{{$phone}}">{{ $beranda->phone }}</a></div><br>
+      <div><strong><i class="fab fa-whatsapp"></i> Whatsapp:<br></strong><a class="sosmed-link" href="https://wa.me/{{$whatsapp}}" target="_blank">{{ $beranda->whatsapp }}</a></div><br>
+      <div><strong><i class="fas fa-envelope"></i> Email:<br></strong><a class="sosmed-link" href="mailto:{{ $beranda->whatsapp }}" target="_blank">{{ $beranda->email_workshop }}</a></div><br>
     </div>
   <div class="col-lg-8 mb-5">
     <h1>Kontak Form</h1>

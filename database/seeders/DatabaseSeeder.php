@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
             'tahun_berdiri' => '2014',
             'email_workshop' => 'info@digitak.id',
             'phone' => '(+62 22) 2028 0625',
-            'whatsapp' => '+6282028062554',
+            'whatsapp' => '+62 821 2707 8478',
             'facebook' => 'digitak.id',
             'twitter' => 'digitak.id',
             'instagram' => 'digitak.id',
