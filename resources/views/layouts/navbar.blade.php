@@ -50,7 +50,7 @@
           <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{ route('about') }}">Tentang Kami</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('portfolio') ? 'active' : '' }}" href="{{ route('portfolio') }}">Portofolio</a>
+          <a class="nav-link {{ Request::is('portfolio','portfolio/*') ? 'active' : '' }}" href="{{ route('portfolio') }}">Portofolio</a>
         </li>
         </li>
         <li class="nav-item">
