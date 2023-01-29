@@ -2,6 +2,7 @@
 
 use App\Models\Perusahaan;
 use App\Models\User;
+use App\Models\Portofolio;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -45,16 +46,29 @@ class DatabaseSeeder extends Seeder
             'nama_workshop' => 'Digitak',
             'alamat' => 'Jl. Gn. Batu Dalam Komplek Citra Asri Permai No.C-26, Pasirkaliki, Kec. Cimahi Utara, Kota Cimahi, Jawa Barat 40514',
             'tahun_berdiri' => '2014',
-            'email_workshop' => 'info@digitak.com',
+            'email_workshop' => 'info@digitak.id',
             'phone' => '(+62 22) 2028 0625',
-            'whatsapp' => '(+62 22) 2028 0625',
+            'whatsapp' => '+62 821 2707 8478',
             'facebook' => 'facebook',
             'twitter' => 'twitter',
             'instagram' => 'instagram',
             'latitude' => '-6.884670666134072',
             'longitude' => '107.57010316354963',
             'image' => 'digitak.png',
-            'waktu_update' => '2023-01-26 16:13:53',
+            'waktu_update' => now(),
+        ]);
+
+        Portofolio::create([
+            'created_by' => 1,
+            'nama_aplikasi' => 'Penghargaan Wahana Tata Nugraha',
+            'kategori' => 'Website',
+            'tahun_pembuatan' => '2019',
+            'klien' => 'Kementrian Perhubungan',
+            'link_demo' => '-',
+            'keterangan' => 'Website Penghargaan Wahana Tata Nugraha Oleh Kementrian Perhubungan',
+            'image' => '20230129203633.png',
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
     }
 }

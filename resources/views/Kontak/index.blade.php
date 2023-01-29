@@ -7,19 +7,25 @@
     <h3 style="color:white;"><b>KONTAK KAMI</b></h3>
   </div>
 </div>
-
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 mt-5 mb-5">
+      MAP
+    </div>
+  </div>
+  </div>
 <div class="container">
 <div class="row">
   <div class="col-lg-4">
     <h1>Kontak Kami</h1>
     <hr>
       <div><strong><i class="fas fa-home"></i> Address:</strong><br>-</div>
-      <div><br><strong><i class="fas fa-building"></i> Workshop:<br></strong>Jl. Gn. Batu Dalam Komplek Citra Asri Permai No.C-26, Pasirkaliki, Kec. Cimahi Utara Kota Cimahi - Jawa Barat 40514</div><br>
-      <div><strong><i class="fas fa-phone"></i> Phone:<br></strong>(+62 22) 2028 0625</div><br>
-      <div><strong><i class="fas fa-whatsapp"></i> Whatsapp:<br></strong>+62 821 2707 8478</div><br>
-      <div><strong><i class="fas fa-envelope"></i> Email:<br></strong>info@digitak.id</div><br>
+      <div><br><strong><i class="fas fa-building"></i> Workshop:<br></strong>{{ $beranda->alamat }}</div><br>
+      <div><strong><i class="fas fa-phone"></i> Phone:<br></strong>{{ $beranda->phone }}</div><br>
+      <div><strong><i class="fas fa-whatsapp"></i> Whatsapp:<br></strong>{{ $beranda->whatsapp }}</div><br>
+      <div><strong><i class="fas fa-envelope"></i> Email:<br></strong>{{ $beranda->email_workshop }}</div><br>
     </div>
-  <div class="col-lg-8">
+  <div class="col-lg-8 mb-5">
     <h1>Kontak Form</h1>
     <hr>
     <input class="form-control mb-3" type="text" placeholder="Nama Lengkap *">
