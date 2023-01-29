@@ -9,6 +9,7 @@ class PortfolioController extends Controller
 {
     public function index()
     {
+
         $data = DB::table('perusahaan')->latest('id_prshn')->first();
         return view('portfolio.index', [
             'title' => 'Portofolio',
@@ -17,9 +18,9 @@ class PortfolioController extends Controller
         ]);
     }
 
-    public function show(Portofolio $portofolio)
+    public function show(Portofolio $portfolio)
     {
         $data = DB::table('perusahaan')->latest('id_prshn')->first();
-        return view('portfolio.show', compact('portofolio'), ["title" => "Detail Portofolio", 'beranda' => $data,]);
+        return view('Portfolio.show', compact('portfolio'), ["title" => "Detail Portofolio", 'beranda' => $data,]);
     }
 }
