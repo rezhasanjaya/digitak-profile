@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\Portofolio;
-
+use Cake\View\Helper\UrlHelper;
 
 class BerandaController extends Controller
 {

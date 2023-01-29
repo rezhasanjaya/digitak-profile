@@ -80,6 +80,7 @@
   </div><!-- /.row -->
 
   <!-- START THE FEATURETTES -->
+  
   <br class="featurette-divider">
   <div class="row featurette">
       <h2 class="featurette-heading mt-0 mb-5"><b> <span style="color: #f7941d">//</span> PORTOFOLIO TERBARU KAMI</b></h2>
@@ -87,6 +88,7 @@
       </div>
       <div class="col-md-10">
         <div class="row row-cols-2 row-cols-sm-6 row-cols-md-3 g-4">
+          @if ($portofolio != null)
           @foreach ($portofolio as $pt)
           <div class="col">
             <div class="card ">
@@ -98,12 +100,15 @@
                   <div class="btn-group">
                   </div>
                  <a href="{{ route('portfolio') }}"class="btn btn-sm btn-outline-dark"><i class="fa-solid fa-circle-info"></i> Selengkapnya</button></a>
-                 
                 </div>
               </div>
             </div>
           </div>
           @endforeach
+          @else
+          <h4 class="featurette-heading mt-0 mb-5"><b> <span style="color: gray"></span> PORTOFOLIO TIDAK ADA</b></h4>
+          @endif
+          
         </div>
       </div>
   </div>

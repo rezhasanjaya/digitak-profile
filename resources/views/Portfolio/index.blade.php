@@ -11,7 +11,9 @@
 <div class="container marketing">
   <br class="featurette-divider">
   <div class="row featurette">
-      <div class="col-md-12">
+    <div class="col-md-1">
+    </div>
+      <div class="col-md-10">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           @foreach ($portofolio as $pt)
           <div class="col">
