@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PerusahaanController;
 use App\Http\Controllers\PortofolioController;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,7 @@ Route::group(['middleware' => 'guest'], function () {
     Route::get('/beranda', 'BerandaController@index')->name('beranda');
     Route::get('/about', 'AboutController@index')->name('about');
     Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
+    // Route::resource('portfolio', PortfolioController::class);
     Route::get('/blog', 'BlogController@index')->name('blog');
     Route::get('/contact', 'ContactController@index')->name('contact');
 });
