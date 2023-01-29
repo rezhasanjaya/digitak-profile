@@ -13,7 +13,7 @@
                 <br>
                 <b>Phone</b>    : {{$beranda->phone}}
                 <br>
-                <b>WhatsApp</b> : <a class="sosmed-link" href="https://wa.me/{{$beranda->whatsapp}}" target="_blank">{{$beranda->whatsapp}}</a>
+                <b>WhatsApp</b> :{{$beranda->whatsapp}}</a>
                 <br>
                 <b>Email</b> : <a class="sosmed-link" href="mailto:{{$beranda->email_workshop}}" target="_blank">{{$beranda->email_workshop}}</a>
           </div>
