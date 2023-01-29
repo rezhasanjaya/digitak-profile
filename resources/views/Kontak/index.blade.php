@@ -1,14 +1,15 @@
 @extends('layouts.main')
 
 @section('container')
-<style>
-  p{
-      color: black;
-    }
-</style>
-<div class="container mt-5">
-<div class="row">
 
+<div class="bg-warning">
+  <div class="container bg-warning py-4 mb-3">
+    <h3 style="color:white;"><b>KONTAK KAMI</b></h3>
+  </div>
+</div>
+
+<div class="container">
+<div class="row">
   <div class="col-lg-4">
     <h1>Kontak Kami</h1>
     <hr>
@@ -33,6 +34,10 @@
 </div>
 </div>
 
+<style>
+  p{
+      color: black;
+    }
+</style>
 
-  
 @endsection

@@ -1,14 +1,18 @@
 @extends('layouts.main')
 
 @section('container')
+
+<div class="bg-warning">
+  <div class="container bg-warning py-4 mb-3">
+    <h3 style="color:white;"><b>PORTOFOLIO</b></h3>
+  </div>
+</div>
+
 <div class="container marketing">
   <br class="featurette-divider">
   <div class="row featurette">
-      <h2 class="featurette-heading mb-5"><b> <span style="color: #f7941d">//</span> PORTOFOLIO TERBARU KAMI</b></h2>
-      <div class="col-md-1">
-      </div>
-      <div class="col-md-10">
-        <div class="row row-cols-2 row-cols-sm-6 row-cols-md-3 g-4">
+      <div class="col-md-12">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           @foreach ($portofolio as $pt)
           <div class="col">
             <div class="card ">
