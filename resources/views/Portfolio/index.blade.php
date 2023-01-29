@@ -25,6 +25,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                   </div>
+                  <a href="{{ route('portfolio.show', $pt->id_portofolio) }}" class="btn btn-sm btn-success mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Detail</a>
                  <a href="{{ route('portfolio') }}"class="btn btn-sm btn-outline-dark"><i class="fa-solid fa-circle-info"></i> Selengkapnya</button></a>
                 </div>
               </div>
