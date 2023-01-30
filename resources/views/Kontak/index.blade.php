@@ -10,19 +10,22 @@
 
 
 <div id="map" class="mb-5"></div>
+
 <div class="container">
 <div class="row">
   <div class="col-lg-4">
     <h1>Kontak Kami</h1>
     <hr>
       <div><strong><i class="fas fa-home"></i> Address:</strong><br>-</div>
-      <?php 
-      $str = $beranda->whatsapp;
-      $str2 = $beranda->phone;
-      $whatsapp = str_replace(' ', '', $str); 
-      $phone = str_replace(' ', '', $str); 
-      ?>
       <div><br><strong><i class="fas fa-building"></i> Workshop:<br></strong>{{ $beranda->alamat }}</div><br>
+      
+      @php
+        $str = $beranda->whatsapp;
+        $str2 = $beranda->phone;
+        $whatsapp = str_replace(' ', '', $str); 
+        $phone = str_replace(' ', '', $str);        
+      @endphp
+
       <div><strong><i class="fas fa-phone"></i> Phone:<br></strong><a class="type-link" href="tel:{{$phone}}">{{ $beranda->phone }}</a></div><br>
       <div><strong><i class="fab fa-whatsapp"></i> Whatsapp:<br></strong><a class="type-link" href="https://wa.me/{{$whatsapp}}" target="_blank">{{ $beranda->whatsapp }}</a></div><br>
       <div><strong><i class="fas fa-envelope"></i> Email:<br></strong><a class="type-link" href="mailto:{{ $beranda->whatsapp }}" target="_blank">{{ $beranda->email_workshop }}</a></div><br>

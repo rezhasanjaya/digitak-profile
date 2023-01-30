@@ -32,9 +32,10 @@ class HomeController extends Controller
         $widget = [
             'users' => $users,
             'portofolio' => $portofolio,
-            //...
         ];
 
-        return view('home', compact('widget'));
+        return view('home', [
+            'title' => 'Beranda Admin',
+        ], compact('widget'));
     }
 }

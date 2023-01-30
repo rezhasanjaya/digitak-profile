@@ -17,7 +17,8 @@
     <div class="col-lg-6 mt-4">
       <h3>{{ $portfolio->nama_aplikasi }}</h3>
       <hr>
-      <p>{{ $portfolio->keterangan }}</p>
+      <article>{!! $portfolio->keterangan !!}</article>
+      <hr>
       <h5>Detail</h5>
       <table class="table table-hover table-striped table-bordered">
         <tbody>
@@ -27,7 +28,7 @@
         </tr>
         <tr>
         <th class="text-secondary"><i class="fa fa-tags"></i> Kategori</th>
-        <td><button class="btn btn-sm btn-primary" style="pointer-events: none;">{{ $portfolio->kategori }}</button></td>
+        <td><span class="badge rounded-pill bg-primary">{{ $portfolio->kategori }}</span></td>
         </tr>
         <tr>
         <th class="text-secondary"><i class="fa fa-calendar"></i> Tahun</th>
@@ -35,7 +36,7 @@
         </tr>
         <tr>
         <th class="text-secondary"><i class="fa fa-link"></i> Link Demo</th>
-        <td><a class="type-link" href="http://{{ $portfolio->link_demo }}" target="_blank">{{ $portfolio->link_demo }}</a></td>
+        <td><a class="type-link" href="http://{{ $portfolio->link_demo }}" target="_blank">http://{{ $portfolio->link_demo }}</a></td>
         </tr>
         </tbody>
       </table>

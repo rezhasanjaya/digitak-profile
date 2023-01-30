@@ -8,39 +8,27 @@
   </div>
 </div>
 
-<div class="container marketing">
-  <br class="featurette-divider">
-  <div class="row featurette">
-    <div class="col-md-1">
-    </div>
-      <div class="col-md-10">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          @foreach ($portofolio as $pt)
-          <div class="col">
-            <div class="card ">
-              <img src="/images/{{ $pt->image }}" class="img-fluid">
-              <div class="card-body shadow">
-                <h4 style="color:#292b2c"><b>{{ $pt->nama_aplikasi }}</b></h4>
-                <p style="color:#f7941d" class="card-text">{{ $pt->kategori }} - {{ $pt->tahun_pembuatan }}</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                  </div>
-                 <a href="{{ route('portfolio.show', $pt->id_portofolio) }}"class="btn btn-sm btn-outline-dark"><i class="fa-solid fa-circle-info"></i> Selengkapnya</button></a>
-                </div>
+<div class="container">
+  <div class="row">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-5">
+        @foreach ($portofolio as $pt)
+        <div class="col">
+          <div class="card ">
+            <div class="fall-item fall-effect">
+              <img class="center-cropped" src="/images/{{ $pt->image }}">
+              <div class="mask">
+                  <h4>{{ $pt->nama_aplikasi }}</h4>
+                  <p>{{ $pt->kategori }} - {{ $pt->tahun_pembuatan }}</p>
+                  <a href="{{ route('portfolio.show', $pt->id_portofolio) }}"class="btn btn-sm btn-success"><i class="fa-solid fa-circle-info"></i> Selengkapnya</button></a>
               </div>
-            </div>
           </div>
-          @endforeach
+          </div>
         </div>
+        @endforeach
       </div>
   </div>
-  <br>
-  <br>
-  <br>
-  {{-- END SECTION --}}
 </div>
-<br>
-<br>
+
 <style>
   .bd-placeholder-img {
     font-size: 1.125rem;

@@ -83,40 +83,32 @@
   
   <br class="featurette-divider">
   <div class="row featurette">
-      <h2 class="featurette-heading mt-0 mb-5"><b> <span style="color: #f7941d">//</span> PORTOFOLIO TERBARU KAMI</b></h2>
-      <div class="col-md-1">
-      </div>
-      <div class="col-md-10">
-        <div class="row row-cols-2 row-cols-sm-6 row-cols-md-3 g-4">
-          @if ($portofolio != null)
-          @foreach ($portofolio as $pt)
-          <div class="col">
-            <div class="card ">
-              <img src="/images/{{ $pt->image }}" class="img-fluid">
-              <div class="card-body shadow">
-                <h4 style="color:#292b2c"><b>{{ $pt->nama_aplikasi }}</b></h4>
-                <p style="color:#f7941d" class="card-text">{{ $pt->kategori }} - {{ $pt->tahun_pembuatan }}</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                  </div>
-                 <a href="{{ route('portfolio') }}"class="btn btn-sm btn-outline-dark"><i class="fa-solid fa-circle-info"></i> Selengkapnya</button></a>
-                </div>
+      <h2 class="featurette-heading mt-0"><b> <span style="color: #f7941d">//</span> PORTOFOLIO TERBARU KAMI</b></h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        @if ($portofolio != null)
+        @foreach ($portofolio as $pt)
+        <div class="col">
+          <div class="card ">
+            <div class="fall-item fall-effect">
+              <img class="center-cropped" src="/images/{{ $pt->image }}">
+              <div class="mask">
+                  <h4>{{ $pt->nama_aplikasi }}</h4>
+                  <p>{{ $pt->kategori }} - {{ $pt->tahun_pembuatan }}</p>
+                  <a href="{{ route('portfolio.show', $pt->id_portofolio) }}"class="btn btn-sm btn-success"><i class="fa-solid fa-circle-info"></i> Selengkapnya</button></a>
               </div>
-            </div>
           </div>
-          @endforeach
-          @else
-          <h4 class="featurette-heading mt-0 mb-5"><b> <span style="color: gray"></span> PORTOFOLIO TIDAK ADA</b></h4>
-          @endif
-          
+          </div>
         </div>
+        @endforeach
+        @else
+        <h4 class="featurette-heading mt-0 mb-3"><b> <span style="color: gray"></span> PORTOFOLIO TIDAK ADA</b></h4>
+        @endif        
       </div>
   </div>
 
-  <br class="featurette-divider">
-  <div class="row row-cols-sm-2 featurette">
-      <h2 class="featurette-heading mb-5"><b> <span style="color: #f7941d">//</span> TEKNOLOGI KAMI</b></h2>
-      <div class="col-md-12 mb-5 g-3">
+  <div class="row featurette">
+      <h2 class="featurette-heading mt-5"><b> <span style="color: #f7941d">//</span> TEKNOLOGI KAMI</b></h2>
+      <div class="col-md-12 mb-3 g-3">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/AngularJS-large.png" width="10%"> &nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Webysther_20160423_-_Elephpant.svg" width="5%"> &nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg"  width="5%"> &nbsp&nbsp&nbsp&nbsp&nbsp
