@@ -27,9 +27,8 @@
         @endforeach
       </div>
   </div>
+  {{ $portofolio->links() }}
 </div>
-
-{{ $portofolio->links() }}
 
 <style>
   .bd-placeholder-img {

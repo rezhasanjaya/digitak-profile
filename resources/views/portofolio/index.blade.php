@@ -77,7 +77,7 @@
         </tbody>
     </table>
 
-    {{-- {{ $perusahaan->links() }} --}}
+    {{ $portofolio->links() }}
 
     <!-- End of Main Content -->
 
