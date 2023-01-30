@@ -4,7 +4,7 @@
 
 <div class="bg-warning">
   <div class="container bg-warning py-4 mb-3">
-    <h3 style="color:white;"><b>PORTOFOLIO</b></h3>
+    <h3 style="color:white;"><b><i class="fas fa-archive"></i> PORTOFOLIO</b></h3>
   </div>
 </div>
 
@@ -29,6 +29,8 @@
   </div>
 </div>
 
+{{ $portofolio->links() }}
+
 <style>
   .bd-placeholder-img {
     font-size: 1.125rem;
@@ -44,4 +46,5 @@
     }
   }
 </style>
+
 @endsection

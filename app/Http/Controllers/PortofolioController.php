@@ -19,17 +19,6 @@ class PortofolioController extends Controller
             'title' => 'Portofolio Management',
             'portofolio' => Portofolio::latest('portofolio.created_at')->first()->orderBy('portofolio.created_at', 'desc')->paginate(10)
         ]);
-
-        // $data = Portofolio::join("users", function ($join) {
-        //     $join->on("users.id", "=", "portofolio.created_by");
-        // })->orderBy('portofolio.created_at', 'desc')->paginate(10);
-
-        // return view('portofolio.index', [
-        //     'title' => 'Portofolio Management',
-        //     'users' => User::all(),
-        //     'portofolio' => Portofolio::latest('portofolio.created_at')->first()->orderBy('portofolio.created_at', 'desc')->paginate(10),
-        //     'data' => $data,
-        // ]);
     }
 
     public function show(Portofolio $portofolio)

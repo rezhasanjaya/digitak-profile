@@ -4,7 +4,7 @@
 
 <div class="bg-warning">
   <div class="container bg-warning py-4">
-    <h3 style="color:white;"><b>KONTAK KAMI</b></h3>
+    <h3 style="color:white;"><b><i class="fas fa-address-book"></i> KONTAK KAMI</b></h3>
   </div>
 </div>
 
