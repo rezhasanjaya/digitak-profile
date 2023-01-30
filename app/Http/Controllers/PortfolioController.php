@@ -9,12 +9,21 @@ class PortfolioController extends Controller
 {
     public function index()
     {
+      if (Portofolio::all() == null) {
         $data = DB::table('perusahaan')->latest('id_prshn')->first();
         return view('portfolio.index', [
             'title' => 'Portofolio',
             'portofolio' => Portofolio::latest('created_at')->first()->orderBy('created_at', 'desc')->paginate(9),
             'beranda' => $data,
         ]);
+      }else{
+        $data = DB::table('perusahaan')->latest('id_prshn')->first();
+        return view('portfolio.index', [
+            'title' => 'Portofolio',
+            'portofolio' => Portofolio::all(),
+            'beranda' => $data,
+        ]);
+      }
     }
 
     public function show(Portofolio $portfolio)

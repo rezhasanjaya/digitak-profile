@@ -27,7 +27,11 @@
         @endforeach
       </div>
   </div>
-  <div class="mb-5">{{ $portofolio->links() }}</div>
+  <div class="mb-5">
+    @if ($portofolio == null)
+      {{ $portofolio->links() }}
+    @endif
+  </div>
 </div>
 
 <style>

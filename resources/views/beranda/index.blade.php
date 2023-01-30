@@ -85,7 +85,6 @@
   <div class="row featurette">
       <h2 class="featurette-heading mt-0"><b> <span style="color: #f7941d">//</span> PORTOFOLIO TERBARU KAMI</b></h2>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        @if ($portofolio != null)
         @foreach ($portofolio as $pt)
         <div class="col">
           <div class="card ">
@@ -100,9 +99,6 @@
           </div>
         </div>
         @endforeach
-        @else
-        <h4 class="featurette-heading mt-0 mb-3"><b> <span style="color: gray"></span> PORTOFOLIO TIDAK ADA</b></h4>
-        @endif        
       </div>
   </div>
 

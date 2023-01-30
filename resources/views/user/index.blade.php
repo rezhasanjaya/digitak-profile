@@ -66,7 +66,9 @@
         </tbody>
     </table>
 
+    @if ($users == null)
     {{ $users->links() }}
+    @endif
 
     <!-- End of Main Content -->
 

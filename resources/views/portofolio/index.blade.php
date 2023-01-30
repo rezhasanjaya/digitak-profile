@@ -48,9 +48,10 @@
             </tr>
         </thead>
         <tbody>
-            <?php 
-            $i = 1;
-            ?>
+            @php
+              $i = 1;
+            @endphp
+
             @foreach ($portofolio as $pt)
                 <tr>
                     <td>{{ $i++ }}</td>
@@ -77,7 +78,9 @@
         </tbody>
     </table>
 
-    {{ $portofolio->links() }}
+    @if ($portofolio == null)
+      {{ $portofolio->links() }}
+    @endif
 
     <!-- End of Main Content -->
 

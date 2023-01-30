@@ -55,6 +55,7 @@
             @break
             @endforeach
             
+            @if ($data != null)
             @foreach ($data as $pt)
                 <tr>
                     <td>{{ $pt->waktu_update }}</td>
@@ -69,10 +70,15 @@
                     <td>{{ $pt->first_name }} {{ $pt->last_name }}</td>
                 </tr>
             @endforeach
+            @else
+            <h4 class="featurette-heading mt-0 mb-3"><b><span style="color: gray"></span>TIDAK ADA PORTOFOLIO</b></h4>
+            @endif
         </tbody>
     </table>
 
-    {{ $perusahaan->links() }}
+    @if ($perusahaan == null)
+      {{ $perusahaan->links() }}
+    @endif
 
     <!-- End of Main Content -->
 

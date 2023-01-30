@@ -15,10 +15,17 @@ class PortofolioController extends Controller
 
     public function index()
     {
+        if (Portofolio::all() == null) {
         return view('portofolio.index', [
             'title' => 'Portofolio Management',
-            'portofolio' => Portofolio::latest('portofolio.created_at')->first()->orderBy('portofolio.created_at', 'desc')->paginate(10)
+            'portofolio' => Portofolio::latest('portofolio.created_at')->first()->orderBy('portofolio.created_at', 'desc')->paginate(10),
         ]);
+        }else{
+          return view('portofolio.index', [
+            'title' => 'Portofolio Management',
+            'portofolio' => Portofolio::all(),
+        ]);
+        }
     }
 
     public function show(Portofolio $portofolio)
