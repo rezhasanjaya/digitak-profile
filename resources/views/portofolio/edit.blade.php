@@ -40,41 +40,32 @@
     @endif
                       
     <div class="row">
-
       <div class="col-lg-6 order-lg-2">
-
           <div class="card shadow mb-4">
               <div class="card-body"> 
                 <h5 class="heading-small text-muted mb-4">Gambar Project</h5>
                 <form action="{{ route('portofolio.update', $portofolio->id_portofolio) }}" method="post" enctype="multipart/form-data">
-                  @method('put')
-                      @csrf
+                  @method('PUT')
+                  @csrf
                   <div class="row">
                       <div class="col-lg-12">
                           <div class="text-center">
                               <h5 class="font-weight-bold"></h5>
-                              <img src="/images/{{ $portofolio->image }}" class="img-preview img-fluid mb-3">
-                              <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()" value=""> 
+                              <img src="/img/portfolio/{{ $portofolio->image }}" class="img-preview img-fluid mb-3">
+                              <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()" value="{{ old('image') }}"> 
                               <br>
                               <div>*file type .jpg .jpeg .png | max size 2 mb</div>
                           </div>
                       </div>
-                  </div>
-
+                    </div>
               </div>
           </div>
-
       </div>
-
       <div class="col-lg-6 order-lg-1">
-
           <div class="card shadow mb-4">
-
               <div class="card-body">
-                 
                 <h5 class="heading-small text-muted mb-4">Tambah Data</h5>
                 <div class="pl-lg-4">
-                   
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group focused">
@@ -110,7 +101,6 @@
                           </div>
                       </div>
                   </div>
-
                     <div class="row">
                       <div class="col-lg-12">
                           <div class="form-group">
@@ -124,7 +114,6 @@
                           </div>
                       </div>
                   </div>
-
                   <div class="row">
                     <div class="col-lg-12">
                         <div class="form-group focused">
@@ -134,8 +123,7 @@
                         </div>
                     </div>
                 </div>
-                    <hr>
-
+                <hr>
                 <!-- Button -->
                 <div class="pl-lg-0 mt-3 mb-3">
                     <div class="row">
@@ -145,14 +133,10 @@
                         </div>
                     </div>
                 </div>             
-            </form>
-
+                </form>
               </div>
-
           </div>
-
       </div>
-
   </div>
 
   <style>

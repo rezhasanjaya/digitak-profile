@@ -109,14 +109,23 @@ class PerusahaanController extends Controller
         $perusahaan->latitude = $request->latitude;
         $perusahaan->longitude = $request->longitude;
         $perusahaan->edited_by = $request->edited_by;
-        $perusahaan->image = 'digitak.png';
+        $perusahaan->image = $request->image;
         $perusahaan->waktu_update = now();
         $perusahaan->save();
 
-        $path = public_path()."/images/".$perusahaan->image;
-        unlink($path);
-        $perusahaan->update($request->all());
-        return redirect()->route('perusahaan.index')
-            ->with('sukses', 'Data berhasil diubah');
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'img/logo/';
+            $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $postImage);
+            $input['image'] = "$postImage";
+        } else {
+            unset($input['image']);
+        }    
+
+        $perusahaan->update($input);
+
+        return redirect()->route('perusahaan.index')->with('sukses', 'Data berhasil diubah');
     }
 }

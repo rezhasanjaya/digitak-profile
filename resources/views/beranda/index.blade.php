@@ -10,7 +10,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/images/gambar1.png"></svg>
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/img/carousel/gambar1.png"></svg>
 
       <div class="container">
         <div class="carousel-caption text-start">
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/images/gambar2.png"></svg>
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/img/carousel/gambar2.png"></svg>
 
       <div class="container">
         <div class="carousel-caption">
@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/images/gambar3.png"></svg>
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img width="100%" height="100%" src="/img/carousel/gambar3.png"></svg>
 
       <div class="container">
         <div class="carousel-caption text-end">
@@ -90,7 +90,7 @@
         <div class="col">
           <div class="card ">
             <div class="fall-item fall-effect">
-              <img class="center-cropped" src="/images/{{ $pt->image }}">
+              <img class="center-cropped" src="/img/portfolio/{{ $pt->image }}">
               <div class="mask">
                   <h4>{{ $pt->nama_aplikasi }}</h4>
                   <p>{{ $pt->kategori }} - {{ $pt->tahun_pembuatan }}</p>

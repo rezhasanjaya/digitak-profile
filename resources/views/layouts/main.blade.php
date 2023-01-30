@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/web-icon.png') }}" rel="icon" type="image/png">
+    <link href="{{ asset('img/cover/web-icon.png') }}" rel="icon" type="image/png">
 
     <!-- Leaflet Maps -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>

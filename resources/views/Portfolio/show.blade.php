@@ -12,7 +12,7 @@
   <a href="{{ route('portfolio') }}" class="btn btn-warning"><i class="fa-solid fa-angle-double-left"></i> List Portofolio</a>
   <div class="row mt-3">
     <div class="col-lg-6 mt-4">
-      <img src="/images/{{ $portfolio->image }}" class="img-fluid" alt="logo">
+      <img src="/img/portfolio/{{ $portfolio->image }}" class="img-fluid" alt="logo">
     </div>
     <div class="col-lg-6 mt-4">
       <h3>{{ $portfolio->nama_aplikasi }}</h3>

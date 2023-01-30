@@ -40,14 +40,14 @@
 
 <nav id="primary-nav" class="navbar shadow-sm navbar-expand-lg navbar-dark fixed-top bg-dark primary-nav">
   <div class="container">
-    <a href="/beranda"><img src="/images/digitak-logo.png" width="120"></a>
+    <a href="/beranda"><img src="/img/logo/digitak-logo.png" width="120"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('beranda') ? 'active' : '' }}" href="{{ route('beranda') }}">Home</a>
+          <a class="nav-link {{ Request::is('beranda','/') ? 'active' : '' }}" href="{{ route('beranda') }}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{ route('about') }}">Tentang Kami</a>

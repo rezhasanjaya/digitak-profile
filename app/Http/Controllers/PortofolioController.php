@@ -58,7 +58,7 @@ class PortofolioController extends Controller
         $input = $request->all();
 
         if ($image = $request->file('image')) {
-            $destinationPath = 'images/';
+            $destinationPath = 'img/portfolio/';
             $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $postImage);
             $input['image'] = "$postImage";
@@ -86,11 +86,14 @@ class PortofolioController extends Controller
             'keterangan' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
+        
+        $path = public_path()."/images/".$portofolio->image;
+        unlink($path);
 
         $input = $request->all();
-
+        
         if ($image = $request->file('image')) {
-            $destinationPath = 'images/';
+            $destinationPath = 'img/portfolio/';
             $postImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $postImage);
             $input['image'] = "$postImage";
@@ -98,16 +101,16 @@ class PortofolioController extends Controller
             unset($input['image']);
         }
 
-        $path = public_path()."/images/".$portofolio->image;
-        unlink($path);
         $portofolio->update($input);
+
         return redirect()->route('portofolio.index')->with('success', 'Data telah diupdated');
     }
 
     public function destroy(Portofolio $portofolio)
     {
-        $path = public_path()."/images/".$portofolio->image;
+        $path = public_path()."/img/portfolio/".$portofolio->image;
         unlink($path);
+        
         $portofolio->delete();
         return redirect()->route('portofolio.index')
             ->with('success', 'Data berhasil dihapus');

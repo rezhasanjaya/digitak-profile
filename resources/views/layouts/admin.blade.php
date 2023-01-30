@@ -20,7 +20,7 @@
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="{{ asset('img/web-icon.png') }}" rel="icon" type="image/png">
+    <link href="{{ asset('img/cover/web-icon.png') }}" rel="icon" type="image/png">
     
     <!-- Trix Editor -->
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">

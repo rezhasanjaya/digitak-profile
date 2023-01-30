@@ -38,19 +38,20 @@
             </button>
         </div>
     @endif
-
                      
     <div class="row">
         <div class="col-lg-4 order-lg-2">
-            <div class="card shadow mb-4">
-                
+            <div class="card shadow mb-4">           
                 <div class="card-body">
                   <h5 class="heading-small text-muted mb-4">Logo Perusahaan</h5>
+                  <form action="{{ route('perusahaan.update', $perusahaan->id_prshn) }}" method="post">
+                    @method('PUT')
+                    @csrf
                     <div class="row">
                         <div class="col-lg-12">
                           <div class="text-center">
-                            <img src="/images/{{ $perusahaan->image }}" class="img-preview img-fluid mb-3">
-                            <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()" value="{{ old('image') }}">
+                            <img src="/img/logo/{{ $perusahaan->image }}" class="img-preview img-fluid mb-3">
+                            <input class="form-control @error('image') is-invalid @enderror" type="file" accept=".jpg,.jpeg,.png" id="image" name="image" onchange="previewImage()" value="{{ old('image',$perusahaan->image) }}">
                             <br>
                             <div>*file type .jpg .jpeg .png | max size 2 mb
                             </div>
@@ -62,31 +63,13 @@
         </div>
 
         <div class="col-lg-8 order-lg-1">
-
             <div class="card shadow mb-4">
-
-                {{-- <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-warning">Profile </h6>
-                </div> --}}
-
                 <div class="card-body">
-
-                    <form action="{{ route('perusahaan.update', $perusahaan->id_prshn) }}" method="post">
-                        @csrf
-                        @method('PUT')
-
                         <h6 class="heading-small text-muted mb-4">Detail Perusahaan</h6>
                         <input type="hidden" id="id_prshn" class="form-control" name="id_prshn" value="{{ old('id_prshn',$perusahaan->id_prshn) }}">
-
                         <input type="hidden" id="tahun_berdiri" class="form-control" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
-
-                        <input type="hidden" id="image" class="form-control" name="image" value="{{ old('image',$perusahaan->image) }}">
                         <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ Auth::user()->id }}">
-
                         <div class="pl-lg-4">
-  
-                        {{-- <input type="hidden" id="id_prshn" class="form-control" name="id_prshn" placeholder="id_prshn" value="{{ old('id_prshn',$perusahaan->id_prshn) }}"> --}}
-
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group focused">
@@ -95,7 +78,6 @@
                                     </div>
                                 </div>
                             </div>
-                     
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
@@ -104,13 +86,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <input type="hidden" id="tahun_berdiri" class="form-control @error('tahun_berdiri') is-invalid @enderror" name="tahun_berdiri" value="{{ old('tahun_berdiri',$perusahaan->tahun_berdiri) }}">
-
-                            <input type="hidden" id="image" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image',$perusahaan->image) }}">
-
-                            <input type="hidden" id="edited_by" class="form-control" name="edited_by" value="{{ Auth::user()->id }}">
-                            
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
@@ -119,7 +94,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
@@ -134,7 +108,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="form-group focused">
@@ -155,7 +128,6 @@
                                     </div>
                                 </div>
                             </div>
-                            
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
@@ -186,7 +158,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <script>

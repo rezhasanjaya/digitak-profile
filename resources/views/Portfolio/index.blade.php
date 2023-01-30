@@ -15,7 +15,7 @@
         <div class="col">
           <div class="card ">
             <div class="fall-item fall-effect">
-              <img class="center-cropped" src="/images/{{ $pt->image }}">
+              <img class="center-cropped" src="/img/portfolio/{{ $pt->image }}">
               <div class="mask">
                   <h4>{{ $pt->nama_aplikasi }}</h4>
                   <p>{{ $pt->kategori }} - {{ $pt->tahun_pembuatan }}</p>

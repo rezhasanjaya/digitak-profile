@@ -47,7 +47,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="text-center">
-                                <img src="/images/{{ $portofolio->image }}" class="img-fluid">
+                                <img src="/img/portfolio/{{ $portofolio->image }}" class="img-fluid">
                                 <h5 class="font-weight-bold"></h5>
                                 <br>
                                 Nama File : {{ $portofolio->image }}
