@@ -2,7 +2,7 @@
 
 @section('main-content')
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">{{ __('Profil Akun') }}</h1>
+    <h1 class="h3 mb-4 text-gray-800">{{ $title ?? __('Profil Akun') }}</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger alert-dismissible fade show border-left-danger" role="alert">
@@ -41,7 +41,7 @@
 
     <div class="row">
 
-        <div class="col-lg-3 order-lg-2">
+        <div class="col-lg-4 order-lg-2">
 
             <div class="card shadow mb-4">
                 <div class="card-profile-image mt-4">
@@ -67,7 +67,7 @@
 
         </div>
 
-        <div class="col-lg-9 order-lg-1">
+        <div class="col-lg-8 order-lg-1">
 
             <div class="card shadow mb-4">
 

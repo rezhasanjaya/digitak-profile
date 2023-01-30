@@ -113,6 +113,8 @@ class PerusahaanController extends Controller
         $perusahaan->waktu_update = now();
         $perusahaan->save();
 
+        $path = public_path()."/images/".$perusahaan->image;
+        unlink($path);
         $perusahaan->update($request->all());
         return redirect()->route('perusahaan.index')
             ->with('sukses', 'Data berhasil diubah');

@@ -23,7 +23,6 @@ class PortofolioController extends Controller
 
     public function show(Portofolio $portofolio)
     {
-      
         $data = Portofolio::join("users", function ($join) {
             $join->on("users.id", "=", "portofolio.created_by");
         })->get();
@@ -31,7 +30,7 @@ class PortofolioController extends Controller
         // return view('portofolio.show', compact('portofolio'), ["title" => "Portofolio's Detail"]);
 
         return view('portofolio.show', compact('portofolio'), [
-            'title' => 'Portofolios Detail',
+            'title' => 'Detail Portofolio',
             'users' => User::all(),
             'portofolio' => Portofolio::all(),
             'data' => $data,
@@ -99,12 +98,16 @@ class PortofolioController extends Controller
             unset($input['image']);
         }
 
+        $path = public_path()."/images/".$portofolio->image;
+        unlink($path);
         $portofolio->update($input);
         return redirect()->route('portofolio.index')->with('success', 'Data telah diupdated');
     }
 
     public function destroy(Portofolio $portofolio)
     {
+        $path = public_path()."/images/".$portofolio->image;
+        unlink($path);
         $portofolio->delete();
         return redirect()->route('portofolio.index')
             ->with('success', 'Data berhasil dihapus');

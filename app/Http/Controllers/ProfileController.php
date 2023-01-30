@@ -16,7 +16,9 @@ class ProfileController extends Controller
 
     public function index()
     {
-        return view('profile');
+        return view('profile', [
+          'title' => 'Profile Akun',
+      ]);
     }
 
     public function update(Request $request)
