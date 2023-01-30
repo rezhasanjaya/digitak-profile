@@ -1,40 +1,43 @@
 <style>
-@media (min-width: 768px) {
+  @media (min-width: 768px) {
   .navbar-nav > li > a {
     padding-top: 20.5px;
     padding-bottom: 20.5px;
     line-height: 15px;
+    }
   }
-}
-.primary-nav {
+  .primary-nav {
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
- }
+  }
 
  .shrink {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        min-height: 55px !important;
-    }
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 55px !important;
+  }
 
-    .shrink .navbar-brand {
-        height: 0 !important;
-        line-height: 0 !important;
-    }
+  .shrink .navbar-brand {
+    height: 0 !important;
+    line-height: 0 !important;
+  }
 
-    .shrink a {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;       
-    }
+  .shrink a {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;       
+  }
 
-    .active, .nav-link:hover {
-      background-color: rgb(252,148,28);
-      color: white;
-    }
+  .active {
+    background-color: rgb(252,148,28);
+    -webkit-text-fill-color: white;
+  }
 
-    
+  .nav-link:hover {
+    -webkit-text-fill-color: white;
+  }
 </style>
+
 <nav id="primary-nav" class="navbar shadow-sm navbar-expand-lg navbar-dark fixed-top bg-dark primary-nav">
   <div class="container">
     <a href="/beranda"><img src="/images/digitak-logo.png" width="120"></a>

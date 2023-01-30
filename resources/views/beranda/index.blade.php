@@ -111,7 +111,7 @@
       <div class="col-md-12 mb-3 g-3">
         <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/AngularJS-large.png" width="10%"> &nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Webysther_20160423_-_Elephpant.svg" width="5%"> &nbsp&nbsp&nbsp&nbsp&nbsp
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg"  width="5%"> &nbsp&nbsp&nbsp&nbsp&nbsp
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg" width="5%"> &nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" width="3.4%"> &nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Logo.min.svg" width="10%"> &nbsp&nbsp&nbsp&nbsp&nbsp
         <img src="https://cdn.freebiesupply.com/logos/large/2x/codeigniter-logo-png-transparent.png" width="3%"> &nbsp&nbsp&nbsp&nbsp&nbsp

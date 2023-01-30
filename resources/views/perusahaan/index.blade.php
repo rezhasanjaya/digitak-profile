@@ -52,7 +52,7 @@
             <div class="d-flex mb-3">
                 <a href="{{ route('perusahaan.edit', $pt->id_prshn) }}" class="btn btn-warning mr-2"><i class="fa-solid fa-pen-to-square mr-2"></i>Edit Data</a>
             </div>
-            <?php break; ?>
+            @break
             @endforeach
             
             @foreach ($data as $pt)

@@ -9,11 +9,10 @@ class PortfolioController extends Controller
 {
     public function index()
     {
-
         $data = DB::table('perusahaan')->latest('id_prshn')->first();
         return view('portfolio.index', [
             'title' => 'Portofolio',
-            'portofolio' => Portofolio::paginate(12),
+            'portofolio' => Portofolio::latest('created_at')->first()->orderBy('created_at', 'desc')->paginate(9),
             'beranda' => $data,
         ]);
     }

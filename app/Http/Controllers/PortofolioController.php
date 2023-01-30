@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\PortoReq;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Portofolio;
@@ -18,13 +17,36 @@ class PortofolioController extends Controller
     {
         return view('portofolio.index', [
             'title' => 'Portofolio Management',
-            'portofolio' => Portofolio::paginate(10)
+            'portofolio' => Portofolio::latest('portofolio.created_at')->first()->orderBy('portofolio.created_at', 'desc')->paginate(10)
         ]);
+
+        // $data = Portofolio::join("users", function ($join) {
+        //     $join->on("users.id", "=", "portofolio.created_by");
+        // })->orderBy('portofolio.created_at', 'desc')->paginate(10);
+
+        // return view('portofolio.index', [
+        //     'title' => 'Portofolio Management',
+        //     'users' => User::all(),
+        //     'portofolio' => Portofolio::latest('portofolio.created_at')->first()->orderBy('portofolio.created_at', 'desc')->paginate(10),
+        //     'data' => $data,
+        // ]);
     }
 
     public function show(Portofolio $portofolio)
     {
-        return view('portofolio.show', compact('portofolio'), ["title" => "Portofolio's Detail"]);
+      
+        $data = Portofolio::join("users", function ($join) {
+            $join->on("users.id", "=", "portofolio.created_by");
+        })->get();
+        
+        // return view('portofolio.show', compact('portofolio'), ["title" => "Portofolio's Detail"]);
+
+        return view('portofolio.show', compact('portofolio'), [
+            'title' => 'Portofolios Detail',
+            'users' => User::all(),
+            'portofolio' => Portofolio::all(),
+            'data' => $data,
+        ]);
     }
 
     public function create()

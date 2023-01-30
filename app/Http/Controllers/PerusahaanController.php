@@ -18,12 +18,12 @@ class PerusahaanController extends Controller
     {
         $data = Perusahaan::join("users", function ($join) {
             $join->on("users.id", "=", "perusahaan.edited_by");
-        })->orderBy('id_prshn', 'desc')->paginate(10);
+        })->orderBy('perusahaan.id_prshn', 'desc')->paginate(10);
 
         return view('perusahaan.index', [
             'title' => 'Ubah Data Perusahaan dan Histori',
             'users' => User::all(),
-            'perusahaan' => Perusahaan::latest('id_prshn')->first()->orderBy('id_prshn', 'desc')->paginate(10),
+            'perusahaan' => Perusahaan::latest('perusahaan.id_prshn')->first()->orderBy('perusahaan.id_prshn', 'desc')->paginate(10),
             'data' => $data,
         ]);
     }

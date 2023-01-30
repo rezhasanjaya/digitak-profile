@@ -114,7 +114,7 @@
                               <div class="col-lg-6">
                                   <div class="form-group">
                                     <label class="form-control-label" for="created_by">Dipost Oleh<span class="small text-danger"></span></label>
-                                    <input type="text" id="created_by" class="form-control" name="created_by" placeholder="created_by" value="{{ $portofolio->created_by }}" disabled>
+                                    <input type="text" id="created_by" class="form-control" name="created_by" placeholder="created_by" value="{{ $portofolio->first_name }}" disabled>
                                   </div>
                               </div>
                           </div>

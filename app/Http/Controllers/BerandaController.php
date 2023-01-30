@@ -18,7 +18,7 @@ class BerandaController extends Controller
     return view('beranda.index', [
       'title' => 'Beranda',
       'beranda' => $data,
-      'portofolio' => Portofolio::latest('id_portofolio')->first()->paginate(6),
+      'portofolio' => Portofolio::latest('created_at')->first()->orderBy('created_at', 'desc')->paginate(6),
     ]);
   }
 }
