@@ -36,8 +36,8 @@
     <input class="form-control mb-3" type="text" placeholder="Nama Lengkap *">
     <input class="form-control mb-3" type="text" placeholder="Email *">
     <input class="form-control mb-3" type="text" placeholder="Telepon">
-    <input class="form-control mb-3" type="text" placeholder="Masukkan pesan anda">
-    <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="3" placeholder="Default input"></textarea>
+    <input class="form-control mb-3" type="text" placeholder="Subject *">
+    <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="3" placeholder="Ketik pesan anda"></textarea>
     <b class="text-black">Masukan kata dengan pembatas koma</b>
     <hr>
     <button type="submit" class="btn btn-warning"><i class="fa-solid fa-paper-plane"></i> Kirim</button>

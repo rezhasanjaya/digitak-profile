@@ -11,7 +11,8 @@
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">{{ __('Login') }}</h1>
+                                    <h4 class="text-gray-900"><b>{{ __('Backend System') }}</b></h4>
+                                    <h5 class="mb-4">{{ __('Silahkan login terlebih dahulu') }}</h5>
                                 </div>
 
                                 @if ($errors->any())
