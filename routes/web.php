@@ -30,13 +30,9 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'auth'], function () {
     // Route::get('/', 'HomeController@index')->name('home');
     Route::get('/home', 'HomeController@index')->name('home');
-
     Route::get('/profile', 'ProfileController@index')->name('profile');
     Route::put('/profile', 'ProfileController@update')->name('profile.update');
-
     Route::resource('user', UserController::class)->middleware('auth')->except('show')->middleware('superadmin');
-
     Route::resource('perusahaan', PerusahaanController::class);
-
     Route::resource('portofolio', PortofolioController::class);
 });
