@@ -34,7 +34,7 @@
 
     @stack('css')
 </head>
-<body id="page-top">
+<body class="d-flex flex-column h-100" id="page-top">
 
 <!-- Page Wrapper -->
 <div id="wrapper">

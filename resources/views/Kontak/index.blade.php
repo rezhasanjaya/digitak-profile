@@ -3,7 +3,7 @@
 @section('container')
 
 <div class="bg-warning">
-  <div class="container bg-warning py-4">
+  <div class="container bg-warning py-2">
     <h3 style="color:white;"><b><i class="fas fa-address-book"></i> KONTAK KAMI</b></h3>
   </div>
 </div>

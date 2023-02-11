@@ -2,7 +2,7 @@
 <br>
 <div class="container-fluid">
 <div class="container">
-  <footer>
+  <footer class="footer mt-auto">
     <div class="row text-black">
         <div class="col-4">
             <h5 style="color: black">Kontak Kami</h5>

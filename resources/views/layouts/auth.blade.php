@@ -20,7 +20,7 @@
     <!-- Favicon -->
     <link href="{{ asset('img/cover/web-icon.png') }}" rel="icon" type="image/png">
 </head>
-<body class="bg-gradient-warning min-vh-100 d-flex justify-content-center align-items-center">
+<body class="d-flex flex-column h-100 justify-content-center align-items-center bg-gradient-warning">
 
 @yield('main-content')
 
